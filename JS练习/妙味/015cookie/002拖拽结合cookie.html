@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: absolute;
+        }
+    </style>
+    <script src="001cookie.js"></script>
+    <script>
+        window.onload=function(){
+
+            var oDiv=document.getElementById("div1");
+            var disX=0;
+            var disY=0;
+            var x=getCookie("x");
+            var y=getCookie("y");
+            if(x){
+                oDiv.style.left=getCookie("x")+"px";
+                oDiv.style.top=getCookie("y")+"px";
+            }
+
+            oDiv.onmousedown=function(ev){
+                var oEvent=ev||event;
+                disX=oEvent.clientX-oDiv.offsetLeft;
+                disY=oEvent.clientY-oDiv.offsetTop;
+                document.onmousemove=function(ev){
+                    var oEvent=ev||event;
+                    oDiv.style.left=oEvent.clientX-disX+"px";//clientX 当事件被触发时鼠标指针向对于浏览器页面的水平坐标
+                    oDiv.style.top=oEvent.clientY-disY+"px";
+                };
+
+                document.onmouseup=function(){
+                    alert(oEvent.clientX-disX);
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                    setCookie("x",oDiv.offsetLeft,5);
+                    setCookie("y",oDiv.offsetTop,5);
+                };
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+
+            //找到ul ul li
+            var oUl=document.getElementById("list");
+            var aUl=oUl.getElementsByTagName("ul");
+            var len=aUl.length;
+
+            for(var i=0;i<len;i++){
+               var aLi= aUl[i].getElementsByTagName("li");
+                for(var j=0;j<aLi.length;j++){
+                    aLi[j].style.border="1px solid red";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="list">
+    <li>
+        <h2>City</h2>
+        <ul>
+            <li>北京</li>
+            <li>北京</li>
+            <li>北京</li>
+        </ul>
+    </li>
+    <li>
+        <h2>Color</h2>
+        <uL>
+            <li>红</li>
+            <li>黄</li>
+            <li>蓝</li>
+        </uL>
+    </li>
+    <li>
+        <h2>season</h2>
+        <ul>
+            <li>春天</li>
+            <li>夏天</li>
+            <li>秋天</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

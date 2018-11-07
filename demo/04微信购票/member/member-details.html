@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/detail.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <title>会员详情</title>
+    <style>
+    	.ui_hotlist a.ui-relative{ width:94%; margin:0 auto; padding:5.5vw 0 5.5vw 0;pad ding: 15px 0;}
+    	.ui_pic_menu_box{padding: 5vw 2vw;}
+    	/*2016.11.28*/
+    	/*.gore{background-color: blueviolet;height: 50px;line-height: 50px;}*/
+        .ui-arrow-left:after {content: "";width: 13px;height: 13px;border: 2px solid #fdfdfd;border-width: 0 0 2px 2px;}
+    	.gore em{margin-left: 5px;margin-top:-8px;width: 30%;height:33px;line-height:33px;text-align:center;font-style: normal;background-color: #f95422;border-radius: 30px;font-size: .6rem;color:#fff;float: left;}
+    	.ui_title {padding-top: 0px;top: 0px;}
+    	.show_info_wrapper{width: 75%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;margin-left: 20vw;}
+    	.ui_hotlist:after {content: '';border-bottom: 1px solid #00a1e5; display: block;  width: 100%; }
+    	.item_poster{border-radius: 50%;width: 64px;height: auto;}
+    	.show_info_wrapper p {margin-bottom: 2px;}
+    	.ui_pic_menu_box .dis-a{background-color: #eee;}
+    </style>
+    <script>
+    	$(function(){
+    		var userAgent = navigator.userAgent;
+			var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Adr') > -1; //android终端
+			var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //iOS终端
+			if(isiOS==true){$(".gore em").css({"margin-top":"-3px","line-height":"35px"})}else{$(".gore em").css({"margin-top":"-8px"})};
+			if(window.innerWidth > 400){
+				$(".gore em").css({"margin-left":"15px"});
+			};
+    	})
+    </script>
+</head>
+<body>
+    <!-- <header class="mu_flex">
+        <div class="h_t color_fff">会员详情</div>
+    </header> -->
+    <section class="my_info" style="margin-top:0;">
+        <div class="ui_hotlist clearfix" style="background-color: #00a1e5;">
+            <a href="javascript:;" class="ui-arrow-left ui-relative">
+                <span class="item_poster" >
+                    <i class="ui_radius_pic"><img src="../image/ico-member.png"></i>
+                </span>
+                <span class="show_info_wrapper ">
+                    <h3 class="color_fff">13800013800(测试卡)</h3>
+                    <p class="color_fff">等级：<span class="color_fff">金卡</span></p>
+                    <p class="gore clearfix">
+                    	<span class="color_fff clearfix">
+                    		<span style="float: left;">余额：</span>
+                    		<label class="color_fff" style="float: left;">8888.00元</label>
+                    		<em>立即充值</em>
+                    	</span>
+                    </p>
+                </span>
+            </a>
+        </div>
+        <div class="ui_pic_menu">
+            <div class="ui_pic_menu_box">
+            	<a href="../page/my-order/order-history.html">
+                    <span class="pic_box">
+                    	<i class="ui_radius_pic"><img src="../image/order.png" style=" width: 7.5vw;"></i>
+                    	<label class="ui_badge">8</label>
+                    </span>
+                    <h3 class="ui-fs15">我的订单</h3>
+                </a>
+                <a href="member-transaction.html">
+                    <span class="pic_box"><i class="ui_radius_pic"><img src="../image/ico-mydeal.png"></i></span>
+                    <h3 class="ui-fs15">会员交易</h3>
+                </a>
+                <a href="integral-transaction-details.html">
+                    <span class="pic_box"><i class="ui_radius_pic"><img src="../image/ico-mybonus.png"></i></span>
+                    <h3 class="ui-fs15">积分交易</h3>
+                </a>
+                <a href="my-ticket.html">
+                    <span class="pic_box">
+                        <i class="ui_radius_pic"><img src="../image/ico-mybills.png" style="position: relative;top:2vw;height:auto;"></i>
+                        <label class="ui_badge">9</label>
+                    </span>
+                    <h3 class="ui-fs15" style="padding-top:3px;">我的票券</h3>
+                </a>
+            </div>
+        </div>
+        <div class="ui_list">
+            <a href="update-password.html" class="city">
+                <span class="color_333">修改密码</span>
+                <i class="icon_right_g"></i>
+            </a>
+        </div>
+        <ul>
+            <li class="mod_li li_bg" style="border-bottom: 1px solid #c6c6c6; border-top:1px solid #c6c6c6;">
+                <h3 class="ui_title">基本信息<span class="add_ticket_btn" onclick="location.href='update-member.html'">修改</span></h3>
+            </li>
+            <li style="border-top:0;">
+                <a href="javascript:;" class="info color_999">
+                    会员卡号：<span class="color_333" name="member_number">8888000888</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    积分：<span class="color_333" name="member_number">999分</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    会员状态：<span class="color_333" name="member_state">有效</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    性别：<span class="color_333" name="sex">男</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    身份证号：<span class="color_333" name="ID">44110000000000000</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    生日：<span class="color_333" name="bithday">2002-03-26</span>
+                </a>
+            </li>
+            <!--<li>-->
+                <!--<a href="javascript:;" class="info color_999">-->
+                    <!--会员等级：<span class="color_333" name="membership_grade">金卡</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;" class="info color_999">-->
+                    <!--帐户余额：<span class="color_333" name="balance">300元</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;" class="info color_999">-->
+                    <!--积分余额：<span class="color_333" name="integral_balance">3000分</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    注册日期：<span class="color_333" name="date_registration">2015-10-26</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    注册商户：<span class="color_333" name="registration_merchant">数码</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    邮箱：<span class="color_333" name="email">123453@126.com</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+<script>
+	$(function(){
+//		$(".gore em").on("click touchstart",function(e){
+//			e.stopPropagation();
+//			 window.location.href="select-member.html"; 
+//			 $(this).css({"background-color":"#da3908"})
+//		})
+$(".gore em").on({
+			click:function(e){e.stopPropagation();window.location.href="select-member.html";},
+			touchstart:function(e){$(this).css({"background-color":"#da3908"})},
+			touchend:function(e){$(this).css({"background-color":"#f95422"})},
+			 
+			 
+		})
+
+
+		$(".ui_hotlist").on("click",function(){
+			 window.location.href="member.html"; 
+		})
+	})
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title >CSS3常用文本属性</title>
+</head>
+<style type="text/css">
+    p{
+        font:bold 60px sans-seric;
+        color:blue;
+        text-shadow:-5px 2px 10px green;
+    }
+    div.test{
+        width: 12em;
+        border: 1px solid #000;
+        white-space:nowrap;
+        overflow: hidden;
+    }
+    h3.test{
+        width: 11em;
+        border: 1px solid #ff0000;
+        word-wrap:normal;/* break-word*/
+    }
+
+</style>
+<body>
+<p>你还要我怎样</p>
+<H2>text-overflow:ellipsis</H2>
+<div class = "test" style="text-overflow:ellipsis">这是一段长文章，没办法完整的在容器中显示</div>
+<br>
+<H2>text-overflow:clip</H2>
+<div class = "test" style="text-overflow: clip">这是一段长文章，没办法完整的在容器中显示</div>
+<br>
+<H2>word-wrap:normal/break-word</H2>
+<h3 class = "test">这是一段长文章，没办法完整的在容器中显示,Word：lovelovelovelovelovelovelovelovelovelovelovelovelovelove啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</h3>
+<br>
+</body>
+</html>

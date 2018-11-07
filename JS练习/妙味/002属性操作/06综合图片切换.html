@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: #ccc;
+        }
+        #content{
+            width: 600px;
+            height: 340px;
+            border: 10px solid #ccc;
+            margin: 40px auto 0;
+            position: relative;
+            background: url(image/bg.gif) no-repeat;
+            background-size: cover;
+        }
+        #content a {
+            width: 40px;
+            height: 40px;
+            background: #451;
+            border: 5px solid #eee;
+            position: absolute;
+            top: 145px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            line-height: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            filter: alpha(opacity:60);
+            opacity: 0.6;
+        }
+        #content a:hover{
+            filter: alpha(opacity:90);
+            opacity: 0.9;
+        }
+        #prev{left: 10px;}
+        #next{right: 10px;}
+        #text,#span1{
+            position: absolute;
+            left: 0;
+            width:600px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #000;
+            filter: alpha(opacity:80);
+            opacity: 0.8;
+        }
+        #text{
+            bottom: 0;
+            margin: 0px;
+        }
+        #span1{
+            top: 0;
+        }
+        #img1{
+            width: 600px;
+            height:340px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oPrev=document.getElementById("prev");
+            var oNext=document.getElementById("next");
+            var oText=document.getElementById("text");
+            var oSpan=document.getElementById("span1");
+            var oImg=document.getElementById("img1");
+
+            var arrUrl = [
+                "image/01.jpg",
+                "image/02.jpg",
+                "image/03.jpg",
+                "image/04.jpg",
+                "image/05.jpg",
+                "image/06.jpg",
+            ];
+             var arrText=[
+                     "waterfall",
+                     "oasis",
+                     "road",
+                     "grass",
+                     "river",
+                     "tree"
+             ];
+            var num=0;
+            //初始化
+            function fnTab(){
+            oSpan.innerHTML=num+1+"/"+arrText.length;
+            oImg.src=arrUrl[num];
+            oText.innerHTML=arrText[num];
+            }
+            fnTab();
+            oPrev.onclick=function(){
+                num--;
+                if(num==-1){
+                    num=arrText.length-1;
+                }
+                fnTab();
+            };
+
+            oNext.onclick=function(){
+                num++;
+                if(num==arrText.length){
+                    num=0;
+                }
+                fnTab();
+            };
+        };
+    </script>
+</head>
+<body>
+<div id="content">
+    <a id="prev" href="javascript:;"><</a>
+    <a id="next" href="javascript:;">></a>
+    <p id="text">图片加载中……</p>
+    <span id="span1">数量正在计算中……</span>
+    <img id="img1"/>
+</div>
+</body>
+</html>

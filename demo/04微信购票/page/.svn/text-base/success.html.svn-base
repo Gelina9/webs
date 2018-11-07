@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../js/public.js"></script>
+<link href="../css/newpage.css" type="text/css" rel="stylesheet" />
+<title>支付成功</title>
+	<style>
+		.pay_suc{position: absolute; width: 100%; top: 15%;}
+		.suc_head,.mod_li{ background: #f0f0f0;}
+	</style>
+</head>
+
+<body class="success">
+<section class="pay_suc">
+	<article class="suc_head">
+		<span class="suc_ico"><i class="icon_suc"></i></span>
+		<span class="suc_tips">恭喜!订单支付成功！</span>
+	</article>
+	<ul>
+		<li class="mod_li clearfix ui-90" style="text-align: center;border-bottom: 0;">
+			<a href="../page/my-order/consume-detail.html" class="color_00a1e5 mod_blue_border ui-l-btn">查看订单详情</a>
+			<a href="movie.html" class="color_00a1e5 mod_blue_border ui-r-btn">返回首页</a>
+		</li>
+	</ul>
+	
+</section>
+<div class="address-new" style="position: fixed;bottom: 40px;background-color: #f0f0f0;">
+		<div class="box">
+			<div class="icon"><img src="../image/goods-only/icon-a1.png" alt="" /></div>
+			<div class="name">星光大道影院</div>
+			<div class="add"><i></i>广州市白云区大龙街道彭东大街星光大道广场12楼</div>
+			<div class="ph"><i></i>020-81562222</div>
+		</div>
+	</div>
+</body>
+</html>

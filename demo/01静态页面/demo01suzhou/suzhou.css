@@ -1,0 +1,232 @@
+body{
+    background:url("images/背景.jpg") no-repeat;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+#container{
+    margin: 0 auto;
+    width: 780px;
+    height: 600px;
+    text-align: left;
+    background-color: lightseagreen;
+}
+#banner{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    background-color: darkseagreen;
+    background-image: url("images/banner.jpg");
+    background-size: cover;
+}
+#globllink{
+    margin: 0;
+    padding: 0;
+}
+#globllink ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+#globllink ul li{
+    float: left;
+    text-align: center;
+    width: 78px;
+}
+#globllink ul li a{
+    display: block;
+    padding: 9px 6px 11px 6px;
+    margin: 0;
+    background-image: url("images/button2.png");
+    background-repeat: no-repeat;
+ }
+#globllink a:link, a:visited{
+    color: #004a87;
+    text-decoration:underline;
+}
+#globllink  a:hover{
+    color: #ffffff;
+    text-decoration: none;
+    background-image: url("images/button3.png");
+    background-repeat: no-repeat;
+}
+#left{
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: lightblue;
+    float: left;
+}
+#district{
+    margin:0 5px 30px 5px;
+    background-image: url("images/08.jpg");
+    padding: 0 0 5px 0;
+}
+#district h3{
+    font-size: 12px;
+    padding: 4px 0 0 70px;
+    color: mediumpurple;
+    margin: 5px 0 0 0;
+}
+#district ul{
+    list-style-type: none;
+    color: mediumpurple;
+    padding: 0 0 0 20px;
+    margin:2px 2px;
+}
+#district li{
+    background: url("images/图标2.png") no-repeat ;
+    padding: 0px 0 0 20px;
+}
+
+#today{
+    background-color: mediumseagreen;
+    margin: 0px 5px;
+}
+#today h3{
+    color: #003973;
+    font-size: 12px;
+    background: url("images/图标1.png") no-repeat 5px 0px ;
+    padding: 0px 0px 0px 30px;
+    margin: -22px 0 10px 0;
+    float: left;
+}
+#today ul{
+    list-style-type: none;
+    padding: 0;
+}
+#today li{
+    text-align: center;
+    padding-bottom: 5px;
+}
+#today img{
+    border: 1px solid #ffffff;
+    margin: 5px 0 -5px 0;
+}
+#today ul li a:link,#today ul li a:visited{
+    color: #ffffff;
+    text-decoration: none;
+}
+#today ul li a:hover{
+    color: #ffff00;
+    text-decoration: underline;
+
+}
+#middle{
+    margin: 0 2px;
+    padding: 5px 0 5px 0;
+    width: 400px;
+    height: 540px;
+    /*background-color:limegreen ;*/
+    background-image: url("images/middlebg.jpg");
+    float: left;
+}
+#middle div{
+    margin: 0 5px;
+}
+#middle h3 span{
+    height: 41px;
+    color: black;
+    background: url("images/button3.png") no-repeat;
+    margin: 0;
+    padding: 8px 5px 5px 10px;
+}
+#middle h3 span:hover{
+    color: aquamarine;
+}
+#beauty{
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+#beauty ul,#route ul{
+    margin: 8px 1px 0 1px;
+    padding: 0;
+    list-style-type: none;
+}
+#beauty ul li{
+    float: left;
+    text-align: center;
+    width: 97px;
+    margin-top: -5px;
+    margin-bottom: 7px;
+}
+#beauty ul li img{
+    border: 1px solid #4ab0ff;
+}
+#route{
+    clear: both;
+    margin: 0;
+    padding: 5px 0 0px 0;
+}
+#route ul li{
+    padding: 3px 0 0 20px;
+    background: url("images/图标2.png") no-repeat 0px 2px;
+}
+#route li a:link,#route li a:visited{
+    color: #004e8a;
+    text-decoration: none;
+}
+#route li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+#right{
+    margin: 0;
+    padding: 0 0 5px 0;
+    width: 176px;
+    background-color: mediumseagreen;
+    float: left;
+}
+#right div{
+    margin: 0 5px;
+}
+#right div h3{
+    font-size: 12px ;
+    padding: 2px 0 0px 25px;
+    margin: 0 0 5px 0;
+    background: url("images/图标3.png") no-repeat 0px 4px;
+    color: #003973;
+}
+#map p{
+    text-align: center;
+    margin: 0;
+    padding: 2px 0 5px 0;
+}
+#map p img{
+    border: 1px solid #ffffff;
+}
+#food ul,#life ul{
+    list-style-type: none;
+    padding: 0 0 10px 0 ;
+    margin: 0 0 0px 0;
+}
+#food ul li,#life ul li{
+    background: url("images/图标4.png") no-repeat 0 5px;
+    padding: 3px 0 3px 12px;
+    border-bottom: 1px dashed wheat;
+}
+#food ul li a:link,#food ul li a:visited,#life ul li a:link,#life ul li a:visited{
+    text-decoration: none;
+}
+#food ul li a:hover,#life ul li a:hover{
+    color: navajowhite;
+    text-decoration: underline;
+}
+#footer{
+    margin: 1px 0 0 0;
+    padding: 1px 0;
+    background-color: lightskyblue;
+    clear: both;
+    text-align: center;
+    text-decoration: none;
+}
+#footer p{
+    border: 2px  solid navajowhite;
+    margin: 0;
+}
+#footer a:hover{
+    color: navajowhite;
+    text-decoration: underline;
+}

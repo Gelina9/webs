@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function  hasPiece(array1) {
+        var t = 0,
+                n = 0,
+                len = array1.length - 1,
+                top,                       //片段前一个数
+                bottom,           //片段后一个数
+                start,       //片段起点
+                end;        //片段终点
+
+        for (var i = 0;i < len;i ++) {
+
+            if (array1[i] > array1[i + 1]) {
+
+                if (t == 0) {
+                    start = array1[i];
+                    top = array1[i - 1] || -9999999999;
+
+                    t = 1;
+                    n ++;
+
+                    if (n > 1) {
+                        return "no";
+                    }
+
+                }
+
+            }else {
+
+                if (t == 1) {
+                    end = array1[i];
+                    bottom =array1[i + 1];
+
+                    if (end < top || start > bottom ) {
+                        return "no";
+                    }
+                    t = 0;
+                }
+
+            }
+        }
+
+        if (n == 1 ) {
+            return "yes";
+        }else {
+            return "no";
+        }
+    }
+    alert(hasPiece([2,1,3,4,9,4]));
+</script>
+</body>
+</html>

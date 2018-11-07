@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/detail.css" type="text/css" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <title>订单确认</title>
+    <style>
+        html,body{ background: #f8f8f8;}
+        .has-footer{ bottom: 62px;}
+        .layui-layer.layui-layer-dialog .layui-layer-content{ padding:35px 20px;}
+        .wrap-page{
+        position:absolute; left:0; right:0;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+	}
+	
+	.ui-account-detail {margin: 0 5px;}
+	.ui-content {height: auto;}
+	
+	
+    </style>
+    
+</head>
+<body>
+<div class="bar bar-header ui-bg-ff9900">
+    <h1 class="title ui-ff0000">请在14分58秒内完成支付</h1>
+</div>
+    <div class="wrap-page has-header has-footer ui-content">
+        <div class="ui-account-film clearfix ui-bg-fff">
+            <p class="ui-account-film-name ui-wc94"><span class="ui-fs16 ui-000 ui-mr10 ui-fl">霍比特人：五军之战</span><label class="ui-badge-95d5f0 ui-fl">英语</label><label class="ui-badge-95d5f0 ui-fl ui-ml5">普通立体3D</label></p>
+            <div class="ui-account-film-info ui-wc94 ui-arrow-left ui-relative">
+                <p>
+                    <span class="ui-cinema-address ui-999 ui-fs14 ui-mr10">51影城四季天地店</span>
+                    <span class="ui-film-hall ui-999 ui-fs14">2号杜比厅</span>
+                </p>
+                <p>
+                    <span class="ui-show-time ui-999 ui-fs14 ui-mr10">今天6月13日 16:20</span>
+                    <span class="ui-film-sheets ui-999 ui-fs14">共2张</span>
+                </p>
+            </div>
+        </div>
+        <div class="ui-account-seat clearfix ui-bg-fff">
+            <ul>
+                <li class="ui-555 ui-fl">7排7座，</li>
+                <li class="ui-555 ui-fl">7排8座，</li>
+                <li class="ui-555 ui-fl">7排9座，</li>
+                <li class="ui-555 ui-fl">7排10座</li>
+            </ul>
+        </div>
+        <div class="ui-box ui-ptb10 ui-account-film-price">
+            <div class="ui-wc94 ui-tar">
+                <span class="ui-fs18 ui-333">¥123.<label class="ui-333 ui-fs16">00</label></span>
+            </div>
+        </div>
+        <div class="ui-goods-up-box">
+            <div class="ui-goods-up">
+                <div class="ui-box">
+                    <p class="ui-arrow-left ui-relative ui-wc94">
+                        <span class="ui-000 ui-fs16">乐享二人套餐</span><label class="ui-000 ui-fs14">等卖品 (共2份)</label>
+                    </p>
+                </div>
+            </div>
+            <div class="ui-goods-down">
+                <div class="ui-box">
+                    <p class="ui-wc94 ui-mb5">
+                        <span class="ui-fs16 ui-000 ui-mr10">乐享二人套餐</span>
+                        <span class="ui-fs16 ui-333 ui-fr">¥23.<label class="ui-333 ui-fs16">00</label></span>
+                        <label class="ui-fr ui-mr20 ui-fs16 ui-relative" style="top: -1px;">1份</label>
+                    </p>
+                    <p class="ui-fs14 ui-999 ui-wc94">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+                </div>
+                <div class="ui-box">
+                    <p class="ui-wc94 ui-mb5">
+                        <span class="ui-fs16 ui-000 ui-mr10">好时果仁（中）</span>
+                        <span class="ui-fs16 ui-333 ui-fr">¥15.<label class="ui-333 ui-fs16">00</label></span>
+                        <label class="ui-fr ui-mr20 ui-fs16 ui-relative" style="top: -1px;">1份</label>
+                    </p>
+                </div>
+            </div>
+            <div class="ui-box ui-tac ui-goods-up-btn">
+                <a href="" class="ui-fs16"><i class="ui-arrow-up ui-999"></i></a>
+            </div>
+        </div>
+        <div class="ui-box ui-bg-f0f0f0 ui-ptb10">
+            <div class="ui-wc94 ui-tar">
+                <span class="ui-fs16">总价：</span>
+                <span class="ui-fs18 ui-ff0000">¥223.<label class="ui-ff0000 ui-fs12">00</label></span>
+            </div>
+        </div>
+        <div class="ui-box ui-bg-fff">
+            <div class="ui-wc94 ui-ellipsis">
+                <span class="ui-999 ui-fs16">优惠活动：</span>
+                <span class="ui-333 ui-fs16">会员电商购票25元</span>
+            </div>
+        </div>
+        <div class="ui-box ui-bg-fff">
+            <div class="ui-wc94 ui-relative ui-h24">
+            	<i class="ui-member-ico ui-fl ui-mr5"></i>
+                <span class="ui-999 ui-fs16 ui-fl">会员：</span>
+                <span class="ui-333 ui-fs16 ui-fl">13800013800</span>
+                <span class="ui-333 ui-fs16 ui-ml10 ui-fl">金卡</span>
+            </div>
+        </div>
+        <div class="ui-box ui-bg-fff clearfix" style="padding: 8px 0;">
+            <div class="ui-wc94 ui-relative ui-h35" style="line-height: 35px;">
+                <i class="ui-member-ico ui-fl ui-mr5 ui-relative" style="top:6px;"></i>
+                <span class="ui-999 ui-fs16 ui-fl">会员：</span>
+                <div class="ui-chosen-input-box ui-fl">
+                    <input type="text" class="ui-chosen-input" value="金卡  3123123" readonly="true">
+                    <div class="ui-ico">
+                        <span class="ui-slideDown"><i class="ui-slideDown-arrow"></i></span>
+                    </div>
+                </div>
+                <div class="ui-chosen-drop">
+                    <ul class="ui-chosen-results">
+                        <li><span class="ui-mr10">自尊金卡</span><label>13800013800</label></li>
+                        <li><span class="ui-mr10">金卡</span><label>1380001380023</label></li>
+                        <li><span class="ui-mr10">白金卡</span><label>1380001380033242</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ui-box ui-bg-fff clearfix" style="padding: 10px 0; clear:bold;" onclick="location.href='ticket-pay.html'">
+            <div class="ui-wc94 ui-arrow-left ui-relative">
+                <span class="ui-999 ui-fs16">优惠券：</span>
+                <span class="ui-fs16">6张待用</sapn>
+                <span class="ui-333 ui-fs16 ui-fr ui-mr20">未使用，添加</span>
+            </div>
+        </div>
+        <div class="ui-box ui-bg-fff" style="padding: 8px 0;">
+            <div class="ui-wc94 ui-relative ui-h35 ui-input-del">
+                <span class="ui-999 ui-fs16 ui-fl" style="line-height: 35px;">购票手机：</span>
+                <input type="tel" class="ui-input-border ui-fs16 ui-fl" placeholder="请输入接收取票码手机号">
+                <i class="ion-close-circled"></i>
+            </div>
+        </div>
+        <div class="ui-box clearfix" style="border-bottom: 0;">
+            <div class="ui-wc94 ui-relative">
+                <i class="ui-ico-exclamation ui-fl"></i>
+                <span class="ui-ml5 ui-fl ui-fs15">请仔细核对购票信息，出票后不支持退换</span>
+            </div>
+        </div>
+    </div>
+<footer class="bar bar-footer ui-bg-f0f0f0">
+    <div class="ui-wc94" style="line-height: 48px;">
+        <div class="ui-need-pay">
+            <span class="ui-fs14">还需支付:</span>
+            <span class="ui-fs20 ui-ff0000">¥93.<label class="ui-ff0000 ui-fs16">00</label></span>
+        </div>
+        <a href="javascript:void(0);" class="ui-account-detail ui-fs16">明细</a>
+        <a href="javascript:void(0);" class="ui-btn-disabled ui-plr10 ui-fs16 ui-fr ui-submit-btn">确认，去支付</a>
+    </div>
+
+</footer>
+<div class="ui-pay-detail-box">
+    <div class="ui-popup-head ui-bg-00a1e5">支付明细<i class="ui-del ui-fff ui-fs24 ui-fr">×</i></div>
+    <div class="ui-pop-content ui-wc94">
+        <div class="row">
+            <div class="col">
+                <div class="ui-fs18 ui-333">总价：</div>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col ui-tar">
+                <div  class="ui-fs16 ui-333">¥75.<label class="ui-333 ui-fs12">00</label></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="ui-fs16">已抵用：</div>
+            </div>
+            <div class="col">
+                <div class="ui-fs16">兑换券1张</div>
+            </div>
+            <div class="col ui-tar">
+                <div  class="ui-fs16 ui-333">抵用¥75.<label class="ui-333 ui-fs12">00</label></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="ui-fs16"></div>
+            </div>
+            <div class="col">
+                <div class="ui-fs16">代金券2张</div>
+            </div>
+            <div class="col ui-tar">
+                <div  class="ui-fs16 ui-333">抵用¥20.<label class="ui-333 ui-fs12">00</label></div>
+            </div>
+        </div>
+        <p class="ui-fs18 ui-tar ui-pr10 ui-pt10 ui-pb10" style="border-top: 1px solid #ccc;">还需支付：
+            <span class="ui-fs20 ui-ff0000">¥75.<label class="ui-ff0000 ui-fs16">00</label></span>
+        </p>
+    </div>
+</div>
+<div class="backdrop"></div>
+<script src="../js/jquery.min.js"></script>
+<!-- <script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script> -->
+<script src="../js/public.js"></script>
+<script src="../layer/layer.js"></script>
+<script>
+	
+    	!function topaa(){
+    		var hasheader=$("body").find(".bar").hasClass("bar-header");
+    		var bartop=$(".bar-header").outerHeight(true);
+    		if(hasheader==true){$(".has-header").css({"top":bartop,})}else{$(".has-header").css({"top":"0px",})}
+    	}()
+    		
+    	
+    
+    /* angular.module('myApp', ['ionic']); */
+
+    //明细
+    $(".ui-account-detail").on("click",function(){
+        $(".backdrop").addClass("visible active");
+        $(".ui-pay-detail-box").slideDown();
+        $(".ui-del").on("click",function(){
+            $(".ui-pay-detail-box").slideUp();
+            $(".backdrop").removeClass("visible active");
+        })
+    })
+    //影票价格
+    $(".ui-account-film").on("click",function(){
+        $(".ui-account-film-info").toggleClass("ui-arrow-left");
+        $(".ui-account-film-price").slideToggle();
+    });
+    //卖品
+    $(".ui-goods-up").on("click",function(){
+        $(this).slideUp();
+        $(".ui-goods-down").slideDown();
+        $(".ui-goods-up-btn").show();
+        $(".ui-goods-up-btn").on("click",function(){
+            $(".ui-goods-up").slideDown();
+            $(".ui-goods-down").slideUp();
+            $(".ui-goods-up-btn").hide();
+        })
+        $(".ui-goods-down").on("click",function(){
+            $(this).slideUp();
+            $(".ui-goods-up").slideDown();
+            $(".ui-goods-up-btn").hide();
+        })
+    });
+
+    //选择会员卡
+    $(".ui-chosen-input").click(function(){
+        $(".ui-chosen-drop").slideToggle();
+        // $(".ui_add_btn").toggle();
+    })
+    $(".ui-slideDown").click(function(){
+        $(".ui-chosen-drop").slideToggle();
+    })
+    $(".ui-chosen-drop li").click(function(){
+        $(".ui-chosen-drop").slideUp();
+        var gettxt = $(this).text();
+        $(".ui-chosen-input").val(gettxt);
+    })
+    $(document.body).click(function(e){
+        var target = e.target;
+        if($('.ui-chosen-drop').is(':visible') && !$(target).hasClass('ui-chosen-results') && !$(target).hasClass('ui-chosen-input') && !$("ui-slideDown"))  {
+            slide_up();
+        }
+    });
+    
+    //购票手机
+    $("input").bind('input propertychange',function(){
+    	if($(this).val().length > 1){
+    		$(this).nextAll(".ion-close-circled").show();
+    		$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+    	}
+    	if($(this).val().length < 1){
+    		$(this).nextAll(".ion-close-circled").hide();
+    		$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+    	}
+    });
+    $(".ion-close-circled").bind('click',function(){
+    	$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+    });
+    
+    //链接到确定支付
+    $(".ui-submit-btn").on("click",function(){
+    	if($(this).hasClass("ui-btn-00a1e5")){
+    		location.href='confirm-payment.html';	
+    	}
+    	else if($(this).hasClass("ui-btn-disabled")){
+    		layer.alert('请填写购票手机!',{
+				closeBtn : 0,
+				title : '',
+				shadeClose : true,
+				shade : 0.5,
+			});
+    		$(".layui-layer-btn").addClass('ui-layer-btn');
+    	}
+    });
+
+</script>
+</body>
+</html>

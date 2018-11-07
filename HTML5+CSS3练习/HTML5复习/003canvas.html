@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id = "myCanvas" width = "200" height = "100" style = "border:1px solid #000"></canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    //绘制矩形并填充
+   /* ctx.fillStyle = "#ff0000";
+    ctx.fillRect(0,0,150,75);*/
+    //绘制直线
+  /*  ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.strokeStyle = "blue";
+    ctx.stroke();*/
+    //绘制圆形
+    /*ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.strokeStyle = "blue";
+    ctx.stroke();
+    ctx.fillStyle = "yellow";
+    ctx.fill();*/
+    //绘制渐变
+    //创建
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,'red');
+    grd.addColorStop(1,'white');
+    //用渐变填充
+    ctx.fillStyle = grd;  /*  ctx.strokeStyle=grd;*/
+    ctx.fillRect(10,10,150,80);
+    //绘制文本文本度量
+    var metrics=ctx.measureText("hello hello");
+    var width=metrics.width;
+    ctx.font="30pt Arial";
+    ctx.textAlign="left";
+    ctx.fillStyle="#549";
+    ctx.fillText("("+width+"px wide)",50,100);
+</script>
+</body>
+</html>

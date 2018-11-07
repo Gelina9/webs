@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+</head>
+<body onload="setInterval('show()',1000)">
+<img name = "myphoto" src="images/0.jpg" width="600">
+<script>
+    var images = new Array(6);
+    var index = 1;
+    for(var i = 0;i<6;i++){
+        images[i] = new Image();
+        images[i].src ="images/" +i+".jpg";
+    }
+    function show(){
+        document.myphoto.src = images[index].src;
+        index = (index+1)%6;
+    }
+</script>
+</body>
+</html>

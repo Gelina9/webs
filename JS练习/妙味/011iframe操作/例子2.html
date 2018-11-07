@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var aIpt=document.getElementsByTagName("input");
+            var oIframe=document.getElementById("iframe1");
+
+            function changeHeight(){
+                setTimeout(function(){
+                    oIframe.height=oIframe.contentWindow.document.body.offsetHeight; //获取高度
+                },100)
+            }
+            changeHeight();
+            aIpt[0].onclick=function(){
+                oIframe.src="例子2iframe1.html";
+                changeHeight();
+            };
+            aIpt[1].onclick=function(){
+                oIframe.src="例子2iframe2.html";
+                changeHeight();
+            };
+
+        };
+    </script>
+</head>
+<body>
+<input type="button" value="切换1"/>
+<input type="button" value="切换2"/>
+<iframe src="例子2iframe1.html" id="iframe1" scrolling="no"></iframe>
+</body>
+</html>

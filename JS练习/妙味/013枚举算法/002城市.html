@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>枚举city</title>
+    <script>
+        window.onload=function(){
+            var oUl=document.getElementById("ul1");
+            var aA=document.getElementsByTagName("a");
+            var aLi=oUl.getElementsByTagName("li");
+
+            for(var i=0;i<aA.length;i++){
+                aA[i].onclick=function(){
+                    //判断有没有点击过用枚举法 mj函数
+                    if(mj(this.innerHTML)){ //首次点击往ul里面添加
+                        var oLi=document.createElement("li");
+                        oLi.innerHTML=this.innerHTML;
+                        if(!aLi[0]){    //判断如果aLi第一个没有的话
+                            oUl.appendChild(oLi);
+                        }
+                        else{
+                            oUl.insertBefore(oLi,aLi[0]); //将最新添加的放在最前面
+                        }
+                    }
+                    else{                  //点过的不用往ul里面添加
+                        mj2(this.innerHTML);
+                    }
+                };
+            }
+
+            //枚举函数
+            function mj(text){
+                var result=true;
+                for(var i=0;i<aLi.length;i++){
+                    if(aLi[i].innerHTML==text){
+                        return false;
+                    }
+                }
+                return result;
+            }
+
+            function mj2(text){
+                for(var i=0;i<aLi.length;i++){
+                    if(aLi[i].innerHTML==text){
+                        oUl.insertBefore(aLi[i],aLi[0]);
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<a href="javascrpt:;">北京</a>
+<a href="javascrpt:;">上海</a>
+<a href="javascrpt:;">广州</a>
+<a href="javascrpt:;">深圳</a>
+<a href="javascrpt:;">西安</a>
+<a href="javascrpt:;">苏州</a>
+<a href="javascrpt:;">重庆</a>
+<ul id="ul1"></ul>
+</body>
+</html>

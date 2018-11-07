@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var aBtn=document.getElementsByTagName("input");
+            var arr=["spring","summer","winter"];
+            var aP=document.getElementsByTagName("p");
+
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].index=i;//自定义属性索引值
+                aBtn[i].onclick=function(){
+                    this.value=arr[this.index];
+                    aP[this.index].innerHTML=arr[this.index];
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<input type="button" value="btn1"/>
+<input type="button" value="btn2"/>
+<input type="button" value="btn3"/>
+<p>a</p>
+<p>b</p>
+<p>c</p>
+</body>
+</html>

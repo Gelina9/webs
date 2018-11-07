@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/detail.css" type="text/css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <title>我的</title>
+    <style>
+    	.ui_hotlist a{ width:94%; margin:0 auto; padding:2vw 0;}
+    </style>
+</head>
+<body>
+    <!-- <header class="mu_flex">
+        <div class="h_t color_fff">会员详情</div>
+    </header> -->
+    <section class="my_info" style="margin-top:0;">
+        <div class="ui_hotlist" style="border-bottom: 15px solid #F0f0f0;">
+            <div class="ui-relative ui-ptb5 ui-plr10">
+                <span class="item_poster">
+                    <i class="ui_radius_pic"><img src="../image/ico-member.png"></i>
+                </span>
+                <!-- <span class="color_333 ui-signLogin ui-fs18">立即登录</span> -->
+                <span class="ui-signLogin"><a href="../page/login-1.html" class="ui-btn-border ui-p3-10">立即登录</a></span>
+                <span class="ui-signLogin ui-ml25 ui-fr" style="margin-right:42px;"><a href="../page/register.html" class="ui-btn-border ui-p3-10">免费注册</a></span>
+                <!-- <span class="show_info_wrapper">
+                    <h3>13800013800（科比）</h3>
+                    <p class="color_999">等级：<span class="color_333">金卡</span></p>
+                    <p><span class="color_999">余额：<label class="color_333">200.00元</label>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="color_999">积分：<label class="color_333">300分</label></span></p>
+                </span> -->
+            </div>
+        </div>
+        <div class="ui_pic_menu" style="border-top:1px solid #b8b8b8;">
+            <div class="ui_pic_menu_box">
+            	<a href="../page/my-order/order-history.html">
+                    <span class="pic_box">
+                    	<i class="ui_radius_pic"><img src="../image/order.png" style=" width: 7.5vw;"></i>
+                    	<label class="ui_badge">5</label>
+                    </span>
+                    <h3 class="ui-fs15">我的订单</h3>
+                </a>
+                <a href="../page/login-1.html">
+                    <span class="pic_box"><i class="ui_radius_pic"><img src="../image/ico-mydeal.png"></i></span>
+                    <h3 class="ui-fs15">会员交易</h3>
+                </a>
+                <a href="../page/login-1.html">
+                    <span class="pic_box"><i class="ui_radius_pic"><img src="../image/ico-mybonus.png"></i></span>
+                    <h3 class="ui-fs15">积分交易</h3>
+                </a>
+                <a href="my-ticket.html">
+                    <span class="pic_box">
+                        <i class="ui_radius_pic"><img src="../image/ico-mybills.png" style="position: relative;top:2vw;"></i>
+                        <label class="ui_badge">9</label>
+                    </span>
+                    <h3 class="ui-fs15" style="padding-top:3px;">我的票券</h3>
+                </a>
+            </div>
+        </div>
+        <div class="ui_list">
+            <a href="update-password.html" class="city">
+                <span class="color_333">修改密码</span>
+                <i class="icon_right_g"></i>
+            </a>
+        </div>
+        <ul>
+            <li class="mod_li li_bg" style="border-bottom: 1px solid #b8b8b8; border-top:1px solid #b8b8b8;">
+                <h3 class="ui_title">基本信息<span class="add_ticket_btn" onclick="location.href='../page/login-1.html'">修改</span></h3>
+            </li>
+            <li style="border-top:0;">
+                <a href="javascript:;" class="info color_999">
+                    会员卡号：<span class="color_333" name="member_number"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    会员状态：<span class="color_333" name="member_state"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    性别：<span class="color_333" name="sex"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    身份证号：<span class="color_333" name="ID"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    生日：<span class="color_333" name="bithday"></span>
+                </a>
+            </li>
+            <!--<li>-->
+                <!--<a href="javascript:;" class="info color_999">-->
+                    <!--会员等级：<span class="color_333" name="membership_grade">金卡</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;" class="info color_999">-->
+                    <!--帐户余额：<span class="color_333" name="balance">300元</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:;" class="info color_999">-->
+                    <!--积分余额：<span class="color_333" name="integral_balance">3000分</span>-->
+                <!--</a>-->
+            <!--</li>-->
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    注册日期：<span class="color_333" name="date_registration"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    注册商户：<span class="color_333" name="registration_merchant"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="info color_999">
+                    邮箱：<span class="color_333" name="email"></span>
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3线性渐变</title>
+    <style type="text/css">
+        #grad1{
+            height: 200px;
+            background: linear-gradient(red,green);
+        }
+        #grad2{
+            height: 200px;
+            background: -webkit-linear-gradient(left,red,green);/*谷歌要加webkit*/
+        }
+        #grad3{
+            height: 200px;
+            background: linear-gradient(45deg,red,green);
+        }
+        #grad4{
+            height: 200px;
+            background: linear-gradient(red,green,blue);
+        }
+    </style>
+</head>
+<body>
+<h3>线性渐变-从上到下</h3>
+
+<div id="grad1"></div>
+<h3>线性渐变-从左到右</h3>
+
+<div id="grad2"></div>
+<h3>线性渐变-带有指定的角度的线性渐变</h3>
+
+<div id="grad3"></div>
+<h3>线性渐变-使用多个颜色结点</h3>
+
+<div id="grad4"></div>
+</body>
+</html>

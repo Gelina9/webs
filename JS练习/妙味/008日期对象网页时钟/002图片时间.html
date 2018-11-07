@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片时间</title>
+<script>
+window.onload=function(){
+	var oBody=document.body;
+	var oP=document.getElementById('time');
+	var aImg=document.getElementsByTagName('img');
+	
+	setInterval(fnTime,1000);
+	fnTime();
+	function fnTime(){
+		var myTime=new Date(); //获取当前系统时间
+	var iHour=myTime.getHours();
+	var iMin=myTime.getMinutes();
+	var iSec=myTime.getSeconds();
+	var str='';
+	
+	str=toTwo(iHour)+toTwo(iMin)+toTwo(iSec);
+	oP.innerHTML=str;
+	for(var i=0;i<str.length;i++){
+		aImg[i].src="images/"+str.charAt(i)+".png";
+	}
+	}
+};
+function toTwo(n){
+	return n<10?"0"+n:""+n;
+}
+</script>
+</head>
+
+<body style="font-size:40px;">
+<p id='time' style="font-size:40px;"></p>
+<img src=images/0.png>
+<img src=images/0.png>
+<img src=images/0.png>
+<img src=images/0.png>
+<img src=images/0.png>
+<img src=images/0.png>
+</body>
+</html>
+

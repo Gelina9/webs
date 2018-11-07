@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <title>登录</title>
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <style>
+        html,body{ background: #f8f8f8;}
+        
+    </style>
+</head>
+<body>
+<div class="ui-wrap ui-relative">
+	<div class="ui-box ui-bg-f0f0f0 ui-mb20">
+		<h1 class="ui-title-h1 ui-tac">登录会员 ，特惠购票(<span class="ui-fs20 ui-ff0000">￥30.<label class="ui-ff0000 ui-fs16">00</label><label class="ui-fs16 ui-ff0000">起</label></span>)</h1>
+		<p class="ui-fs18 ui-333 ui-tac">更可尊享会员专座</p>
+	</div>
+	<section class="ui-main ui-wc90">
+        <form action="goods.html">
+            <input type="text" class="ui-input ui-ptb12 ui-mb20 ui-fs16" name="user" placeholder="请输入手机号/会员卡号">
+            <input type="password" class="ui-input ui-ptb12 ui-fs16" name="pwd" placeholder="请输入会员密码">
+            <p class="ui-tar ui-mtb5"><a href="reset-password-1.html" class="ui-fs16">忘记密码？</a></p>
+            <input type="submit" class="ui-submit ui-btn-ff8500 ui-fs20 ui-mt20 ui-wc100 ui-block" value="登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录">
+        </form>
+        <a href="register.html" class="ui-submit ui-btn-00a1e5 ui-fs20 ui-mt20 ui-wc100 ui-block">免费注册</a>
+        <!-- <p class="ui-mt30 ui-fs18 ui-mb20">还不是影院会员？<a href="register.html" class="ui-btn-border ui-p5-10">快速注册</a> </p> -->
+    </section>
+</div>
+<p class="ui-relative ui-wc90" style="height: 60px;position: fixed;bottom: 0;left: 3%;"><label class="ui-fs16 ui-fl ui-ptb10">不享受会员优惠</label><a href="movie.html" class="ui-fs16 ui-btn-gray ui-ptb10 ui-333 ui-btn-continue ui-block ui-fr ui-tac">继续购票</a> </p>
+</body>
+<script src="../js/jquery.min.js"></script>
+<!--<script>
+	var bodyHeight = $("html").height();
+	$(".ui-wrap").css({"height":bodyHeight-60});
+</script>-->
+</html>

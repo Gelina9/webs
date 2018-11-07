@@ -1,0 +1,95 @@
+<!doctype html>
+<html style="height:100%;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<link href="../css/main.css" type="text/css" rel="stylesheet">
+<link href="../lib/ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<title>登录</title>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script src="../layer/layer.js"></script>
+<style type="text/css">
+span{height:40px; width:40px; display:block; position:relative;border: 1px solid #ccc;line-height: 40px;color: #999;padding-left: 3%;font-size: 0.8rem;} 
+.movies-sel{overflow:hidden; width:97%;}
+.movies-sel:before{content:''; height:10px; width:10px; display:block; border:1px solid #b9b9b9; border-left-width:0; border-top-width:0; transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg); position:absolute; top:14px; right:7px;}
+</style>
+</head>
+
+<body class="login">
+<header class="ui-header-bar">
+    <div class="h_t color_fff">会员登录</div>
+</header>
+<article class="ui_login ui-relative" style="top:80px;">
+	<div class="login_input m_login">
+		<a href="select-city.html">
+			<div class="input_box mb20">
+			<span class="movies-sel">请选择影院</span>
+		</div>
+		</a>
+		
+		<div class="input_box mb20">
+			<input type="text" name="member" placeholder="请输入手机号码/会员卡号" class="mod_input" />
+			<i class="ion-close-circled"></i>
+		</div>
+		<div class="input_box mb20">
+			<input type="password" name="m_psw" placeholder="请输入登录密码" class="mod_input" id="pwd" />
+			<i class="ion-close-circled"></i>
+		</div>
+		<a href='goods-only.html' class="submit mod_orange_btn ui_login_btn" style="clear:both">登 录</a>
+		<a href="register.html" class="ui_register_btn">立即注册</a>
+		<a href="reset-password-1.html" class="ui_register_btn ui-fr ui-tar">忘记密码？</a>
+	</div>
+	<div class="ui_register">
+		<div class="head">
+			<a href="#" class="ui_return_row"></a>
+			<div class="h_right show_tab">
+				<a href='#' class="sec_cinema color_fff" onClick="location.href='select-city.html'">选择影院</a><i class="icon_right_r"></i>
+			</div>
+		</div>
+	<form action="" method="get" class="login_input ui_sign_up" style="margin-top: 1.2rem;">
+		<input type="text" name="number" placeholder="请输入手机号码" class="mod_input ui_phone_input" />
+		<input type="password" name="ph_psd" placeholder="请输入验证码" class="mod_input m_code" />
+		<input type="button" name="ph_psd_code" class="ui_code_btn ui_disabled_btn" value="获取验证码" />
+		<input type="password" name="pwd" placeholder="请输入密码（6位数字）" class="mod_input" />
+		<input type="password" name="confirm_pwd" placeholder="请确认密码（6位数字）" class="mod_input" />
+		<a href='movie.html' class="submit mod_orange_btn">注册</a>  <!-- ui_disabled_btn -->
+	</form>
+	</div>
+</article>
+</body>
+<script>
+	//tips
+	$("#pwd").on('click',function(){
+		layer.alert('会员帐号或密码有误!',{
+			closeBtn : 0,
+			title : '提示',
+			shadeClose : true,
+			shade : 0.5,
+		});
+		$(".layui-layer-btn").addClass('ui-layer-btn');
+	});
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');;
+	})
+
+</script>
+</html>

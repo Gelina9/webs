@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<title>选择城市</title>
+</head>
+
+<body>
+<section class="sec_fixed search_sel_city">
+	<article class="search input_box">
+		<i class="icon_search"></i>
+		<input type="text" class="mod_search" placeholder="请输入城市名称进行查询" />
+		<i class="ion-close-circled"></i>
+	</article>
+</section>
+<section class="city_list">
+	<ul>
+		<li class="mod_li">
+			<a href='movie.html' class="city">
+				<span class="city_name color_333">酒泉市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="city">
+				<span class="city_name color_333">广州市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="city">
+				<span class="city_name color_333">珠海市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="city">
+				<span class="city_name color_333">杭州市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="city">
+				<span class="city_name color_333">昆明市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="city">
+				<span class="city_name color_333">乌鲁木齐市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="city">
+				<span class="city_name color_333">长安市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>10</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="city">
+				<span class="city_name color_333">成都市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>1</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="city">
+				<span class="city_name color_333">三亚市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>100</label>间影院</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="movie.html" class="city">
+				<span class="city_name color_333">厦门市</span>
+				<!--<i class="icon_right_g"></i>-->
+				<span class="c_cinema_q color_999">共<label>10</label>间影院</span>
+			</a>
+		</li>
+	</ul>
+</section>
+<script>
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');
+	});
+</script>
+</body>
+</html>

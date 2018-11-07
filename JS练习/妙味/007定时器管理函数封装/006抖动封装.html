@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+img{
+	position:absolute;
+	width:400px;
+	top:150px;
+	left:300px;
+	border-radius:200px;
+}
+</style>
+<script src='001$.js'></script>
+<script>
+window.onload=function(){
+	var oImg=document.getElementById('img1');
+	oImg.onclick=function(){
+		shake(oImg,'left',function(){alert(1);});
+	};	
+};
+function shake(obj,attr,endFn){
+		var pos=parseInt(getStyle(obj,attr));
+		var arr=[];
+		var num=0;
+		
+		for(var i=20;i>0;i-=2){
+			arr.push(i,-i);
+		}
+		arr.push(0);
+		
+		clearInterval(obj.shake);
+		obj.shake=setInterval(function(){
+			obj.style[attr]=pos+arr[num]+'px';
+			num++;
+			if(num==arr.length){
+				clearInterval(obj.shake);
+				endFn&&endFn();
+			}
+		},40);
+}
+</script>
+</head>
+
+<body>
+<img id='img1' src='images/05.jpg'/>
+</body>
+</html>

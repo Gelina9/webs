@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/detail.css" type="text/css" rel="stylesheet">
+    <link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+    <title>抽奖</title>
+    <style>
+        .ui_chosen_results li{ border:0;}
+    </style>
+</head>
+<body>
+    <div class="draw_box"><img src="../image/draw.png"></div>
+    <section class="my_info" style="margin-top: 0;">
+        <div class="ui_input_box li_bg" style="border-top: 1px solid #d9d9d9;">
+            <span style="width: auto; color: #333;">抽奖会员卡</span>
+        </div>
+        <div class="ui_input_box ui_chosen_li">
+            <div class="ui_chosen" style="width: 100%;">
+                <div class="ui_chosen_txt" style="font-size: 0.7rem; line-height: normal; height: 1rem; margin-bottom: 2px;">
+                    请选择会员卡号：
+                </div>
+                <div style="position:relative;">
+                    <input type="text" class="ui_chosen_input" placeholder="3123123" style="width: 98%;">
+                    <div class="ui_ico">
+                        <span class="ui_slidedown"><i class="ui_slidedown_arrow"></i></span>
+                    </div>
+                </div>
+                <div class="ui_chosen_drop" style="display: none;">
+                    <ul class="ui_chosen_results">
+                        <li>1235434</li>
+                        <li>1235434</li>
+                        <li>1235434</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ui_input_box li_bg">
+            <span style="width: auto; color: #333;">活动规则</span>
+        </div>
+        <div class="film_abs color_999 text_expander_box" style="padding: 3vw 2vw;">
+            <div class="text_expander_content">五星级影院，地处交通便利，地铁上盖，影厅装修豪华，可同时供850多人同时观影，是您观影的不二选择五星级影院。五星级影院，地处交通便利，地铁上盖，影厅装修豪华，可同时供850多人同时观影，是您观影的不二选择五星级影院。</div>
+            <div class="text_expander_button"><i class="icon ion-chevron-down"></i></div>
+        </div>
+    </section>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+    $('.text_expander_box').on('click',function(){
+        if($(".text_expander_button i").hasClass('ion-chevron-down')){
+            $('.text_expander_content').css({'height':'auto'});
+            $(".text_expander_button i").removeClass('ion-chevron-down');
+            $(".text_expander_button i").addClass('ion-chevron-up');
+        }
+        else{
+            $('.text_expander_content').css({'height':'3rem'});
+            $(".text_expander_button i").removeClass('ion-chevron-up');
+            $(".text_expander_button i").addClass('ion-chevron-down');
+        }
+    })
+    $(".ui_chosen_input").click(function(){
+        $(".ui_chosen_drop").slideToggle();
+        // $(".ui_add_btn").toggle();
+    })
+    $(".ui_slidedown").click(function(){
+        $(".ui_chosen_drop").slideToggle();
+    })
+    $(".ui_chosen_drop li").click(function(){
+        $(".ui_chosen_drop").slideUp();
+        var gettxt = $(this).text();
+        $(".ui_chosen_input").val(gettxt);
+    })
+    $(document.body).click(function(e){
+        var target = e.target;
+        if($('.ui_chosen_drop').is(':visible') && !$(target).hasClass('ui_chosen_results') && !$(target).hasClass('ui_chosen_input') && !$("ui_slidedown"))  {
+            slide_up();
+        }
+    })
+</script>
+</html>

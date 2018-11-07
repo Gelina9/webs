@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: url("image/iPhone.jpg") no-repeat;
+            background-size: cover;
+        }
+        #box{
+            width: 277px;
+            height:489px;
+            background: #ddd;
+            border: 2px solid #555;
+            position: absolute;
+            left: 536px;
+            top: 66px;
+        }
+        #D{
+            width: 275px;
+            height:450px;
+            background: #ddd;
+            border: 1px solid #555;
+            overflow: auto;
+        }
+        section{
+            position: absolute;
+            bottom: 3px;
+        }
+        #img1,#img2{
+            width: 22px;
+            height: 22px;
+            padding: 0;
+            margin: auto 0 -8px 15px;
+        }
+        .tx1{
+            width: 22px;
+            height: 22px;
+            float:left;
+            margin-left:3px;
+        }
+        .tx2{
+            width: 22px;
+            height: 22px;
+            float:right;
+            margin-right:3px;
+        }
+        #text1,#text2{
+            height: 22px;
+        }
+        #send1,#send2{
+            height: 22px;
+            border: none;
+            color: #666;
+        }
+        .le{
+            width:230px;
+            margin:5px 0;
+            float:left;
+
+        }
+        .ri{
+             width:230px;
+             margin:5px 0;
+             float:right;
+         }
+        .div2 {
+            background: limegreen;
+            font-size: 13px;
+            margin-left:28px;
+            margin-top:-21px;
+            padding:4px;
+            border-radius:5px;
+            float:left;
+            clear:both;
+        }
+        .div3 {
+            background: #aaa;
+            font-size: 13px;
+            margin-right:28px;
+            margin-top:-21px;
+            padding:4px;
+            border-radius:5px;
+            float:right;
+            clear:both;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById("D");
+            var oImg1=document.getElementById("img1");
+            var oImg2=document.getElementById("img2");
+            var oText1=document.getElementById("text1");
+            var oText2=document.getElementById("text2");
+            var oSec1=document.getElementById("sec1");
+            var oSec2=document.getElementById("sec2");
+            var oSend1=document.getElementById("send1");
+            var oSend2=document.getElementById("send2");
+
+            oImg1.onclick=function(){
+                oSec1.style.display="none";
+                oSec2.style.display="block";
+            }
+            oImg2.onclick= function () {
+                oSec2.style.display="none";
+                oSec1.style.display="block";
+
+            }
+
+            oSend1.onclick=function(){
+                oDiv.innerHTML="<div class='le'>"+"<img class='tx1' src='image/emj1.png'/>" +
+                "<div class='div2'>"+oText1.value+"</div></div>"+oDiv.innerHTML+"<br/>";
+                oText1.value=null;
+            }
+
+            oSend2.onclick=function(){
+                oDiv.innerHTML="<div class='ri'>"+"<img class='tx2' src='image/emj2.png'/>" +
+                "<div class='div3'>"+oText2.value+"</div></div>"+oDiv.innerHTML+"<br/>";
+                oText2.value=null;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="D">
+    </div>
+    <div class="user">
+        <section id="sec1">
+            <img id="img1" src="image/emj1.png"/>
+            <input type="text" id="text1">
+            <input type="button" id="send1" value="发送">
+        </section>
+        <section id="sec2">
+            <img id="img2" src="image/emj2.png"/>
+            <input type="text" id="text2">
+            <input type="button" id="send2" value="发送">
+        </section>
+    </div>
+</div>
+</body>
+</html>

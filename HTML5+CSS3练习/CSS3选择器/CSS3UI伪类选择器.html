@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CSS3UI伪类选择器</title>
+    <style>
+        /*input[type="text"]:enabled{
+            background: #ffff00;
+        }*/
+       /* input[type="text"]:disabled{
+            background: #ff5aba;
+        }*/
+       /* input:checked{
+            background: chartreuse;//此属性浏览器暂不支持
+        }*/
+        /*input:read-write{
+            background-color:deeppink;
+        }*/
+        /*input:read-only{
+            background:lawngreen;
+        }*/
+        /*::selection{
+            color:#ff0000;
+        }*/
+       /* div::selection{
+            color:#ff0000;
+        }*/
+        /*input:out-of-range{
+            border:2px solid red;
+        }
+        input:in-range{
+            border:2px solid yellow;
+        }*/
+        /*p>input[type="text"]:optional{
+            background-color:darkblue ;//p>表示标签里边的
+        }
+        p>input[type="text"]:required{
+            background-color:pink;
+        }*/
+        input[type="email"]:valid{
+            background-color:darkblue ;
+        }
+        input[type="email"]:invalid{
+            background-color:yellow ;
+        }
+
+
+    </style>
+</head>
+<body>
+<form action="#" name="myform" method="get">
+    姓名：<input type="text" value="陈豪"/><br>
+    国家：<input type="text" disabled="disabled" value="中国"/><br>
+    <input type="radio" checked="checked" value="male" name="gender"> 男<br>
+    <input type="radio" checked="checked" value="female" name="gender"> 女<br>
+    <p>普通的input元素：<br><input value="hello"></p>
+    <p>只读的input元素：<br><input readonly value="hello"> </p>
+    <div>这是div元素中的一些文本</div>
+    <input type="number" min="5" max="10" value="6"/>
+    <p>可选的input元素：<br><input type="text"></p>
+    <p>必填的input元素：<br><input required type="text">
+    <input type="email" value="support@exampel.com"/>
+</form>
+</body>
+</html>

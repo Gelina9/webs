@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+img{
+	position:absolute;
+	width:400px;
+	top:150px;
+	left:300px;
+	border-radius:200px;
+}
+</style>
+<script src='../my.js'></script>
+<script>
+$(function(){
+	$('img1').onclick=function(){
+		var pos=parseInt(getStyle($('img1'),'left'));
+		var arr=[];
+		var num=0;
+		var timer=null;
+		
+		clearInterval(timer);
+		timer=setInterval(function(){
+			$('img1').style.left=pos+arr[num]+'px';
+			num++;
+			if(num==arr.length){
+				clearInterval(timer);
+			}
+		},40);
+		for(var i=20;i>0;i-=2){
+			arr.push(i,-i);
+		}
+		arr.push(0);
+	};	
+});
+</script>
+</head>
+
+<body>
+<img id='img1' src='images/05.jpg'/>
+</body>
+</html>

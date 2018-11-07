@@ -1,0 +1,4 @@
+20170209以后微信页面新增页面动态数据都增加<STATIC_DATA></STATIC_DATA>标签
+newpage目录用来存放这些新页面
+weixin/page/newpage/f-menu.html    功能菜单页面
+

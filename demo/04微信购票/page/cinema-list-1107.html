@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+    <link href="../css/newpage.css" type="text/css" rel="stylesheet" />
+    <script src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/swiper.js"></script>
+	<!--<script>
+		$(function(){
+			$("body").css({"overflow":"hidden"})
+		})
+	</script>-->
+    <title>影院排期</title>
+    <style>
+    /*.cl-header-box{position: relative;width: 100%;height: 120px;min-height: 120px;min-width:320px;overflow: hidden;background: url(../image/goods-only/c-list-bg2.png) no-repeat;}
+    .bg{width: 100%;height: 120px;min-height: 120px;overflow: hidden;background: url(../image/goods-only/c-list-bg3.png);position: absolute;top: 0;left: 0;}
+    .cl-left{width: 70%;padding-top: 10px;padding-left: 5px;float: left;}
+    .cl-left .sq{width: 9px;float: left;}
+    .sq li{width: 9px;height: 9px;background-color: #dae3f9;margin-bottom: 10px;}
+    .cl-left .title{width: 80%;height: 110px;float: left;color: #fff;margin-left: 30px;}
+    .title .name{font-size: 20px;}
+   	.title .add{position: relative;font-size: 14px;margin-top: 15px;}
+   	.title .add i{display: inline-block;width: 19px;height: 20px;background: url(../image/goods-only/add.png) no-repeat;background-size: 70%;position: absolute;top: 3px;left: -16px;}
+   	.title .ph{position: relative;font-size: 14px;margin-top: 0px;}
+   	.title .ph i{display: inline-block;width: 19px;height: 20px;background: url(../image/goods-only/ph.png) no-repeat;background-size: 70%;position: absolute;top: 2px;left: -16px;}
+   	
+   	.cl-right{width: 96px;float: right;padding-top: 10px;color: #fff;}
+   	.cl-right .sq{width: 9px;float: left;float: right;margin-right: 5px;}
+   	.cl-right .time{float: left;width: 80px;border-left: 1px dashed #fff;margin-top: 5px;}
+   	.cl-right .time li{width: 50px;margin: 0 auto;text-align: center;}
+   	.cl-right .time .mouth{font-size: 20px;margin-top: 0px;border-top:1px solid #fff ;padding-top: 2px;}
+   	.cl-right .time .day{font-size: 41px;margin-top: 10px;}
+   	.cl-right .time .week{font-size: 16px;margin-top: 15px;border-top:1px solid #fff ;padding-top: 2px;}
+   	.cl-data-box .swiper-wrapper{border-bottom: 1px solid #d9d9d9;}
+   	.cl-data-box .swiper-slide{height: 40px;text-align: center;line-height: 40px;color: #777777;}
+   	.cl-data-box .is-active span{display: inline-block;width: 80%;height: 30px;background-color: #00a1e5;border-radius:20px;line-height: 30px;color: #fff;}
+   	
+   	.cl-content-box{overflow-x: hidden;overflow-y: auto;}
+   	.cl-content-box ul{width: 100%;background-color: #fff;}
+   	.cl-content-box ul li{width: 100%;margin-left: 10px;border-bottom: 1px solid #d9d9d9;padding: 20px 0px 20px 0px;}
+   	
+   	.li-left{float: left;width: 100%;position: relative;height: 98px;}
+   	.img-box{width: 66px;position: absolute;top: 0;left: 0;}
+   	.cl-name{margin-left: 76px;}
+   	.cl-name .name P{font-size: 17px;color: #000;width: 70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+   	.cl-name .name span{font-size: 17px;color: #000;display: inline-block;font-size: 14px;text-align: center;border-radius: 2px;color: #fff;padding: 0 5px 0 5px;position: absolute;top: 0;right: 20px;}
+   	.cl-name .name .twod{background-color: #00a1e5;}
+   	.cl-name .name .threed{background-color: #ff4e4e;}
+   	.cl-name .type{font-size: 12px;color: #adadad;}
+   	.cl-name .data{font-size: 14px;color: #777777;}
+   	.cl-name .data span{display: inline-block;width: 23%;}*/
+   	
+   	
+   	/*.b{position: absolute;top: 0;left: 0;}
+   	.cl-content-box{margin-top: 161px;}*/
+   	html,body{height: 100%;overflow: auto;background-color: #fff;}
+    </style>
+</head>
+<body>
+	<div class="b">
+		<div class="bg"></div>
+		<div class="cl-header-box clearfix">
+			<div class="cl-left clearfix">
+				<ul class="sq">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="title">
+					<li class="name"><span>星光大道影院</span><a href="select-city.html">切换</a></li>
+					<li class="add"><i></i>广州市白云区大龙街道彭东大街星光大道广场12楼</li>
+					<li class="ph"><i></i>020-66668888</li>
+				</ul>
+			</div>
+			<div class="cl-right">
+				<ul class="time">
+					<li class="mouth">10月</li>
+					<li class="day">28</li>
+					<li class="week">星期五</li>
+				</ul>
+				<ul class="sq">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+			</div>
+		</div>
+		
+		<div class="cl-data-box">
+			<div class="swiper-container">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide is-active"><span data-week = "星期五">10-28</span></div>
+			    <div class="swiper-slide"><span data-week = "星期六">10-29</span></div>
+			    <div class="swiper-slide"><span data-week = "星期日">10-30</span></div>
+			    <div class="swiper-slide"><span data-week = "星期一">10-31</span></div>
+			    <div class="swiper-slide"><span data-week = "星期二">11-01</span></div>
+			    <div class="swiper-slide"><span data-week = "星期三">11-02</span></div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="cl-content-box">
+		<ul class="cl-list" style="dis play: none;">
+			<li class="cl-list-li clearfix">
+				<div class="li-left clearfix">
+					<div class="img-box"><img src="../image/goods-only/cl-tu.jpg" alt="" /></div>
+					<div class="cl-name">
+						<div class="name clearfix"><p>失失孤失孤失孤失孤失孤失孤失孤孤</p><span class="threed">3DIMAX</span></div>
+						<p class="type">120分钟-喜剧</p>
+						<div class="data">
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cl-list-li clearfix">
+				<div class="li-left clearfix">
+					<div class="img-box"><img src="../image/goods-only/cl-tu.jpg" alt="" /></div>
+					<div class="cl-name">
+						<div class="name clearfix"><p>失失孤失孤失孤失孤失孤失孤失孤孤</p><span class="twod">2DIMAX</span></div>
+						<p class="type">120分钟-喜剧</p>
+						<div class="data">
+							<span>10:00</span>
+							
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cl-list-li clearfix">
+				<div class="li-left clearfix">
+					<div class="img-box"><img src="../image/goods-only/cl-tu.jpg" alt="" /></div>
+					<div class="cl-name">
+						<div class="name clearfix"><p>失失孤失孤失孤失孤失孤失孤失孤孤</p><span class="threed">3DIMAX</span></div>
+						<p class="type">120分钟-喜剧</p>
+						<div class="data">
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+							<span>10:00</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cl-list-li clearfix">
+				<div class="li-left clearfix">
+					<div class="img-box"><img src="../image/goods-only/tishi-show.jpg" alt="" /></div>
+					<div class="cl-name">
+						<div class="name clearfix"><p>失失孤失孤失孤失孤失孤失孤失孤孤</p><span class="threed">3DIMAX</span></div>
+						<p class="type">120分钟-喜剧</p>
+						<div class="data">
+							<span>10:00</span>
+							
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cl-list-li clearfix">
+				<div class="li-left clearfix">
+					<div class="img-box"><img src="../image/goods-only/tishi-show.jpg" alt="" /></div>
+					<div class="cl-name">
+						<div class="name clearfix"><p>失失孤失孤失孤失孤失孤失孤失孤孤</p><span class="threed">3DIMAX</span></div>
+						<p class="type">120分钟-喜剧</p>
+						<div class="data">
+							<span>10:00</span>
+							
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cl-list-li clearfix">
+				<div class="li-left clearfix">
+					<div class="img-box"><img src="../image/goods-only/tishi-show.jpg" alt="" /></div>
+					<div class="cl-name">
+						<div class="name clearfix"><p>失失孤失孤失孤失孤失孤失孤失孤孤</p><span class="threed">3DIMAX</span></div>
+						<p class="type">120分钟-喜剧</p>
+						<div class="data">
+							<span>10:00</span>
+							
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="no-movies" style="disp lay: none;">
+			<li class="box"><img src="../image/goods-only/no-movies.png" alt="暂无排期" /></li>
+			<li class="title">对不起，目前暂无排期</li>
+		</ul>
+	</div>
+</body>
+<script language="javascript"> 
+	var mySwiper = new Swiper('.swiper-container',{
+	slidesPerView : 4,
+	})
+	$(function(){
+//		内容宽度
+		!function wi(){
+			var cw=$(window).width();
+			var newa=cw-86+"px";
+			$(".cl-name").width(newa);
+		}()
+//		内容滚动
+//		!function wd(){
+//			var ch=$(window).height();
+//			var b=$(".b").height();
+//			var top=$(".cl-header-box").height();
+//			var data=$(".cl-data-box").height();
+//			var newa=ch-top-40+"px";
+//			$(".cl-content-box").height(newa);
+//		}()
+//		日期切换
+		!function data(){
+			$(".cl-data-box .swiper-wrapper .swiper-slide").on("click",function(){
+				var me=$(this);
+				me.addClass("is-active").siblings().removeClass("is-active")
+			})
+		}()
+	})
+</script>
+</html>

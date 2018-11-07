@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时</title>
+<script>
+window.onload=function(){
+	var iNow=new Date();
+	var iNew=new Date(2017,6,8,11,00,00);//数字形式
+	var iNew=new Date('July 8,2017 11:00:00');//字符串形式
+	var t=Math.floor((iNew-iNow)/1000); //毫秒->秒 向下取整
+	var str=Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+Math.floor(t%60)+'秒';
+	alert(str);
+};
+</script>
+</head>
+
+<body>
+</body>
+</html>

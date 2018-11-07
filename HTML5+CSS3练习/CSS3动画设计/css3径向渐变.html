@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3径向渐变</title>
+    <style type="text/css">
+        #grad1{
+            height: 150px;
+            width: 200px;
+            background: radial-gradient(red,green,blue);/*默认椭圆*/
+        }
+        #grad2{
+            height: 150px;
+            width: 200px;
+            background: radial-gradient(red 5%,green 15%,blue 60%);
+        }
+        #grad3{
+            height: 150px;
+            width: 200px;
+            background: radial-gradient(circle,red,green,blue);
+        }
+        #grad4{
+            height: 150px;
+            width: 200px;
+            background: -webkit-radial-gradient(60% 55%,closest-side,red, green,yellow,blue);
+        }
+        #grad5{
+            height: 150px;
+            width: 200px;
+            background: -webkit-radial-gradient(60% 55%,farthest-side,red,green,yellow,blue);
+        }
+        #grad6{
+            height: 150px;
+            width: 200px;
+            background: -webkit-radial-gradient(60% 55%,closest-corner,red,green,yellow,blue);
+        }
+        #grad7{
+            height: 150px;
+            width: 200px;
+            background: -webkit-radial-gradient(60% 55%,farthest-corner,red,green,yellow,blue);
+        }
+    </style>
+</head>
+<body>
+<h3>径向渐变-颜色结点均匀分布</h3>
+
+<div id="grad1"></div>
+<h3>径向渐变-颜色节点不均匀分布</h3>
+
+<div id="grad2"></div>
+<h3>径向渐变-形状</h3>
+
+<div id="grad3"></div>
+<h3>径向渐变-不同尺寸大小关键字的使用</h3>
+
+<div id="grad4"></div><br/>
+<div id="grad5"></div><br/>
+<div id="grad6"></div><br/>
+<div id="grad7"></div>
+</body>
+</html>

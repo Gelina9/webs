@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>下拉菜单和滚动监听</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<!--下拉菜单(同模态框)-->
+<!--<div class="dropdown">
+    <button class="btn btn-primary" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+</div>-->
+<!--滚动监听-->
+<nav class="navbar navbar-default" id="nav">
+    <a href="#" class="navbar-brand">web开发</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#bootatrap">BootStrap</a></li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown">JavaScript<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#jquery">jQuery</a></li>
+                <li><a href="#yui">Yui</a></li>
+                <li><a href="#extjs">Extjs</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div data-target="#nav" data-spy="scroll" data-offset="0" style="padding: 0 10px;height:200px;overflow: auto;position: relative;">
+    <h4 id="html5">HTMl5</h4>
+    <p>
+        标准通用标记语言下的一个应用HTML标准自1999年12月发布的HTML4.01后，后继的HTML5和其它标准被束之高阁，为了推动Web标准化运动的发展，一些公司联合起来，成立了一个叫做 Web Hypertext Application Technology Working Group （Web超文本应用技术工作组 -WHATWG） 的组织。WHATWG 致力于 Web 表单和应用程序，而W3C（World Wide Web Consortium，万维网联盟） 专注于XHTML2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。
+    </p>
+    <h4 id="bootatrap">BootStrap</h4>
+    <p>
+        Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。[1]  它由Twitter的设计师Mark Otto和Jacob Thornton合作开发，是一个CSS/HTML框架。Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。[2]  国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。
+    </p>
+    <h4 id="jquery">jQuery</h4>
+    <p>
+        jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。
+    </p>
+    <h4 id="yui">Yui</h4>
+    <p>
+        YUI 库，全称Yahoo! UI Library。是一组工具和控件，用JavaScript写成, 为的是用DOM 脚本，DHTML和AJAX等技术创建丰富的网页交互式应用程序。YUI 基于BSD协议，对所有的使用方式都是免费的。YUI 项目包括YUI 库和两个创建时工具： YUI Compressor (压缩) 和 YUI Doc （JavaScripts代码的文档引擎）。
+    </p>
+    <h4 id="extjs">Extjs</h4>
+    <p>
+        extjs是一种软件。自动生成行号，支持checkbox全选，动态选择显示哪些列，支持本地以及远程分页，可以对单元格按照自己的想法进行渲染，这些也算可以想到的功能。
+    </p>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

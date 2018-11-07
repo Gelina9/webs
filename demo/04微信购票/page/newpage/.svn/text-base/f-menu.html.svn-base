@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../../css/swiper.css" rel="stylesheet">
+<link href="../../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../../css/pagelocal.css" type="text/css" rel="stylesheet" />
+<style>
+.wrap-style,.wrap-style .swiper-slide {height: 7.25rem;width:100%;}
+/*.ui-swiper-box{}*/
+.fswrep .swiper-pagination{bottom:4px;}
+</style>
+<title>星光大道影院</title>
+</head>
+<body>
+	<!--<div class="ui-swiper-box" style="margin-top:2.2rem;">
+		<div class="swiper-container ui-swiper" style="width:100%;" >
+			<div class="swiper-wrapper" id="wrapperimg">
+				<div class="swiper-slide"><img alt="" src="../image/ad-1.png" class="ui-wc100"></div>
+				<div class="swiper-slide"><img alt="" src="../image/ad-1.png" class="ui-wc100"></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>-->
+<div class="fbox">
+	<div class="fswrep">
+		<div class="ui-swiper-box">
+			<div class="swiper-container ui-swiper wrapperimg wrap-style" id ="wrapperimg2" >
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img alt="" src="../../image/f-menu/f-bg-01.jpg" class="ui-wc100"></div>
+					<div class="swiper-slide"><img alt="" src="../../image/f-menu/201704060144354SosRUGW0J.png" class="ui-wc100"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<div class="fswrep-menubig">
+			<ul>
+				<STATIC_DATA>
+				<li class="fswrep-menubig_item" onclick="location.href='../movie.html'">
+					<a href="javascript:;" class="fswrep-menubig_a f-red">
+						<span class="fswrep-menubig_icon blockcenter menubig_icon1">
+							<img src="../../image/f-menu/icon01.png" alt="图标" />
+						</span>
+					</a>
+					<p class="fswrep-menubig_text">在线选座</p>
+				</li>
+				<li class="fswrep-menubig_item" onclick="location.href='../login-pre-only.html'">
+					<a href="javascript:;" class="fswrep-menubig_a f-blue">
+						<span class="fswrep-menubig_icon blockcenter menubig_icon2">
+							<img src="../../image/f-menu/icon02.png" alt="图标" />
+						</span>
+					</a>
+					<p class="fswrep-menubig_text">卖品</p>
+				</li>
+				<li class="fswrep-menubig_item" onclick="location.href='../../member/member-details.html'">
+					<a href="javascript:;" class="fswrep-menubig_a f-purple">
+						<span class="fswrep-menubig_icon blockcenter menubig_icon3">
+							<img src="../../image/f-menu/icon03.png" alt="图标" />
+						</span>
+					</a>
+					<p class="fswrep-menubig_text">个人中心</p>
+				</li>
+				</STATIC_DATA>
+			</ul>
+		</div>
+		<div class="fswrep-menusmall">
+			<ul>
+				<STATIC_DATA>
+				<li class="fswrep-menusmall_item" onclick="location.href='../find.html'">
+					<span class="fswrep-menusmall_icon">
+						<img src="../../image/f-menu/sicon04.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">优惠资讯</p>
+				</li>
+				<li class="fswrep-menusmall_item" onclick="location.href='../creditShop/creditShop.html'">
+					<span class="fswrep-menusmall_icon ">
+						<img src="../../image/f-menu/sicon11.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">积分商城</p>
+				</li>		
+				<li class="fswrep-menusmall_item" onclick="location.href='../../member/select-member.html'">
+					<span class="fswrep-menusmall_icon ">
+						<img src="../../image/f-menu/sicon06.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">会员充值</p>
+				</li>
+				<li class="fswrep-menusmall_item" onclick="location.href='../cinema-list-1107.html'">
+					<span class="fswrep-menusmall_icon ">
+						<img src="../../image/f-menu/sicon07.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">影讯排期</p>
+				</li>
+				<li class="fswrep-menusmall_item" onclick="location.href='../cinema-details.html'">
+					<span class="fswrep-menusmall_icon">
+						<img src="../../image/f-menu/sicon08.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">影院介绍</p>
+				</li>
+				<li class="fswrep-menusmall_item" onclick="location.href='../my-order/order-history.html'">
+					<span class="fswrep-menusmall_icon">
+						<img src="../../image/f-menu/sicon09.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">我的订单</p>
+				</li>
+				<li class="fswrep-menusmall_item" onclick="location.href='../register.html'">
+					<span class="fswrep-menusmall_icon">
+						<img src="../../image/f-menu/sicon10.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">会员注册</p>
+				</li>
+				<li class="fswrep-menusmall_item" onclick="location.href='../buy-bills/buy-bills.html'">
+					<span class="fswrep-menusmall_icon">
+						<img src="../../image/f-menu/sicon05.png" class="fswrep-menusmall_img"/>
+					</span>
+					<p class="fswrep-menusmall_text">票券</p>
+				</li>
+				</STATIC_DATA>
+			</ul>
+		</div>
+		
+		<div class="fswrep-news">
+			<STATIC_DATA>
+			<div class="fswrep-news_box">
+				<div class="fswrep-news_left">
+					<span class="fswrep-news_imgbox"><img src="../../image/f-menu/news_img01.jpg" alt="" /></span>
+				</div>
+				<div class="fswrep-news_right">
+					<p class="news_right_tit">电影票在线选座，乐享2~6折优惠赶紧行动起来</p>
+					<p class="news_right_det">凡在活动期间内购买以下任意凡在活动期间内购买以下任意凡在活动期间内购买以下任意</p>
+					<p class="news_right_time">时间：3月1日-3月10日</p>
+				</div>
+			</div>
+			<div class="fswrep-news_box">
+				<div class="fswrep-news_left">
+					<span class="fswrep-news_imgbox"><img src="../../image/f-menu/news_img00.jpg" alt="" /></span>
+				</div>
+				<div class="fswrep-news_right">
+					<p class="news_right_tit">电影票在线选座，乐享2~6折优惠赶紧行动起来</p>
+					<p class="news_right_det">凡在活动期间内购买以下任意凡在活动期间内购买以下任意凡在活动期间内购买以下任意</p>
+					<p class="news_right_time">时间：3月1日-3月10日</p>
+				</div>
+			</div>
+			</STATIC_DATA>
+		</div>
+	</div>		
+</div>	
+	<!--绑定会员卡-->
+	<div class="bound-member" id="id">
+		<div class="bound-member_bg"></div>
+	</div>
+	<!--新用户注册大礼包-->
+		<!--<div class="shade0227"></div>-->
+		<div class="advertising-popups" style="display: none;">
+			<div class="ad-up"></div>
+			<div class="ad-down">
+				<i class="ad-down-title">新用户注册大礼包</i>
+				<p class="ad-down-content">新人专享,15元红包，最高再减20元， 下单后还能再领红包。下单后还能再领红包下单后还能再领红包下单后还能再领红包下单后还能再领红包下单后还能再领红包下单后还能再领红包后还能再领红包</p>
+				<span class="ad-down-btn">我知道了</span>
+			</div>
+			<i class="ad-up-close"></i>
+		</div>
+		<!--广告二-->
+		<div class="advertising-popups" st yle="display: none;">
+			<div class="ui-swiper-box">
+				<div class="swiper-container ui-swiper wrapperimg" id="wrapperimg1">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img alt="" src="../../image/f-menu/ad1.png" class="ui-wc100"></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<i class="ad-up-close"></i>
+		</div>
+</body>
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/swiper.js"></script>
+		<script>
+		//图片轮播方法
+		function newMySwiper(a){
+				var mySwiper = new Swiper(a,{
+				autoplay:3000,
+				pagination:".swiper-pagination",
+				loop:true
+			})
+		}
+//		主页轮播图片高度设置
+		var wrapperimg=function(){
+			var wrapper=$("#wrapperimg1");
+			wrapper.parent().css({
+				"height":"100%",
+			})
+			var h=wrapper.find(".swiper-slide").height();
+			var ph=wrapper.find("img").height();
+			if(h>ph){
+				wrapper.find("img").css({
+					"height":"100%",
+				})
+			}
+			wrapper.find(".swiper-slide").css({
+				"overflow":"hidden",
+			})
+		}
+		//	遮罩层z-index:10;
+		function shade0227(className){
+			var shade='<div class="shade0227"></div>';
+			$(className).append(shade);
+			$("body").css({"overflow":"hidden","height":"100%"});
+		}
+		shade0227("body");
+//		关闭遮罩层
+		$(".ad-down-btn,.ad-up-close").on("click",function(){
+			$(this).parents(".advertising-popups").hide();
+			$(".shade0227").remove();
+			$("body").css({"overflow":"auto"});
+			$(".fbox,.fswrep").css({"overflow":"hidden","height":"auto"});
+//			主页轮播开始
+			newMySwiper("#wrapperimg2");
+		})
+		$(".shade0227").on("click",function(){
+			$(".advertising-popups").hide();
+			$(".shade0227").remove();
+			$("body").css({"overflow":"auto"});
+			$(".fbox,.fswrep").css({"overflow":"hidden","height":"auto"});
+//			主页轮播开始
+			newMySwiper("#wrapperimg2");
+		})
+	</script>
+    <script type="text/javascript">
+    //绑定会员图标全屏移动
+    var movebtn=function(){
+    	var x_start,y_start;//开始xy坐标
+	    var x_move,y_move;//移动xy坐标
+	    var x_end,y_end;//结束xy坐标
+	    var left_start,top_start;//保存对象的left，top值
+	    var objw,objh;//对象的宽高
+	    var winw,winh;//屏幕的宽高
+	    var id=document.getElementById("id");
+	    id.addEventListener("touchstart",function(e){
+	    	event.preventDefault()
+	    	x_start=e.touches[0].pageX;
+	    	y_start=e.touches[0].pageY;
+	    	right_start=$("#id").css("right");
+	    	bottom_start=$("#id").css("bottom");
+	    	objw=$("#id").width();
+	    	objh=$("#id").height();
+	    	winw=$(window).width();
+	    	winh=$(window).height();
+	    })
+	    id.addEventListener("touchmove",function(e){
+	    	event.preventDefault()
+	    	x_move=e.touches[0].pageX;
+	    	y_move=e.touches[0].pageY;
+	    	var nright=parseFloat(x_start)-parseFloat(x_move)+parseFloat(right_start);
+	    	var nbottom=parseFloat(y_start)-parseFloat(y_move)+parseFloat(bottom_start);
+			if(nright<=0){
+				$("#id").css("right","0");
+			}else if(nright>winw-objw){
+				$("#id").css("right",winw-objw);
+			}
+			else{
+				$("#id").css("right",nright);
+			}
+	    	if(nbottom<=0){
+	    		$("#id").css("bottom","0");
+	    	}else if(nbottom>winh-objh){
+	    		$("#id").css("bottom",winh-objh);
+	    	}else{
+	    		$("#id").css("bottom",nbottom);
+	    	}
+	    })
+	    id.addEventListener("touchend",function(e){
+	    	event.preventDefault()
+	    	x_end=e.changedTouches[0].pageX;
+	    	y_end=e.changedTouches[0].pageY;
+	    })
+//	     阻止浏览器下拉事件
+//	     $('body').on('touchmove', function (event) {event.preventDefault();});	
+    }  
+    //根据屏幕宽度判断根字体大小实现手机分辨率自适应
+    var nscript=function(){
+	  var docEl = document.documentElement,
+	    resizeEvt = 'orientationchange' in window ? 'orientationchange':'resize',
+	    recalc = function () {
+	      var clientWidth = docEl.clientWidth;
+	      var clientHeight = docEl.clientHeight;
+	      if (!clientWidth) return;
+	      docEl.style.fontSize = 20 * (clientWidth / 376) + 'px';
+	    };
+	  if (!document.addEventListener) return;
+	  window.addEventListener(resizeEvt, recalc, false);
+	  document.addEventListener('DOMContentLoaded', recalc, false);
+	}
+    
+	movebtn();
+	nscript();
+	$(function(){
+	//		去除微信长按页面弹出"在浏览器打开"
+//		document.addEventListener('touchstart', function(e) {
+//		    e.preventDefault();
+//		}, false);
+//		点击毛玻璃效果
+		 function Wglass(className){
+		 	return $(className).on({
+			 		touchstart:function(){
+					$(this).addClass("maoboli")
+				},
+				touchend:function(){
+					$(this).removeClass("maoboli")
+				}
+		 	})
+		 }
+		 
+		 Wglass(".fswrep-menusmall_img");
+		 Wglass(".fswrep-menubig_a");
+		 
+		 
+		//解决9格宫出现1像素问题
+		var nine=function(){
+			//	9格宫自动补齐
+			var liLenth=$(".fswrep-menusmall").find("li").length;
+			var liNull='<li class="fswrep-menusmall_item"><span class="fswrep-menusmall_icon"></span><p class="fswrep-menusmall_text"></p></li>';
+			var liNeed=liLenth%3;
+			if(liNeed!=0){
+				var newliNeed=3-liNeed;
+				for(var i=0;i<newliNeed;i++){
+					$(".fswrep-menusmall ul").append(liNull);
+				}
+			}
+			
+			var i=1;
+			var num=$(".fswrep-menusmall ul li").length;
+			for(i;i<=num;i++){
+				$(".fswrep-menusmall ul li").eq(3*i-1).css({
+					"border-right":"none",
+					"width": "6.25rem",
+				})
+			}
+			
+			
+		}
+		nine();
+	})
+    </script>
+</html>

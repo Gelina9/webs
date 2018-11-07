@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图形的组合</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            //绘制矩形
+            context.beginPath();
+            context.rect(200,20,100,100);
+            context.fillStyle="blue";
+            context.fill();
+
+            //context.globalCompositeOperation = "source-over";//目标图像上显示源图像
+            //context.globalCompositeOperation = "source-atop";//只绘制目标图像和新图形与目标图像重叠部分,
+                                                                // 新图形在原有图形之上
+            //context.globalCompositeOperation = "source-in";//新图像在目标图像之内显示，目标图像是透明的
+            //context.globalCompositeOperation = "source-out";//之外显示，目标图像是透明的
+            context.globalCompositeOperation = "destination-atop";//只绘制目标图像和新图形与目标图像重叠部分,
+                                                                    // 新图形在原有图形下层
+            //context.globalCompositeOperation = "destination-in";
+            //context.globalCompositeOperation = "destination-out";
+            //context.globalCompositeOperation = "destination-over";
+           // context.globalCompositeOperation = "lighter";//显示源图像+目标图像，两图形重叠部分加色处理
+            //context.globalCompositeOperation = "darker";//两图形重叠部分减色处理
+            //context.globalCompositeOperation = "xor";//重叠部分透明
+            //context.globalCompositeOperation = "copy";//只显示源图像
+
+            //绘制圆
+            context.beginPath();
+            context.arc(320,120,60,0,2*Math.PI);
+            context.fillStyle="red";
+            context.fill();
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1340" height="660"></canvas>
+</body>
+</html>

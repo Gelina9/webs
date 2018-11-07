@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta name="wap-font-scale" content="no">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/newpage.css" rel="stylesheet">
+    <!-- <link href="../css/swiper.css" type="text/css" rel="stylesheet" /> -->
+    <title>星光大道影院</title>
+    <style>
+        body,html{ background: #fff;height: 100%;}
+        .wrap-page{
+        position:absolute; left:0; right:0;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+		}
+		.has-footer {bottom: 60px;}
+		.has-header{top: 36px;}
+		.bar-footer.ui-bg-f0f0f0{background-color: #fff;}
+		.button-bar>.button {padding: 0 8px;min-width: 30px;min-height: 30px;line-height: 30px;}
+		.ui-button-bar-not {font-size: 20px;line-height: 32px;min-width: 38px;text-align: center;min-height: 32px;padding: 0;color: #e2e2e2;background: #f2f2f2;padding: 0;}
+		.ui-button-bar {font-size: 20px;line-height: 32px;min-width: 38px;text-align: center;min-height: 32px;padding: 0;color: #797979;background: #f2f2f2;padding: 0;}
+		.ui-button-amount {line-height: 30px;min-height: 30px; min-width: 38px;background: #fff; color: #333;text-align: center;padding: 0;}
+		.item{position: relative;}
+		.nemu .swiper-slide{width: 50px !important;}
+		.shoppingcar-tc .newfoot{padding: 0;}
+		.shoppingcar-tc .newfoot .left{line-height: 44px;padding-left: 12px;width: 30%;}
+		.shoppingcar-tc .newfoot .right{line-height: 44px;}
+		
+    </style>
+</head>
+<body ng-app="myApp">
+	
+<div class="bar bar-header only-page" style="background: #fff;border-top: 1px solid #e4e4e4;border-bottom: 1px solid #e4e4e4;">
+    <ul class="top-nemu" style="position: relative;width: 100%;">
+    	<a href="cinema-ina-city.html"><li class="dropdown">切换影院<i></i></li></a>
+	    <div class="swiper-container">
+		  <ul class="swiper-wrapper top-nemu1">
+		    <li class="swiper-slide nemu active"><span>全部</span></li>
+		    <li class="swiper-slide nemu"><span>单品</span></li>
+		    <li class="swiper-slide nemu"><span>套餐</span></li>
+		    <li class="swiper-slide nemu"><span>套餐3</span></li>
+		    <li class="swiper-slide nemu"><span>套餐4</span></li>
+		    <li class="swiper-slide nemu"><span>衍生品</span></li>
+		    
+		  </ul>
+		</div>
+    </ul>
+</div>
+
+<!-- <ion-content class="has-header ui-goods-wrap has-footer"> -->
+<div class="wrap-page has-header has-footer ui-goods-wrap">
+	<ul class="list">
+        <li class="item item-thumbnail-left ui-relative">
+          <img src="../image/default-goods-picture.jpg">
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left ui-relative">
+          <a href="product-details.html" class="pro-img"><img src="../image/default-goods-picture.jpg"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left ui-relative">
+          <a href="product-details.html" class="pro-img"><img src="../image/default-goods-picture.jpg"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left ui-relative">
+          <a href="product-details.html" class="pro-img"><img src="../image/default-goods-picture.jpg"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left ui-relative">
+          <a href="product-details.html" class="pro-img"><img src="../image/default-goods-picture.jpg"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left ui-relative">
+          <a href="product-details.html" class="pro-img"><img src="../image/default-goods-picture.jpg"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left ui-relative">
+          <a href="product-details.html" class="pro-img"><img src="../image/default-goods-picture.jpg"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left">
+          <a href="product-details.html" class="pro-img"><img src="../image/set_meal.png"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar-not"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left">
+          <a href="product-details.html" class="pro-img"><img src="../image/set_meal.png"></a>
+          <div class="ui-selected-goods">
+          	<a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar ui-btn-group" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar-not"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left">
+          <a href="product-details.html" class="pro-img"><img src="../image/set_meal.png"></a>
+          <div class="ui-selected-goods">
+          	 <a href="product-details.html"><h2 class="ui-goods-title">情侣套餐</h2></a>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar ui-btn-group" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar-not"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+    </ul>
+    <ul class="no-movies" style="disp lay: none;">
+			<li class="box"><img src="../image/goods-only/no-pro.png" alt="暂无卖品"></li>
+			<li class="title">对不起，目前暂无卖品</li>
+		</ul>
+</div>
+<footer class="bar bar-footer ui-bg-f0f0f0" style="background-color: #fff;border-top:1px solid #d9d9d9 ;">
+    <div class="ui-wc94 clearfix" style="height: 50px;font-size: 16px;">
+    	<div class="sum left">合计:<i>¥35.00</i></div>
+    	<div class="right clearfix">
+    		<div class="shoppingcar db-shoppingcar"><span class="f1">购物车<em id="wpnum">777</em></span></div>
+    		<div class="confirm" onclick="javascript:window.location.href='accounts-only.html'">确认购买</div>
+    	</div>
+    </div>
+</footer>
+<div class="shade" style="display: none;"></div>
+<!--<div class="shade1" style="display: none;"></div>-->
+<div class="shoppingcar-tc" id="shoppingcar-tc" style="display: none;">
+	<div class="title1">购物车<em></em></div>
+	<div class="bodyH">
+		<!--<div id="hehe1">
+			<i></i>
+			<span>购物车为空</span>
+		</div>-->
+		<div class="name clearfix" data-nums = "sp01"><span class="left">爆米花1<em>X1</em></span><span class="right">¥350000.00</span></div>
+		<div class="name clearfix" data-nums = "sp02"><span class="left">爆米花2<em>X1</em></span><span class="right">¥35.00</span></div>
+		<div class="name clearfix" data-nums = "sp03"><span class="left">爆米花3<em>X1</em></span><span class="right">¥35.00</span></div>
+		<div class="name clearfix" data-nums = "sp04"><span class="left">爆米花4<em>X1</em></span><span class="right">¥35.00</span></div>
+		<div class="name clearfix" data-nums = "sp05"><span class="left">爆米花5<em>X1</em></span><span class="right">¥35.00</span></div>
+		<div class="name clearfix" data-nums = "sp05"><span class="left">爆米花6<em>X1</em></span><span class="right">¥35.00</span></div>
+		<div class="name clearfix" data-nums = "sp05"><span class="left">爆米花7<em>X1</em></span><span class="right">¥35.00</span></div>
+	</div>
+	<div class="name clearfix foot newfoot"><span class="left" id="editor-sh">编辑</span><span class="right">合计：<em>¥135.00</em></span></div>
+</div>
+<div class="shoppingcar-tc shoppingcar-tc-bj ui-goods-wrap" id="shoppingcar-tc-bj" style="display: none;">
+	<div class="title1">购物车</div>
+	<div class="bodyH">
+		<div id="hehe1">
+			<i></i>
+			<span>购物车为空</span>
+		</div>
+		<!--<p style="" id="hehe">购物车为空</p>-->
+		<div class="name clearfix" data-nums = "sp01"><span class="left">爆米花1</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+				<!--<input type="button" value="" class="btn001 x">-->
+			</span>
+		</div>
+		<div class="name clearfix" data-nums = "sp02"><span class="left">爆米花2</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+			</span>
+		</div>
+		<div class="name clearfix" data-nums = "sp03"><span class="left">爆米花3</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+			</span>
+		</div>
+		<div class="name clearfix" data-nums = "sp04"><span class="left">爆米花4</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+			</span>
+		</div>
+		<div class="name clearfix" data-nums = "sp05"><span class="left">爆米花5</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+			</span>
+		</div>
+		<div class="name clearfix" data-nums = "sp05"><span class="left">爆米花6</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+			</span>
+		</div>
+		<div class="name clearfix" data-nums = "sp05"><span class="left">爆米花7</span>
+			<span class="right">
+				<div class="button-bar ui-btn-group" style="position: absolute;bottom: -8px;width: auto;right: 30px;">
+		          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+		          	<label class="button ui-button-amount">1</label>
+		          	<span class="button ui-ion-plus"><i class="ion-plus"></i></span>
+	       	  	</div>
+				<i class="x"></i>
+			</span>
+		</div>
+	</div>	
+	<div class="name clearfix foot newfoot"><span class="left" id="finish-sh">完成</span><!--<span class="left">取消</span>--><span class="right">合计：<em class="g-price">¥135.00</em></span></div>
+</div>
+<script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/swiper.js"></script>
+<!-- <script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script> -->
+<script>
+	var mySwiper = new Swiper('.swiper-container',{
+//		centeredSlides:true;
+		slidesPerView : 5,
+//		centeredSlides : true,
+//		spaceBetween:8,
+
+		
+		})
+</script>
+<script>
+//卖品种类切换
+	$(".top-nemu").on("click",".nemu",function(e){
+		$(this).addClass("active").siblings(".nemu").removeClass("active");
+	})
+//点击购物车	
+	$(".db-shoppingcar").on("click",function(){
+		$(".shade").show();
+		$("#shoppingcar-tc").show();
+		isheight();
+	})
+//购物车弹窗编辑
+	$(".shoppingcar-tc .title1 em").on("click",function(){
+		var me=$(this);
+		me.parents(".shoppingcar-tc").hide();
+		me.parents(".shoppingcar-tc").siblings(".shade").hide();
+	})
+	$("#editor-sh").on("click",function(){
+		$("#shoppingcar-tc").hide();
+		$("#shoppingcar-tc-bj").show();
+		$(".shade").off("click");
+//		$(".shade").hide();
+//		$(".shade1").show();
+//		$(".bodyH").css({"height":bodyH});
+//		isheight()
+	})
+//	$("#finish-sh").on("click",function(){
+//		$("#shoppingcar-tc").show();
+//		$("#shoppingcar-tc-bj").hide();
+//		$(".shade").show();
+//		if(spnum==0){$("#hehe1").show();$(".shoppingcar-tc .bodyH .name").hide()}
+//		$(".shade").on("click",function(){
+//		var me=$(this);
+//		me.hide();
+//		$("#shoppingcar-tc").hide();
+//		$("#shoppingcar-tc-bj").hide();
+//		
+//	})
+//		$(".bodyH").css({"height":bodyH});
+//	})
+	$("#shoppingcar-tc-bj .x").on("click touchend",function(){
+		var me=$(this);
+		me.addClass("rx");
+		var datanum=me.parents(".name").attr("data-nums");
+		me.parents(".name").remove();
+		spnum=spnum-1;
+		isheight();
+		$("#wpnum").text(spnum);
+		if(spnum==0){$("#hehe1").show();$(".g-price").html("¥0.00")
+//		$(".shoppingcar-tc .bodyH .name").hide();$("#shoppingcar-tc").show();
+//		$("#shoppingcar-tc-bj").hide();$("#editor-sh").hide()
+		}
+	})
+	$("#shoppingcar-tc-bj .x").on("touchstart",function(){
+		var me=$(this);
+		me.addClass("rx");
+	})
+	
+	$(".shade").on("click",function(){
+		var me=$(this);
+		me.hide();
+		$("#shoppingcar-tc").hide();
+		$("#shoppingcar-tc-bj").hide();
+		
+	})
+	
+	//弹窗高度
+	var spnum=$("#wpnum").text();
+//	var bodyH1;
+	function isheight(){
+		var topH=$(".shoppingcar-tc .title1").outerHeight(true);
+		var footH=$(".shoppingcar-tc .foot").outerHeight(true);
+		var wpnum=spnum;
+		var ch=$("body").outerHeight(true);
+		var shownums=parseInt(ch/44/2);
+		var newshownums=parseInt(ch/2);
+		if(wpnum>shownums){wpnum=shownums}
+		if(wpnum<shownums){wpnum=wpnum}
+		var bodyH=wpnum*topH;
+		$(".bodyH").css({"height":newshownums});
+//		bodyH=bodyH1;
+//		console.log(bodyH1)
+	}
+	isheight();
+//	console.log(bodyH1)
+</script>
+<script>
+    /* angular.module('myApp', ['ionic']); */
+//  $(".ui-selected-goods").on("click",function(){
+//  	$(this).nextAll("i").toggleClass("ui-checkbox-bar-not").addClass("ui-checkbox-bar");
+//  	$(this).parent("li").toggleClass("ui-bg-fffccc");
+//  	$(this).nextAll("div").children(".ui-ion-plus").toggleClass("ui-button-bar-not").addClass("ui-button-bar");
+//		if($(".item").hasClass("ui-bg-fffccc")){
+//			$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+//		}
+//		else{
+//			$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+//		}
+//  });
+    
+	//加数量
+    $(".ui-ion-plus").on("click",function(){
+    	var $this_ = $(this);
+    	if(!$this_.hasClass("ui-button-bar-not")){
+    		var num = $this_.prev(".ui-button-amount").text();
+    		$this_.prev(".ui-button-amount").text(parseInt(num)+1);
+    		$this_.parent().find(".ui-ion-minus").removeClass("ui-button-bar-not").addClass("ui-button-bar");
+    		
+    	}
+	});
+	//减数量
+    $(".ui-ion-minus").on("click",function(){
+    	var $this_ = $(this);
+    	if(!$this_.hasClass("ui-button-bar-not")){
+    		var num = $this_.next(".ui-button-amount").text();
+    		var sub_num = parseInt(num)-1;
+    		$this_.next(".ui-button-amount").text(sub_num);
+    		if(sub_num =="1"){
+    			$this_.removeClass("ui-button-bar").addClass("ui-button-bar-not")
+    		}
+    	}
+    });
+    
+    $(".ion-checkmark-circled").on("click",function(){
+    	$(this).toggleClass("ui-checkbox-bar-not").addClass("ui-checkbox-bar");
+    	$(this).parent("li").toggleClass("ui-bg-fffccc");
+    	if($(".item").hasClass("ui-bg-fffccc")){
+			$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+		}
+		else{
+			$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+		}
+    })
+	$(".ui-submit-btn").on("click",function(){
+		if($(this).hasClass("ui-btn-00a1e5")){
+			location.href='accounts.html';
+		}
+	})
+
+    </script>
+</body>
+</html>

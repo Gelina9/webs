@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function count(){
+            document.getElementById("m").innerHTML="十秒钟计时已经开始……"
+            setTimeout('alert("十秒钟到")',10000);
+        }
+    </script>
+</head>
+<body>
+<div id="m"></div>
+<input type="button" value="点击计时开始" onclick="count()">
+</body>
+</html>

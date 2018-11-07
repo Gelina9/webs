@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function gd(){
+        var arr=[1,2,3,4,5,6,7,8].sort(function(){return Math.random()>.5});
+        for(var i=0,k=0,n=arr.length;i<n;i++)
+            for(var j=i+1;j<n;j++)
+                arr[i]>arr[j] && (k=1-k);
+        k && (i=arr[n-2]) && (arr[n-2]=arr[n-1]) && (arr[n-1]=i);
+        return [arr.slice(0,3),arr.slice(3,6),arr.slice(6).concat('_')];
+    }
+    var r=2,c=2,sp='\r\n',d=gd();
+    document.writeln('<textarea id="t1" readonly style="overflow:hidden;width:70px;height:70px;">'+d.join(sp)+'</textarea>');
+    var t1=document.getElementById("t1");
+    document.onkeyup = function (e){
+        var k = (e||window.event).keyCode, t, r2=r, c2=c;
+        if(k==37||k==39){
+            c2 += 38-k;
+            if(c2<0||c2>2)return;
+        }else if(k==38||k==40){
+            r2 += 39-k;
+            if(r2<0||r2>2)return;
+        }else return;
+        t = d[r][c];
+        d[r][c] = d[r2][c2];
+        d[r=r2][c=c2] = t;
+        t1.value = d.join(sp);
+        if(t1.value.match(/^1,2,3[^\d]*4,5,6[^0]*_$/)){
+            alert('YOU WIN !');
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>购票票券</title>
+<link href="../../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../../css/detail.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/public.js"></script>
+<link href="../../css/newpage.css" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(".item_info").click(function(){
+		$(".mask").show();
+		$(".ui_wbox").show();
+	})
+	$(".only_btn").click(function(){
+		$(".mask").hide();
+		$(".ui_wbox").hide();
+	})	
+	$(".item_icon").click(function(){
+		$(this).parents().next(".bill_term").toggle();
+	})
+});
+
+</script>
+</head>
+
+<body class="bills-page">
+<!--<header class="mu_flex">
+	<div class="h_left">
+		<a href="#" class="cinema_t color_fff">数码辰星测试影院</a>
+	</div>
+	<div class="h_right show_tab">
+		<a href="../select-cinema.html" class="new_sec_cinema color_fff">选择影院</a>
+	</div>
+</header>-->
+<header class="mu_flex iHeader">
+	<a href="../select-city.html" class="iHeader-href">
+		<div class="iHeader-box">
+			<p class="iHeader-box_palce">广州</p>
+			<p class="iHeader-box_cinemaname">星光大道影院</p>
+			<p class="iHeader-box_righticon"></p>
+		</div>
+	</a>
+</header>	
+<section class="bills_list" style="padding-bottom:50px;">
+	<ul>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">代</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元代金券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+				</div>
+				<span class="group_btn">
+						<label class="group_left_btn color_cecece">-</label>
+						<input type="text" class="group_input color_61" value="10">
+						<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">兑</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元兑换券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">代</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元代金券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+					
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="content_info">
+				<div class="item_icon">
+					<span class="bill_ico"><b class="icon_blue">优</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">20元优惠券</p>
+					<p class="color_red">15元/张<span class="sell_tips color_999">10张起售</span></p>
+
+				</div>
+				<span class="group_btn">
+					<label class="group_left_btn color_cecece">-</label>
+					<input type="text" class="group_input color_61" value="10">
+					<label class="group_right_btn color_61">+</label>
+				</span>
+			</a>
+		</li>
+		<li class="li_f0 bill_term">
+			<a href="javascript:;">
+				<p class="color_555 _7rem">抵扣20元现金</p>
+				<p class="color_555 _7rem">有效期：2015-02-01至2015-05-31</p>
+			</a>
+			<i class="icon_up_bg"></i>
+		</li>
+	</ul>
+</section>
+<footer class="footer_flex" style="">
+	<a href="bills_accounts.html" class="h_t color_fff">确认，去支付</a>
+</footer>
+<section class="mask"></section>
+<section class="ui_wbox">
+	<div class="pop rec_pop">
+		<div class="pop_info">
+			<p class="pop_title color_00a1e5">票券详情</p>
+			<div class="ticket-detail">
+				<p class="t_t">20元代金券</p>
+				<p class="t_explain">抵扣20元现金</p>
+				<p class="t_time_limit">有效期：2015年02月1日-2015年7月30日</p>
+			</div>
+			<div class="mod_li">
+				<p class="t_t">适用影院：</p>
+				<div class="apply_cinema">
+					<ul>
+						<li class="color_555 _7rem"><span class="c_name">数码辰星测试影院</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="address">天河店</span></li>
+						<li class="color_555 _7rem"><span class="c_name">数码辰星测试影院</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="address">从化店</span></li>
+						<li class="color_555 _7rem"><span class="c_name">数码辰星测试影院</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="address">增城店</span></li>
+						<li class="color_555 _7rem"><span class="c_name">数码辰星测试影院</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="address">花都店</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="only_btn">关闭</div>
+	</div>
+</section>
+</body>
+</html>

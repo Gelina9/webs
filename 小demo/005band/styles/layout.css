@@ -1,0 +1,98 @@
+section,header,article,nav{
+    display: block;
+}
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    margin:1em 10%;
+    background-image: url("../images/background.gif");
+    background-attachment: fixed; /*设置固定的背景图像*/
+    background-position: top left;
+    background-repeat: repeat-x;
+    max-width:80em;
+}
+header{
+    background: url("../images/guitarist.gif") no-repeat bottom right;
+    border: .1em solid;
+    border-bottom-width:0;
+}
+header nav{
+    background: url("../images/navbar.gif") repeat-x bottom left;
+    border: .1em solid;
+    border-bottom-width:0;
+    border-top-width:0;
+    padding-left:10%;
+}
+header nav ul{
+    width:100%;
+    overflow:hidden;
+    border-left: .1em solid;
+}
+header nav li{
+    display: inline;
+}
+header nav li a{
+    display: block;
+    float: left;
+    padding: .5em 2em;
+    border-right: .1em solid;
+}
+article{
+    border: .1em solid;
+    border-top:0;
+    padding:2em 10%;
+    line-height:1.8em;
+}
+article img{
+    border: .1em solid;
+    outline: .1em solid;
+}
+/*-------------------------------*/
+/*第一页中的动画*/
+#slideshow{
+    width:150px;
+    height:150px;
+    position: relative;
+    overflow: hidden;
+}
+#preview{
+    position: absolute;
+    top:0;
+    left:0;
+    border:0;
+    outline:0;
+}
+/*第三页的缩略图*/
+#imagegallery li{
+    display:inline;
+}
+/*第四页*/
+td{
+    padding: .5em 3em;
+}
+th{
+    color:#edc;
+    background-color: #445;
+}
+tr td{
+    color:#223;
+    background-color: #eb6;
+}
+dl{
+    overflow: hidden;
+}
+dt{
+    float: left;
+}
+dd{
+    float: left;
+}
+/*第五页*/
+label{
+    display: block;
+}
+fieldset{
+    border:0;
+}

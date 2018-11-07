@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oIpt=document.getElementById("ipt1");
+            var oIframe=document.getElementById("iframe1");
+            oIpt.onclick=function(){
+                oIframe.contentWindow.document.getElementById("div1").style.color="red";
+            };
+
+        };
+    </script>
+</head>
+<body>
+<input id="ipt1" type="button" value="变色"/>
+<iframe src="iframe1.html" id="iframe1"></iframe>
+</body>
+</html>

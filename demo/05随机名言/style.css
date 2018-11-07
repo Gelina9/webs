@@ -1,0 +1,56 @@
+*{
+  margin:0;
+  padding:0;
+  font-style:normal;
+}
+#container{
+  position:absolute;
+  left:30%;
+  top:20%;
+}
+#content{
+  background:#fff;
+  width:550px;
+  padding-bottom:40px;
+}
+.word{
+  left:80px;
+  font-size:25px;
+  padding:40px;
+}
+#writer{
+  text-align:right;
+  padding-right:40px;
+  font-weight:400;
+  margin-top:0px;
+  margin-bottom:40px;
+}
+.fa-weibo{
+  margin-left:40px;
+}
+.fa,#button{
+  color:#fff;
+  padding:10px;
+  border-radius:5px;
+  font-weight:400;
+}
+#button{
+  padding:8px;
+  float:right;
+  margin-right:40px;
+  margin-top:-10px;
+}
+footer{
+  text-align:center;
+  margin-top:20px;
+  font-size:13px;
+}
+a,#button,a:hover{
+  cursor:pointer;
+}
+footer a{
+  color:#fff;
+}
+a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>积分兑换</title>
+<link href="../../css/common.css" type="text/css" rel="stylesheet">
+<link href="../../css/detail.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/public.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(".pop_confirm").click(function(){
+		$(".mask").hide();
+		$(".ui_wbox").hide();
+		location.href='exchange-success.html';
+	})
+	$(".confirm").click(function(){
+		$(".mask").show();
+		$(".ui_wbox").show();
+	})
+});
+</script>
+</head>
+
+<body class="exchange">
+<section class="inte_info">
+	<ul>
+		<li class="b_li"></li>
+		<li class="mod_li">
+			<a href="javascript:;" class="info">
+				<p class="color_red">可用积分：<label>1320</label></p>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="info">
+				<p class="color_333">奥尔良烤翅兑换券</p>
+				<p class="_6rem color_999">总数量：1000份</p>
+				<p class="_6rem color_999">剩余数量：992份</p>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="info">
+				<p class="color_333 ex_q">
+					<span class="ex">兑换数量：</span>
+					<span class="group_btn">
+						<label class="group_left_btn color_999">-</label>
+						<input type="text" class="group_input color_61" value="1">
+						<label class="group_right_btn color_61">+</label>
+					</span>&nbsp;
+					<span class="exchange_ac color_999">(最多可兑换3个)</span>
+				</p>
+			</a>
+		</li>
+		<li class="b_li"></li>
+		<li class="mod_li">
+			<a href="javascript:;" class="info">
+			<p class="color_333">所需积分：<label class="color_red">300</label></p>
+			</a>
+		</li>
+		<li class="mod_li h_li">
+			<a href="javascript:;" class="info receive">
+				接收短信手机号:&nbsp;
+				<input type="text" placeholder="13800138000" class="half_7">
+				<div class="sel_act">
+					<span class="ico_act"><i class="icon_gray"></i></span>
+				</div>
+			</a>
+		</li>
+		<li class="b_li"></li>
+		<li class="mod_li">
+			<a href="javascript:;" class="info">
+				<p class="color_333">兑换详情：</p>
+				<p class="color_999 ex_suc_tip">成功兑换后，您可凭手机收到的兑换码至影院现场换取中可乐一杯。</p>
+			</a>
+		</li>
+	</ul>
+	<article class="btn-area">
+		<ul>
+			<li><a href="javascript:;" class="mod_gray_btn">取消</a></li>
+			<li><a href="javascript:;" class="mod_blue_btn confirm">确认</a></li>
+		</ul>
+	</article>
+</section>
+<section class="mask"></section>
+<section class="ui_wbox">
+	<div class="pop">
+		<div class="pop_info inte_pop">
+			<p class="pop_title color_red">本次支付积分：300分</p>
+			<p class="color_333">请输入支付密码：</p>
+			<input type="password" class="mod_input pop_input" placeholder="请输入会员密码" />
+		</div>
+		<div class="pop_btn">
+			<ul>
+				<li class="color_999">取消</li>
+				<li class="color_00a1e5 pop_confirm">确认</li>
+			</ul>
+		</div>
+	</div>
+</section>
+</body>
+</html>

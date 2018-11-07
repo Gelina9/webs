@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript">
+        window.onload=function(){
+            var oBtn1=document.getElementById("btn1");
+            var oBtn2=document.getElementById("btn2");
+            var oBtn3=document.getElementById("btn3");
+            var oBtn4=document.getElementById("btn4");
+            var oP=document.getElementById("p1");
+            var num=15;
+            oBtn1.onclick=function(){
+                num--;
+                oP.style.fontSize=num+"px";
+            }
+            oBtn2.onclick=function(){
+                num++;
+                oP.style.fontSize=num+"px";
+            }
+            oBtn3.onclick=function(){
+                /*oP.style.width="300px";
+                oP.style.background="red";
+                oP.style.color="yellow";
+                oP.style.padding="20px";
+                oP.style.border="10px solid #ccc";*/
+                oP.className="red";
+            }
+            oBtn4.onclick=function(){
+                oP.className="yellow";
+            }
+        }
+    </script>
+    <style>
+        .red{
+            width: 300px;
+            padding: 20px;
+            background: red;
+            color: yellow;
+            border: 10px solid #ccc;
+        }
+        .yellow{
+            width: 500px;
+            padding: 20px;
+            background: yellow;
+            color: cornflowerblue;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<input id="btn1" type="button" value="-"/>
+<input id="btn2" type="button" value="+"/>
+<input id="btn3" type="button" value="红"/>
+<input id="btn4" type="button" value="黄"/>
+<p id="p1" >
+    “印象雁塔——雁塔区环卫工人休息室设计大赛有奖征集”开始啦！擅长室内设计的你，快来加入征集活动吧！汇集你的奇思妙想，
+    为城市“美容师”设计一个温暖的“家”。本报与雁塔区城市管理局共同举办的本次有奖征集活动今日启动，面向全省征集好创意、
+    好设计，最高单项奖金2万元。
+    环卫工人是城市的美容师，也是创建品质西安的一支主力军。新建一批功能齐全、款式新颖的环卫休息室，更大程度方便环卫工人，
+    让城市的美容师有个更温馨的“港湾”，这是彰显政府民生关怀、传递社会正能量的重要举措。
+    <br/>
+    　　为了更好地推进城市治理工作创新发展，诠释雁塔文化新内涵，加快推进雁塔“城市家具”升级换代，全面提升城市外观形象。
+    雁塔区城市管理局特别联合本报，共同推出“印象雁塔——雁塔区环卫工人休息室设计大赛”，面向全社会有奖征集设计方案，取其优作为今后建设的重要参考。使新建的环卫工人休息室成为雁塔区、乃至古城西安一道独特的城市风景，为品质西安添色增辉。
+</p>
+</body>
+</html>

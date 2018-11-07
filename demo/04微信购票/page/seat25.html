@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <title>五一四季影院</title>
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/detail.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/common_new.css" type="text/css" rel="stylesheet" />
+    <style>
+    /*html{font-size: 100%;}*/
+    	html,body{ height:100%; background:#fff;}
+    	.scroll{ height:100%;}
+    	.layui-layer.layui-layer-dialog .layui-layer-content{ padding:30px 20px;}
+    	h4{margin-top: 0;}
+    	.ui_m_price {margin-top: 8px;}
+    	.sed .mod_blue_btn{width: 3.2rem;}
+    	.mod_btn_disabled{
+    		background: #aeaeae;
+    		color: #ddd;
+    		border: 1px solid #ddd;
+    		height: 1.3rem;
+    		line-height: 1.3rem;
+    		width: 3.2rem;
+			font-size: 0.75rem;
+		    position: absolute;
+		    right: 0;
+		    top: 0.3rem;
+		    border-radius: 3px;
+		    text-align: center;}
+		.ui_price:after{
+		    content: '';
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    margin-left: 0;
+		    border-width: 5px;
+		    border-color: #999 transparent transparent;
+		    border-style: solid;
+		    font-size: 0;
+		    vertical-align: -3px;
+		  }
+		.scroll {
+		     height: auto; 
+		}
+		.seat-box-first{width: 100%;min-width: 375px;overflow: auto;}
+		.seat-zwli-first div,.seat-zwli-sec div,.seat-zwli-last div{display: inline-block;float: left;}
+		.seat-zw-list{width: 100%;}
+		.seat-zw-list li{margin-left: 5px;}
+		.seat-zwli-first,.seat-zwli-last{height: 49px;}
+		.seat-zwli-sec{height: 20px;}
+		.seat-left-firnums{display:inline-block;width: 20px;height: 100%;background-color: #606060;border-radius: 8px 8px 0px 0px;margin-right: 2%;}
+		.seat-right-img{width: 90%;display:inline-block;height: 49px;}
+		.seat-right-img img{display:block;width: 100%;height: 29px;}
+		.seat-right-imgtitle{display:block;font-size: 12px;text-align: center;}
+		
+		.seat-left-secnums{display:inline-block;width: 20px;height: 20px;background-color: #606060;text-align: center;color: #fff;font-size: 12px;margin-right: 2%;}
+		.seat-right-zw{width: 90%;height: 20px;display:inline-block;text-align: center;}
+		
+		.seat-left-lastnums{display:inline-block;width: 20px;height: 100%;background-color: #606060;border-radius: 0px 0px 8px 8px;margin-right: 2%;}
+		.seat-zwli-last{}
+		
+		.ui-seat-wrap{transition:transform .5s ease-in;}
+        .icon_no_buy {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background: url(../image/no_buy_btn.png) no-repeat;
+            background-size: contain;}
+        .icon_sell {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            background: url(../image/sell_seat_btn.png) no-repeat;
+            background-size: contain;}    
+*/    </style>
+</head>
+<body ng-app="myApp">
+<!--<ion-content class="has-header">-->
+	<div class="ui-relative clearfix">
+		<p class="ui-account-film-name ui-wc94"><span class="ui-fs16 ui-000 ui-mr10 ui-fl">霍比特人：五军之战</span><label class="ui-badge-95d5f0 ui-fl">英语</label> &nbsp;<label class="ui-badge-95d5f0 ui-fl ui-ml5">普通立体3D</label></p>
+		<p class="ui-wc94">
+             <span class="ui-show-time ui-999 ui-fs14 ui-mr10">今天6月13日 16:20</span>
+        </p>
+        <a href="" class="ui-update-btn ui-fs16 list-btn-way">换一场</a>
+	</div>
+    <div class="ui-seat-wrap clearfix relative ui-bg-f0f0f0 small-seats" id="small-seats">
+    	<div class="s-seats">
+    		<div class="seat-number">
+    			<ul class="seat-no-ul">
+    				<li>1</li>
+    				<li>2</li>
+    				<li>3</li>
+    				<li>4</li>
+    				<li>5</li>
+    				<li>6</li>
+    				<li>7</li>
+    				<li>8</li>
+    				<li>9</li>
+    				<li>10</li>
+    				<li>11</li>
+    				<li>12</li>
+    				<!--<li>13</li>
+    				<li>14</li>
+                    <li>15</li>
+					<li>16</li>
+    				<li>17</li>
+    				<li>18</li>
+    				<li>19</li>
+    				<li>20</li>
+    				<li>21</li>
+    				<li>22</li>
+    				<li>23</li>
+    				<li>24</li>
+                    <li>25</li> -->
+    			</ul>
+    		</div>
+    		<div class="seats-wrapper">
+    			<div class="seats-inner" draggable="true" id="test">
+    				<div class="theater-screen">
+    					<p class="sign" data-title="4号厅">
+    						<img src="../image/seat-screen.png" alt="">
+    					</p>
+    				</div>
+    				<ul class="seat-table">
+                        <!-- <li class="seat-row"><span class="seat1 has-seat" title="1排1座"><span class="inner"><span class="cartoon-pic ui-member-seat-disabled"></span></span></span><span class="seat1 has-seat" title="1排2座"><span class="inner"><span class="cartoon-pic ui-icon-member"></span></span></span><span class="seat1 has-seat" title="1排3座"><span class="inner"><span class="cartoon-pic ui-icon-member"></span></span></span><span class="seat1 has-seat" title="1排4座"><span class="inner"><span class="cartoon-pic ui-icon-member"></span></span></span><span class="seat1 has-seat" title="1排5座"><span class="inner"><span class="cartoon-pic ui-icon-member"></span></span></span><span class="seat1 has-seat" title="1排6座"><span class="inner"><span class="cartoon-pic ui-icon-member"></span></span></span><span class="seat1 has-seat" title="1排7座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排8座"><span class="inner"><span class="cartoon-pic icon_no_buy"></span></span></span><span class="seat1 has-seat" title="1排9座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排10座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排11座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排12座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排13座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排14座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排15座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排16座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排16座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排16座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排16座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排16座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排16座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排17座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排18座"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat" title="1排19座"><span class="inner"><span class="cartoon-pic"></span></span></span></li> -->
+						<li class="seat-row"><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span></li>
+						<!--<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="not-seat"><span class="inner"></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li> -->
+						<!-- <li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li>
+						<li class="seat-row"><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span><span class="seat1 has-seat"><span class="inner"><span class="cartoon-pic"></span></span></span></li> -->
+    					<div class="mid-line"></div>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    			
+    </div>
+    
+<div class="ui-footer-box">
+    	<p class="ico ui-pl24 ui-tal"><i class="icon_seat"></i>可售<i class="icon_no_buy"></i>不可售<i class="icon_sell"></i>已选<i class="ui-icon-member"></i>会员专座</p>
+		<div class="ui-333 ui-fs12 ui-wc100 ui-selectSeat-tip ui-pb5 ui-pl24">最多可选8个座位</div>
+		<div class="ui-wc94 clearfix ui-relative ui-selected-seat-box">
+			<!-- <span class="ui-user-submit">7排11座</span>
+			<span class="ui-user-submit">7排12座</span>
+			<span class="ui-user-submit">7排13座</span>
+			<span class="ui-user-submit">10排11座</span>
+			<span class="ui-user-submit">10排12座</span> -->
+			<i class="ion-close-circled ui-block ui-aaa ui-fs18 ui-p5 ui-absolute" style="bottom:0;right:0;"></i>
+		</div>
+		<a href="javascript:void(0);" class="ui-submit ui-btn-disabled ui-fs20 ui-wc94 ui-mtb10" style="display:block;">请选座</a>
+</div>
+<div class="cinema-list-else" style="width: 100%;background-color: #fff;position: fixed;bottom: 0;display: none;z-index: 10001;">
+	<p class="cinema-f-title" style="width: 100%;text-align: center;height: 50px;line-height: 50px;position: absolute;top: 0;">今天&nbsp&nbsp06-13</p>
+	<div class="schedule" style="margin-top: 50px;">
+		<ul>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mo d_blue_btn mod_btn_disabled" onClick="javascript:;">当前场次</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="backdrop" style="z-index: 1000;"></div>
+<script src="../js/jquery.min.js"></script>
+<script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/hammer.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var starzhiY=0;
+		var yzhi;
+		var yzhiY;
+		var stHeight=$('.ui-relative').outerHeight(true); //头部高度
+		var sfHeight=$('.ui-footer-box').outerHeight(true);//尾部高度
+		var scHeight=$(window).height();//视墙高度
+        var scWidth=$(window).width();//视墙宽度
+		var sbHeight=scHeight-sfHeight-stHeight;//中间的高度
+		var ssHeight=sbHeight-10;//座位盒子的高度，理上边10px
+        var oneseatWidth=$(".seat1").outerHeight(true);//一个座位的宽度
+        var seatZwnums=[];//数组接受每排座位的个数
+        $(".seat-table .seat-row").each(function(index){
+            var a=$(".seat-table .seat-row").eq(index).children("span").length;
+             seatZwnums.push(a);
+        })
+        var cseatZwnums=Math.max.apply(null, seatZwnums);//算出最多一排最多座位的个数
+        var sumsseatWidth=cseatZwnums*oneseatWidth//最长一排座位的宽度
+        var signtitleWidth=sumsseatWidth+20;
+        var onexlHeight=$(".seat-no-ul li").outerHeight(true);//一个序列行数的高度
+        var numsxl=$(".seat-no-ul li").length;
+        var sumsxlHeight=$(".seat-no-ul").outerHeight(true);//序列号的总长度
+        var middlelineHeight=sumsxlHeight-(sumsxlHeight-numsxl*onexlHeight)/2;
+        var middlelineWidth=sumsseatWidth/2;
+        var showWidth=$(".seats-wrapper").width();//座位图能显示的宽度
+        var showHeight=ssHeight-10;//座位图能显示的高度
+        var x_offset=-((signtitleWidth-showWidth)/2);//座位图X轴的偏移值
+        var y_offset=showHeight-sumsxlHeight;
+        var W_max_seatnum_x=showWidth/signtitleWidth;
+        var W_max_seatnum_y=showHeight/sumsxlHeight;
+        var scaleNums=Math.min(W_max_seatnum_x,W_max_seatnum_y);
+        var signtitleHeight=$(".seats-inner").outerHeight(true);
+        var hm=showHeight-signtitleHeight;
+        var sumsxlWidth=$(".seat-number").outerWidth(true);
+        $(".ui-seat-wrap").css({"height":sbHeight,"min-height":sbHeight,});//设置最外座位盒子高固定，宽100%;
+        $(".s-seats").css({"max-height":ssHeight,});//下一级
+        $(".seats-wrapper").css({"height":ssHeight});//下一级
+        $(".seats-inner").css({"width":signtitleWidth})
+        $(".seat-table").css({"width":sumsseatWidth});
+        $(".seat-row").css({"width":sumsseatWidth,"height":onexlHeight});//设置一排座位的长度和宽度
+        $(".theater-screen,.sign").css({"width":signtitleWidth})//设置座位头部图片宽度
+        $(".seat-number").css({"height":sumsxlHeight});//设置序列盒子的高度
+        $(".mid-line").css({"height":middlelineHeight,"left":middlelineWidth})//设置中线的Xｙ坐标
+
+
+        //座位图初始化
+        if(signtitleWidth>showWidth){
+            if(scaleNums<1){scaleNums=1;}
+           $(".seats-inner").css({
+            "transform":"translate("+x_offset+"px, 0px) scale("+scaleNums+")",
+            "transform-origin": "0px 0px 0px",
+            "transition":"transform 1s ease-in-out",
+            }) 
+           $(".seat-number").css({
+            "transform":"translate(0px, 0px) scale("+scaleNums+")",
+            "transform-origin": "0px 0px 0px",
+            "transition":"transform 1s ease-in-out",
+            })
+        }else{
+            $(".seats-inner").css({
+            "transform":"translate(0px, 0px) scale("+scaleNums+")",
+            "transform-origin": "0px 0px 0px",
+            "transition":"transform 1s ease-in-out",
+            })
+            $(".seat-number").css({
+            "transform":"translate(0px, 0px) scale("+scaleNums+")",
+            "transform-origin": "0px 0px 0px",
+            "transition":"transform 1s ease-in-out",
+            })
+        }
+        signtitleWidth=signtitleWidth*scaleNums;
+        signtitleHeight=signtitleHeight*scaleNums;
+        sumsxlWidth=sumsxlWidth*scaleNums;
+        sumsxlHeight=sumsxlHeight*scaleNums;
+        
+        $(".seats-inner .seat1").on("click",function(e){
+            var me=$(this);
+			if(me.hasClass("icon_no_buy") || me.hasClass("vip-one-seat-sold") || 
+				me.hasClass("group-seat-sold-left") || me.hasClass("group-seat-sold-center") || 
+				me.hasClass("group-seat-sold-right") || me.hasClass("lover-double-seat-sold-right") || 
+				me.hasClass("lover-double-seat-sold-left"))
+			{
+				//已选座位直接返回
+				return;
+			}
+			
+    		var sel=me.find("span.cartoon-pic");
+    		var seatstitle=me.attr("title");//获取座位号
+    		var showSeat='<span class="ui-user-submit" id="'+seatstitle+'">'+seatstitle+'</span>';//添加座位
+    		
+    		var seatviph=sel.hasClass("ui-icon-member");
+    		var seatvipl=sel.hasClass("ui-member-seat-selected");
+    		var seatg=sel.hasClass("icon_sell");
+    		var seath=sel.hasClass("icon_no_buy");
+			var seatDis=sel.hasClass("ui-member-seat-disabled");
+    		if(seatviph){
+    				sel.toggleClass("ui-member-seat-selected");
+    			}
+    		else if(seath || seatDis){
+    			$(this).off();
+				return;
+    		}
+    		else{
+    			sel.toggleClass("icon_sell");
+    			if(!seatg){
+    				$(".ui-selected-seat-box").append(showSeat);
+    			}else{
+    				$("#"+seatstitle+"").remove();
+    			}
+    		}
+    		$(".ui-selected-seat-box").show()
+    		$(".ui-selectSeat-tip").hide();
+    		$(".ion-close-circled").show();
+
+            e=e||window.event;
+            var x=e.clientX;
+            var y=e.clientY;
+            var T=me.position().top;
+            var L=me.position().left;
+            
+            var L=me.position().left;
+            // var T=me.position().top;
+//             console.log(x+","+y);
+//             console.log(L+","+T);
+
+            var clickScaleNums=scaleNums+0.5;
+            scaleNums=clickScaleNums;
+            signtitleWidth=signtitleWidth*scaleNums;
+            signtitleHeight=signtitleHeight*scaleNums;
+            sumsxlWidth=sumsxlWidth*scaleNums;
+            sumsxlHeight=sumsxlHeight*scaleNums;
+            y_offset=showHeight-sumsxlHeight;
+//
+            x_offset=-((signtitleWidth-showWidth)/2);
+            j_x_offset=x_offset;
+            console.log(x_offset)
+            var newx_offset=x_offset*2;
+            
+            x=-L;
+            y=-T;
+            x1=x*0.4;
+            y1=y*0.4;
+			x2=x1;
+			y2=y1;
+            
+//          if(y2<0){y2=0}
+//          if(x2>newx_offset){x2=newx_offset};
+//             if(y>0){y=0};
+//           if(y<y_offset){y=y_offset;};
+//            console.log(x_offset)
+//           console.log(y_offset)
+//             console.log(newx_offset)
+//
+           $(".seats-inner").css({
+            			 "transform":"scale("+clickScaleNums+") translate("+x2+"px,"+y2+"px) ",
+             				"transform-origin": "0px 0px",
+//           				"transform-origin": "50% 50%",
+             				"transition":"transform .5s ease-in-out",
+             			})
+            $(".seat-number").css({
+             "transform": "translate(0px,"+y2+"px) scale("+clickScaleNums+")",
+              "transform-origin": "0px 0px",
+//           "transform-origin": "50% 50%",
+             "transition":"transform .5s ease-in-out",
+             })
+      console.log("座位Ｘ坐标"+L+",,座位y坐标"+T)           
+//console.log("座位Ｘ坐标"＋L+",座位y坐标"＋T);
+console.log(x1+","+y1);
+console.log(x2+","+y2);
+console.log(newx_offset)
+     
+
+            $(".ui-selected-seat-box").show()
+            $(".ui-selectSeat-tip").hide();
+            $(".ion-close-circled").show();
+     
+        })
+
+ console.log(x_offset)
+
+   console.log("放大倍数"+scaleNums)
+   console.log("x轴偏移量"+x_offset+"x轴偏移量"+y_offset)
+
+        var rightwwz=x_offset*2;
+		var hammertime = new Hammer(document.getElementById("test"));
+		hammertime.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+         hammertime.on("panup", function (e) {
+         	var yzhi=x_offset;
+         	console.log(e.deltaY);
+         	var yzhiY=starzhiY+e.deltaY;
+         	var numsh=$(".seat-no-ul").outerHeight(true);
+         	var rightwwzY=-(numsh-sbHeight);
+         	if(yzhiY<rightwwzY){
+         	yzhiY=rightwwzY;	
+         	}
+         	$(".seat-number").css({
+         	 	"transform": "translate(0px, "+yzhiY+"px)",
+         	 	"transition":"transform 1s ease-in-out",
+         	});
+         	 $(".seats-inner").css({
+         	 	"transform": "translate("+yzhi+"px, "+yzhiY+"px)",
+         	 	"transition":"transform .1s ease-in-out",
+         	 });
+         	starzhiY=yzhiY;
+         	nscWidth=yzhi;
+         });
+         
+              hammertime.on("pandown", function (e) {
+         	var yzhi=x_offset;
+         	var yzhiY=starzhiY+e.deltaY;
+         	var numsh=$(".seat-no-ul").outerHeight(true);
+         	var rightwwzY=-(numsh-sbHeight);
+         	if(yzhiY>0){
+         	yzhiY=0;
+         	}
+         	 $(".seat-number").css({
+         	 	"transform": "translate(0px, "+yzhiY+"px)",
+         	 	"transition":"transform 1s ease-in-out",
+         	 });
+         	 $(".seats-inner").css({
+         	 	"transform": "translate("+yzhi+"px, "+yzhiY+"px)",
+         	 	"transition":"transform .1s ease-in-out",
+         	 });
+         	 starzhiY=yzhiY;
+         	 nscWidth=yzhi;
+         });
+//
+			hammertime.on("panright", function (e) {
+				console.log(e.deltaY);
+	         	var yzhi=x_offset+e.deltaX;
+	         	var yzhiY=starzhiY;
+	         	var numsh=$(".seat-no-ul").outerHeight(true);
+	         	var rightwwzY=-(numsh-sbHeight);
+	         	if(yzhi>0){yzhi=0;}
+	         		$(".seats-inner").css({
+							"transform": "translate("+yzhi+"px,"+yzhiY+"px)",
+							"transition":"transform .1s ease-in-out",
+						})
+	         	starzhiY=yzhiY;
+	         	nscWidth=yzhi;
+			})
+//		
+			hammertime.on("panleft", function (e) {
+	         	var yzhi=x_offset+e.deltaX;
+	         	var yzhiY=starzhiY;
+	         	var numsh=$(".seat-no-ul").outerHeight(true);
+	         	var rightwwzY=-(numsh-sbHeight);
+	         	if(yzhi<rightwwz){yzhi=rightwwz;}
+	         		$(".seats-inner").css({
+							"transform": "translate("+yzhi+"px,"+yzhiY+"px)",
+							"transition":"transform .1s ease-in-out",
+						})
+	         	starzhiY=yzhiY;
+	         	nscWidth=yzhi;
+	         	
+			})
+			if(ssHeight>sumsxlHeight){
+				hammertime.off("pandown");
+				hammertime.off("panup");
+			}
+			if(scWidth>signtitleWidth){
+				hammertime.off("panleft");
+				hammertime.off("panright");
+			}
+//			 hammertime.add(new Hammer.Pinch());
+//			hammertime.on("pinchin", function (e) {
+//				$(".seats-inner").css({
+//							"transform": "translate("+yzhi+"px,"+yzhiY+"px) scale("+clickScaleNums+")",
+//							"transition":"transform 1s ease-in-out",
+//						})
+//				alert()
+//			})
+
+	})
+		
+</script>
+<script type="text/javascript">
+//	换一换弹窗
+	$(function(){
+		$(".list-btn-way").on("click",function(e){
+			e.stopPropagation();
+			$(".cinema-list-else").show();
+			$(".backdrop").addClass("visible active")
+			var liLength=$(".schedule ul li").length;
+		if(liLength>3){
+			var bcHeight=$(".mod_li").outerHeight(true);
+			var newHeightT=bcHeight*4-bcHeight/2+50;
+			var newHeight=bcHeight*4-bcHeight/2;
+			$(".cinema-list-else").css({"height":newHeightT,});
+			$(".schedule").css({"height":newHeight,"overflow":"auto",});
+
+			}
+		})
+		$(".backdrop").on("click",function(e){
+			e.stopPropagation();
+			$(".cinema-list-else").hide();
+			$(".backdrop").removeClass("visible active");
+		})
+
+		$(".ui_price").click(function(e) {
+			e.stopPropagation();
+			$(this).next().slideToggle();
+			$(".ui_price").toggleClass("ui_point");
+		});
+		
+	})
+</script>
+<script>
+    //选座
+    $(".ui-seat-active").bind("click",function(){
+        if(($(".ui-seat-selected").length + $(".ui-member-seat-selected").length) < 8){
+            if(!$(this).hasClass("ui-seat-selected")){
+                $(this).addClass("ui-seat-selected");
+                if($(this).hasClass("ui-seat-selected")){
+                	$(".ui-selectSeat-tip").hide();
+                    $(".ui-selected-seat-box").show();
+                    $(".ion-close-circled").show();
+                    $("<span class='ui-user-submit'>"+ $(this).parent("p").index() + "排" + ($(this).index()+1) + "座</span>").attr("id",$(this).parent("p").index() + "-" + ($(this).index()+1)).appendTo($(".ui-selected-seat-box"))
+                };
+
+                //请选座按钮
+                $(".ui-submit").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5").text("确认");
+                $(".ui-btn-00a1e5").on("click",function(){
+                    location.href='goods.html';
+                })
+            }
+            else{
+                if($(this).hasClass("ui-seat-selected")){
+                    $(this).toggleClass("ui-seat-selected");
+                    $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+                }
+                if($(".ui-seat-selected").length < 1){
+                    $(".ui-selected-seat-box").hide();
+                    $(".ui-selectSeat-tip").show();
+                }
+            }
+        }
+        else{
+            if($(this).hasClass("ui-seat-selected")){
+                $(this).toggleClass("ui-seat-selected");
+                $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+            }
+          //最多可选座位提示
+       		layer.alert('最多可选8个座位!',{
+				closeBtn : 0,
+				title : '',
+				shadeClose : true,
+				shade : 0.5,
+			});
+			$(".layui-layer-btn").addClass('ui-layer-btn');
+        }
+    });
+    
+
+
+    var app = angular.module("myApp",["ionic"]);
+    app.controller("myCtrl",function($scope){
+        $scope.onSwipe=function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+ arr[1]+arr[2]+arr[3]});
+        }
+        $scope.onDrag=function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+arr[1]+arr[2]+arr[3]});
+        }
+    })
+    $(document).ready(function(){
+        $('.ui-scroller').bind("touchmove",function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+ arr[1]+arr[2]+arr[3]});
+        });
+        $('.ui-scroller').bind("touchend",function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+ arr[1]+arr[2]+arr[3]});
+        });
+        
+       //删除选中座位
+       $(".ion-close-circled").on("click",function(){
+    	   $(".ui-user-submit").remove();
+    	   $(this).hide();
+    	   $(".ui-selectSeat-tip").show();
+    	   $(".ui-seat-active").removeClass("ui-seat-selected");
+    	   $(".ui-member-seat").removeClass("ui-member-seat-selected");
+    	   $(".ui-submit").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled").text("请选座");
+       })
+       //会员专座
+       /*$(".ui-icon-member").on("click",function(){
+    	   location.href='login-pre.html';
+       });\
+	   */
+       $(".ui-member-seat").on("click",function(){
+    	   if(($(".ui-seat-selected").length + $(".ui-member-seat-selected").length) < 8){
+    		   if(!$(this).hasClass("ui-member-seat-selected")){
+                   $(this).addClass("ui-member-seat-selected");
+                   if($(this).hasClass("ui-member-seat-selected")){
+                   	$(".ui-selectSeat-tip").hide();
+                       $(".ui-selected-seat-box").show();
+                       $(".ion-close-circled").show();
+                       $("<span class='ui-user-submit'>"+ $(this).parent("p").index() + "排" + ($(this).index()+1) + "座</span>").attr("id",$(this).parent("p").index() + "-" + ($(this).index()+1)).appendTo($(".ui-selected-seat-box"))
+                   };
+
+                   //请选座按钮
+                   $(".ui-submit").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5").text("确认");
+                   $(".ui-btn-00a1e5").on("click",function(){
+                       location.href='goods.html';
+                   })
+               }
+    		   else{
+                   if($(this).hasClass("ui-member-seat-selected")){
+                       $(this).toggleClass("ui-member-seat-selected");
+                       $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+                   }
+                   if($(".ui-member-seat-selected").length < 1){
+                       $(".ui-selected-seat-box").hide();
+                       $(".ui-selectSeat-tip").show();
+                   }
+               }
+    	   }
+    	   else{
+               if($(this).hasClass("ui-member-seat-selected")){
+                   $(this).toggleClass("ui-member-seat-selected");
+                   $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+               }
+             //最多可选座位提示
+          		layer.alert('最多可选8个座位!',{
+	   				closeBtn : 0,
+	   				title : '',
+	   				shadeClose : true,
+	   				shade : 0.5,
+   				});
+   				$(".layui-layer-btn").addClass('ui-layer-btn');
+           }
+       });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<img  name = "qiao" height = 200 src =images/2.jpg>
+<p name = "haha">
+    哈哈哈
+</p>
+<script>
+    alert(document.qiao.height);
+    alert(document.getElementsByName("haha"));
+    document.qiao.height = 800;
+    alert(document.qiao.height);
+    for(x in document.qiao){
+        document.write(x+"<br/>");
+    }
+</script>
+</body>
+</html>

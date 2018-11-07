@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../css/main.css" rel="stylesheet" />
+<link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/swiper.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<style>
+.flim_img .swiper-slide {
+	width: 4.8rem;
+	height:3.2rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.group_pic {
+        width: 100%;
+        height: 0%;
+		position:absolute;
+		top:0;
+		z-index:-1;
+    }
+    .group_pic .swiper-slide {
+        text-align: center;
+        background-color:rgba(0,0,0,0.7);  
+    }
+    .group_pic .swiper-slide img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+    </style>
+<title>影片详情</title>
+</head>
+
+<body class="film_details" style="background: #fff;">
+<section class="film_detail">
+<ul>
+	<li class="mod_li">
+		<a href="javascript:;" class="film_info">
+			<div class="item_pic"><img src="../image/min_playbill.png" /></div>
+			<div class="item_info">
+				<h3 class="film_t">失孤</h3>
+				<p class="type_label">
+					<span class="mod_nattier_btn">香港</span>
+					<span class="mod_nattier_btn">动作</span>
+				</p>
+				<p class="direct color_999">导演：<span>彭三源</span></p>
+				<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如</span></p>
+				<p class="show_time color_999"><label>2015-03-24</label>&nbsp;&nbsp;<label>135分钟</label></p>
+			</div>
+		</a>
+	</li>
+</ul>
+<div class="detail_info">
+	<a href="schedule.html" class="mod_blue_btn buy_btn">立即购票</a>
+	<h3 class="clearfix ui-wc95 ui-mb10"><i class="ui-border-left ui-fl"></i><span class="ui-fl ui-333 ui-fs16 ui-ml5" style="line-height:18px;">剧情简介</span></h3>
+	<div class="film_abs color_999">
+		<span class="film_brief">在上一部结尾处，比尔博一行人对巨龙史矛革声称将要重新收复自己的家园，但却不知不觉地被一股强大致命的力量推向世界黑暗的更深处，而巨龙史矛革的重现将自身无尽的愤怒对准了长湖镇的男女老少。索林迷恋自己收回的财富，他牺牲了队友的友谊，却把霍比特人推向了索林迷恋自己收回的财富，他牺牲了队友的友谊，却把霍比特人推向了在上一部结尾处比尔博一行人对巨龙史矛革声称将要重新收复自己的家园，但却不知不觉地被一股强大致命的力量推向世界黑暗的更深处，而巨龙史矛革的重现将自身无尽的愤怒对准了长湖镇的男女老少。索林迷恋自己收回的财富，他牺牲了队友的友谊，却把霍比特人推向了索林迷恋自己收回的财富，他牺牲了队友的友谊，却把霍比特人推向了</span>
+		<span class="spread">展开&gt;&gt;</span>
+		<span class="pack_up">&lt;&lt;收起</span>
+	</div>
+	<h3 class="clearfix ui-wc95 ui-mb10"><i class="ui-border-left ui-fl"></i><span class="ui-fl ui-333 ui-fs16 ui-ml5" style="line-height:18px;">影片剧照</span></h3>
+	<div class="swiper-container flim_img">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><img src="../image/film_img01.png" /></li>
+            <li class="swiper-slide"><img src="../image/film_img02.png" /></li>
+            <li class="swiper-slide"><img src="../image/default-cinema-picture.jpg" /></li>
+            <li class="swiper-slide"><img src="../image/film_img01.png" /></li>
+            <li class="swiper-slide"><img src="../image/film_img02.png" /></li>
+            <li class="swiper-slide"><img src="../image/film_img03.png" /></li>
+        </ul>
+        <div class="swiper-scrollbar"></div>
+    </div>
+</div>
+
+</section>
+
+<div class="swiper-container group_pic">
+<div class="swiper-wrapper">
+	<div class="swiper-slide">
+		<img src="../image/film_img01.png" />
+	</div>
+	<div class="swiper-slide">
+		<img src="../image/film_img02.png" />
+	</div>
+	<div class="swiper-slide">
+		<img src="../image/film_img03.png" />
+	</div>
+	<div class="swiper-slide">
+		<img src="../image/active.png" />
+	</div>
+	<div class="swiper-slide">
+		<img src="../image/film_img04.jpg" />
+	</div>
+	<div class="swiper-slide">
+		<img src="../image/film_img05.jpg" />
+	</div>
+</div>
+</div>
+<script>
+    var swiper1 = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        grabCursor: true
+    });
+
+     var swiper = new Swiper('.group_pic', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true
+    });
+	$(document).ready(function(e) {
+		$(".flim_img li").click(function(){
+			$('html,body').animate({scrollTop: '0px'}, 100);
+			$('html,body').css({"overflow":"hidden","height":"100%"});
+			$(".group_pic").css({"z-index":"1"})
+			$(".group_pic").css({"height":"100%"})
+
+		})
+		$(".group_pic").click(function(){
+			$(".group_pic").css({"z-index":"-1","height":"0"})
+			$("html,body").css({"overflow":"","height":""})
+		})
+		$(".ui_wbox").click(function(){
+			$(".mask").hide();
+			$(".ui_wbox").hide();
+			$("body").css({"overflow":"","height":""})
+			$("html").css({"overflow":"","height":""})
+		})
+		var h = $(".film_brief").height();
+		if( h >= 173){
+			$(".spread").show();
+		}
+
+		$(".spread").click(function(){
+			$(this).prev().removeClass();
+			$(this).hide();
+			$(".pack_up").show();
+		})
+		$(".pack_up").click(function(){
+			$(".film_abs span:first-child").addClass("film_brief");
+			$(".spread").show();
+			$(this).hide();
+		});
+	})
+</script>
+</body>
+</html>

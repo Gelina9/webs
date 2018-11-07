@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>时间扩展版</title>
+    <style>
+        *{margin:0; padding:0; list-style: none;}
+        ul{position: relative; overflow: hidden; height: 172px;margin: 150px 180px;}
+        ul li{position: absolute; left:0; top:0; width:122px; height: 344px;}
+        img{height:172px;}
+    </style>
+    <script src="doMove.js"></script>
+    <script>
+        window.onload=function() {
+            var aLi=document.getElementsByTagName("li");
+            var aMao=document.getElementsByClassName("mao");
+            var arrMao = ['images/colon.png','images/colon1.png'];
+            var arrImg = [
+                'images/0.png','images/1.png','images/2.png','images/3.png','images/4.png',
+                'images/5.png','images/6.png','images/7.png','images/8.png','images/9.png'
+            ];
+            var aShow = document.getElementsByClassName('show');
+            var num=0;
+            var timer=null;
+            var onOff=true;
+            for(var i=0;i<aLi.length;i++){
+                aLi[i].style.left=i*122+"px";
+            }
+
+            function maohao(){
+                aMao[0].src = arrMao[num%arrMao.length];
+                aMao[1].src = arrMao[num%arrMao.length];
+                num++;
+            }
+            timer=setInterval(maohao,500);
+
+            function showTime() {
+                var myTime = new Date();
+                var iHour = myTime.getHours();
+                var iMin = myTime.getMinutes();
+                var iSec = myTime.getSeconds();
+
+                str = toTwo(iHour) + toTwo(iMin) + toTwo(iSec);
+                if (onOff) {
+                    for (var i = 0; i < aShow.length; i++) {
+                        var aImg = aShow[i].getElementsByTagName('img');
+                        aImg[0].src = arrImg[str.charAt(i) % arrImg.length];
+                        aShow[i].num = parseInt(str.charAt(i));
+                        aShow[i].index = i;
+                    }
+                    onOff = false;
+                }
+                function move(obj) {
+                    var aImg = obj.getElementsByTagName('img');
+                    obj.num1 = parseInt(str.charAt(obj.index));
+                    aImg[1].src = arrImg[str.charAt(obj.index) % arrImg.length];
+                    if (obj.num1 != obj.num) {
+                        doMove(obj, 'top', 10, -172, function () {
+                            obj.style.top = 0;
+                            obj.num = obj.num1;
+                            aImg[0].src = arrImg[str.charAt(obj.index) % arrImg.length];
+                        });
+                    }
+                }
+
+                for (var i = 0; i < aShow.length; i++) {
+                    move(aShow[i]);
+                }
+            }
+            showTime();
+            setInterval(showTime,1000);
+        }
+        function toTwo ( n ) {
+            return n < 10 ?  '0' + n : '' + n;
+        }
+    </script>
+</head>
+
+<body style="font-size:40px;">
+<p id='time' style="font-size:40px;"></p>
+<ul>
+    <li class="show"><img src="images/0.png"><img src="images/0.png"></li>
+    <li class="show"><img src="images/0.png"><img src="images/0.png"></li>
+    <li><img src="images/colon.png" class="mao"></li>
+    <li class="show"><img src="images/0.png"><img src="images/0.png"></li>
+    <li class="show"><img src="images/0.png"><img src="images/0.png"></li>
+    <li><img src="images/colon.png" class="mao"></li>
+    <li class="show"><img src="images/0.png"><img src="images/0.png"></li>
+    <li class="show"><img src="images/0.png"><img src="images/0.png"></li>
+</ul>
+</body>
+</html>
+

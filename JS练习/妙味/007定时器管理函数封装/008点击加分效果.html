@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    
+    <style>
+        *{margin: 0;padding:0;}
+        body{background: #eee;}
+        #box{
+            width: 510px;
+            height: 160px;
+            position: relative;
+            border: solid #bbb 1px;
+            margin: 200px auto;
+            background: #fff;
+        }
+        #container{
+            width:498px;
+            border: solid #444 1px;
+            height:48px;
+            position: absolute;
+            left: 5px;
+            bottom: 4px;
+        }
+        #bg{
+            width:0;
+            height:47px;
+            position: absolute;
+            left: 6px;
+            bottom: 5px;
+            background:#10f7ef;
+            opacity:1;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oBox=document.getElementById("box");
+            var oCon=document.getElementById("container");
+            var oBg=document.getElementById("bg");
+            var aDiv=oCon.getElementsByTagName("div");
+            var len=10;
+            var str="";
+            var timer=null;
+            var num=0;
+            for(var i=0;i<len;i++){
+                str+="<div style='width:50px;height:50px;text-align:center;opacity:1;padding-top:7px;font-size:20px;position:absolute;top:0;left:" +i*50+"px;'>+1</div>";
+            }
+            oCon.innerHTML=str;
+
+            oBox.onclick=function(){
+                doMove(oBg,'width',10,497,function(){
+                    opacity(oBg,0.1,0,function(){
+                        doMove(oBg,"width",10,0,function(){
+                            opacity(oBg,0.1,1);
+                        });
+                    });
+                });
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    doMove(aDiv[num],'top',10,-200);
+                    opacity(aDiv[num],0.1,0);
+                    if(num == len-1){
+                        clearInterval(timer);
+						//重置属性
+						num = 0;
+						//清空
+						oCon.innerHTML = "";
+						//1s定时器 初始化对象
+						setTimeout(function(){
+							var str1 = ""; 		
+							for(var i=0;i<len;i++){
+								
+								str1 += "<div style='width:50px;height:50px;text-align:center;opacity:1;padding-top:7px;font-size:20px;position:absolute;top:0;left:" +i*50+"px;'>+1</div>";
+							}
+							oCon.innerHTML = str1;
+						},1000);
+                    }
+                    num++;
+                },150);
+            };
+        };
+        //getStyle
+        function getStyle(obj,attr){
+            return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+        }
+        //doMove
+        function doMove(obj,attr,dir,target,endFn) {
+            dir = parseInt(getStyle(obj, attr)) < target ? dir : -dir;
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                var speed = parseInt(getStyle(obj, attr)) + dir;
+                if (speed > target && dir > 0 || speed < target && dir < 0) {
+                    speed = target;
+                }
+                obj.style[attr] = speed + 'px';
+                if (speed == target) {
+                    clearInterval(obj.timer);
+                    endFn && endFn();
+                }
+            }, 30);
+        }
+        //opacity
+        function opacity( obj,dir,target,endFn) {
+            dir = parseInt(getStyle(obj, 'opacity')) < target ? dir : -dir;
+            clearInterval(obj.timers);
+            obj.timers = setInterval(
+                    function () {
+                        var speed = parseFloat(getStyle(obj, 'opacity')) + dir;
+                        if (speed > target && dir > 0 || speed < target && dir < 0) {
+                            speed = target;
+                        }
+                        ;
+                        obj.style.opacity = speed;
+                        if (speed == target) {
+                            clearInterval(obj.timers);
+                            endFn && endFn();
+                        }
+                        ;
+                    }, 50
+            );
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="container"></div>
+    <div id="bg"></div>
+</div>
+</body>
+</html>

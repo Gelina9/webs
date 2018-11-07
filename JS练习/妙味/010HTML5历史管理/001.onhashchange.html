@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //onhashchange:是一个事件 当hash值有改变时触发
+        window.onload=function(){
+            var oDiv=document.getElementById("div1");
+            var oInp=document.getElementById("input1");
+            var obj={};
+
+            oInp.onclick=function(){
+                var num=randomNum(35,7);
+                oDiv.innerHTML=num;
+                var oRD=Math.random();      //产生的随机数作为obj的索引
+                window.location.hash=oRD;
+                obj[oRD]=num;
+            };
+
+            //给window加上onhashchange事件
+            window.onhashchange=function(){
+                var num=obj[window.location.hash.substring(1)]||'';
+                oDiv.innerHTML=num;
+            }
+            //产生35选7的函数
+            function randomNum(all,now){
+                var arr=[];
+                var arrNow=[];
+                for(var i=1;i<=all;i++){
+                    arr.push(i);
+                }
+                for(var i=0;i<now;i++){
+                    arrNow.push(arr.splice(Math.floor(Math.random()*arr.length),1));
+                }
+                return arrNow;
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="input1" type="button" value="35选7"/>
+<div id="div1"></div>
+</body>
+</html>

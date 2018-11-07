@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #container{
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        #btn1{
+            background: #f00;
+            width: 80px;
+            height: 35px;
+            color: #fff;
+            font-size: 13px;
+            padding: 10px;
+            border: none;
+        }
+        #div1{
+            width: 80px;
+            height: 80px;
+            margin-top: 15px;
+            border: 3px solid #000;
+            background: #fff;
+        }
+        #box{
+            position: absolute;
+            z-index: 2;
+            left: 40%;
+            top: 30%;
+            display: none;
+            width: 250px;
+            height: 175px;
+            font-size: 14px;
+            border: 12px solid #bbb;
+            background: #fff;
+            text-align: center;
+            padding-top: 20px;
+            line-height: 30px;
+        }
+        button{
+            margin-top: 20px;
+            padding: 10px auto;
+            background: #343478;
+            width: 60px;
+            height: 35px;
+            color: #fff;
+        }
+        input{
+            width: 30px;
+            height: 25px;
+            padding-left: 3px;
+            box-shadow: none;
+        }
+        input:hover{
+            background: orange;
+            border: 1px solid #000;
+        }
+        #red{
+            background: red;
+        }
+        #yel{
+            background: yellow;
+        }
+        #blue{
+            background: blue;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var b=document.getElementById("container");
+            var oBtn2=document.getElementById("btn2");
+            var oBtn3=document.getElementById("btn3");
+            var oBtn1=document.getElementById("btn1");
+            var oDiv=document.getElementById("div1");
+            var oBox=document.getElementById("box");
+            var oRed=document.getElementById("red");
+            var oYel=document.getElementById("yel");
+            var oBlue=document.getElementById("blue");
+            var oW2=document.getElementById("w2");
+            var oW3=document.getElementById("w3");
+            var oW4=document.getElementById("w4");
+            var oH2=document.getElementById("h2");
+            var oH3=document.getElementById("h3");
+            var oH4=document.getElementById("h4");
+            oBtn1.onclick=function(){
+                oBox.style.display="block";
+                b.style.background="#999";
+            }
+            oRed.onclick=function(){
+                oDiv.style.background="red";
+            }
+            oYel.onclick=function(){
+                oDiv.style.background="yellow";
+            }
+            oBlue.onclick=function(){
+                oDiv.style.background="blue";
+            }
+            oW2.onclick=function(){
+                oDiv.style.width="200px";
+            }
+            oW3.onclick=function(){
+                oDiv.style.width="300px";
+            }
+            oW4.onclick=function(){
+                oDiv.style.width="400px";
+            }
+            oH2.onclick=function(){
+                oDiv.style.height="200px";
+            }
+            oH3.onclick=function(){
+                oDiv.style.height="300px";
+            }
+            oH4.onclick=function(){
+                oDiv.style.height="400px";
+            }
+            oBtn2.onclick=function(){
+                oDiv.style.background="#fff";
+                oDiv.style.width="80px";
+                oDiv.style.height="80px";
+            }
+            oBtn3.onclick=function(){
+                oBox.style.display="none";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+<span><b>请为下面的div设置样式：</b></span>
+<button id="btn1">点击设置</button>
+<div id="div1"></div>
+<div id="box">
+    <div>
+        <span>请选择背景色：</span>
+        <input type="button" value="红" id="red">
+        <input type="button" value="黄" id="yel">
+        <input type="button" value="蓝" id="blue">
+    </div>
+    <div>
+        <span>请选择宽(px)：</span>
+        <input type="button" value="200" id="w2">
+        <input type="button" value="300" id="w3">
+        <input type="button" value="400" id="w4">
+    </div>
+    <div>
+        <span>请选择高(px)：</span>
+        <input type="button" value="200" id="h2">
+        <input type="button" value="300" id="h3">
+        <input type="button" value="400" id="h4">
+    </div>
+    <button id="btn2">恢复</button>
+    <button id="btn3">确定</button>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script language="JavaScript" type="text/javascript">
+        var str = "这是一个测试";
+        var seq = 0;
+        var second=1000; //间隔时间1秒钟
+        function scroll() {
+            msg = str.substring(0, seq+1);//取两个下标之间的字符
+            document.getElementById('word').innerHTML = msg;
+            seq++;
+            if (seq >= str.length) seq = 0;//循环
+        }
+    </script>
+</head>
+</head>
+<body onload="setInterval('scroll()',second)">
+<div id="word"></div><br/><br/>
+</body>
+</html>

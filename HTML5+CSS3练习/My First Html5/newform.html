@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>input新增元素下的newform</title>
+</head>
+<body>
+<form action="#" enctype="application/x-www-form-urlencoded" id="testform" method="get">
+    请输入电子邮件地址：<input type="email" name="user_name"/><br/>
+    <input type="submit" value="formaction" formaction="input属性.html"/><!--规定URL-->
+    <input type="submit" value="formenctype" formenctype="multipart/form-data"/><!--规定服务器如何编码-->
+    <input type="submit" value="formmethod" formmethod="post"/><!--定义表单数据到action URL的http方法-->
+    <input type="submit" value="formnovalidate" formnovalidate="formnovalidate"/><!--属性覆盖-->
+    <input type="submit" value="formtarget" formtarget="_self"/><!--规定表单提交后在哪里显示接收到响应的名称或关键字
+                                                                        blank或者self-->
+
+</form>
+</body>
+</html>

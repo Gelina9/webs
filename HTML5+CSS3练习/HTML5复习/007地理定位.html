@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id = "demo" >点击按钮获取您当前的地理位置（可能需要比较长的时间）：</p>
+<button onclick = "getLocation">点我</button>
+<div id = "mapholder"></div>
+<script>
+    var x = document.getElementById("demo");
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }else{
+            x.innerHTML="该浏览器不支持获取地理位置。";
+        }
+        function showPosition(position){
+            var latlon=positon.coords.latitude+","+position.longitude;
+            var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+                    +latlon+"&zoom=14&size=400x300&sensor=false";
+            document.getElmentById("mapholder").innerHTML="<img src='+img_url+'>";
+        }
+    }
+</script>
+</body>
+</html>

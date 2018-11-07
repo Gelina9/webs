@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>选择卖品</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../js/public.js"></script>
+</head>
+
+<body>
+<header class="mu_flex">
+	<div class="h_t color_fff">卖品推荐</div>
+	<a href='accounts.html' class="skip color_fff">跳过</a>
+</header>
+<section class="meal_list">
+	<ul>
+		<li class="mod_li">
+			<a href="javascript:;" class="meal_info">
+				<div class="item_pic"><img src="../image/default-goods-picture.jpg" /></div>
+				<div class="item_info">
+					<h3 class="meal_t">失孤</h3>
+					<p class="meal_detail color_999">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					<span class="meal_price color_red"><label>28</label>元/份</span>
+					<span class="group_btn">
+						<span href="javascript:;" class="group_left_btn color_61">-</span>
+						<input type="text" class="group_input color_61" value="1" />
+						<span href="javascript:;" class="group_right_btn color_61">+</span>
+					</span>
+				</div>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="meal_info">
+				<div class="item_pic"><img src="../image/set_meal.png" /></div>
+				<div class="item_info">
+					<h3 class="meal_t">失孤</h3>
+					<p class="meal_detail color_999">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					<span class="meal_price color_red"><label>28</label>元/份</span>
+					<span class="group_btn">
+						<span href="javascript:;" class="group_left_btn color_d2">-</span>
+						<input type="text" class="group_input color_d2" value="0" />
+						<span href="javascript:;" class="group_right_btn color_61">+</span>
+					</span>
+				</div>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="meal_info">
+				<div class="item_pic"><img src="../image/set_meal.png" /></div>
+				<div class="item_info">
+					<h3 class="meal_t">失孤</h3>
+					<p class="meal_detail color_999">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					<span class="meal_price color_red"><label>28</label>元/份</span>
+					<span class="group_btn">
+						<span href="javascript:;" class="group_left_btn color_61">-</span>
+						<input type="text" class="group_input color_61" value="1" />
+						<span href="javascript:;" class="group_right_btn color_61">+</span>
+					</span>
+				</div>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="meal_info">
+				<div class="item_pic"><img src="../image/set_meal.png" /></div>
+				<div class="item_info">
+					<h3 class="meal_t">失孤</h3>
+					<p class="meal_detail color_999">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					<span class="meal_price color_red"><label>28</label>元/份</span>
+					<span class="group_btn">
+						<span href="javascript:;" class="group_left_btn color_d2">-</span>
+						<input type="text" class="group_input color_d2" value="0" />
+						<span href="javascript:;" class="group_right_btn color_61">+</span>
+					</span>
+				</div>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="meal_info">
+				<div class="item_pic"><img src="../image/set_meal.png" /></div>
+				<div class="item_info">
+					<h3 class="meal_t">失孤</h3>
+					<p class="meal_detail color_999">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					<span class="meal_price color_red"><label>28</label>元/份</span>
+					<span class="group_btn">
+						<span href="javascript:;" class="group_left_btn color_61">-</span>
+						<input type="text" class="group_input color_61" value="1" />
+						<span href="javascript:;" class="group_right_btn color_61">+</span>
+					</span>
+				</div>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href="javascript:;" class="meal_info">
+				<div class="item_pic"><img src="../image/set_meal.png" /></div>
+				<div class="item_info">
+					<h3 class="meal_t">失孤</h3>
+					<p class="meal_detail color_999">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					<span class="meal_price color_red"><label>28</label>元/份</span>
+					<span class="group_btn">
+						<span href="javascript:;" class="group_left_btn color_d2">-</span>
+						<input type="text" class="group_input color_d2" value="0" />
+						<span href="javascript:;" class="group_right_btn color_61">+</span>
+					</span>
+				</div>
+			</a>
+		</li>
+	</ul>
+</section>
+<footer class="footer_flex">
+	<a href="accounts.html" class="h_t color_fff">确认，去支付</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/detail.css" type="text/css" rel="stylesheet">
+    <link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+    <title>优惠政策</title>
+</head>
+<body>
+<header class="mu_flex">
+    <div class="h_t color_fff">优惠政策</div>
+</header>
+<div class="main">
+    <table class="ui_table" cellpadding="0" cellspacing="0" style="padding: 4vw 0 10vw 0; ">
+        <tr>
+            <th style="width: 44%;">等级</th><th style="width: 28%;">影票折扣</th><th style="width: 28%;">卖品折扣</th>
+        </tr>
+        <tr>
+            <td>普通卡<span>（注册充值100）</span></td>
+            <td>8折</td>
+            <td>98折</td>
+        </tr>
+        <tr>
+            <td>银卡<span>（注册充值200）</span></td>
+            <td>7折7折7折</td>
+            <td>88折</td>
+        </tr>
+        <tr>
+            <td>金卡<span>（注册充值500）</span></td>
+            <td>6折</td>
+            <td>8折</td>
+        </tr>
+    </table>
+    <a href="register.html" class="mod_gray_btn" style="width: 90%; padding: 3vw 0;margin: 0 auto;">返回</a>
+</div>
+</body>
+</html>

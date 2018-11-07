@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>原型对象</title>
+    <script>
+        function Person(){}
+        Person.prototype.name = "Gelina";
+        Person.prototype.age = 20;
+        Person.prototype.job = "student";
+        Person.prototype.sayName = function(){
+            alert(this.name)
+        };
+        var person1 = new Person();
+        person1.sayName();
+        var person2 = new Person();
+        person2.sayName();
+        alert(person1.sayName == person2.sayName);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

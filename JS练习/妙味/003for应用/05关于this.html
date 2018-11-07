@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var  aBtn=document.getElementsByTagName("input");
+
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].onclick=fn1;
+            }
+
+            function fn1(){
+                this.style.background="red";//this=>oBtn，因为被oBtn点击调用
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮1"/>
+<input type="button" value="按钮2"/>
+<input type="button" value="按钮3"/>
+</body>
+</html>

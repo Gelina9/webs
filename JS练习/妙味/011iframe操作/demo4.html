@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oIframe=document.createElement("iframe");
+            oIframe.src="iframe1.html";
+            document.body.appendChild(oIframe);
+            oIframe.onload=function(){
+                alert(123);
+            };  /*标准浏览器*/
+
+            /*oIframe.attachEvent("onload",function(){
+                alert(123);
+            })      IE浏览器*/
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

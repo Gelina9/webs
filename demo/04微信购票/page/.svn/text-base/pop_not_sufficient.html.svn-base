@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title></title>
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+</head>
+
+<body>
+	<article class="ui_tis_pop">
+		您当前的会员帐户余额不足，你可以选择充值或其他支付方式！
+	</article>
+	<div class="pop_btn ui_footer">
+			<ul>
+				<li><a href="javascript:;" class="color_999 pop_cancel" onclick="closeWin(0)">返回</a></li>
+				<li><a href="javascript:;" class="color_00a1e5 pop_confirm" onclick="closeWin(1)">充值</a></li>
+			</ul>
+		</div>
+</body>
+</html>

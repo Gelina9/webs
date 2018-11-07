@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>变色字</title>
+<style>
+body{text-align:center;}
+div{
+	margin:50px auto;
+	width:450px;
+	height:350px;
+	border:solid 2px #ccc;
+	padding:50px;
+    overflow: hidden;
+}
+span{
+	font-size:34px;
+	width:60px;
+}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var aInp=document.getElementsByTagName('input');
+	var arrColor=["#ffc","#cc3","#6fc","#9c9","#3cc","#c3c"];
+	
+	aInp[1].onclick=function(){
+		var str=aInp[0].value;
+		var arr=str.split('');
+		
+		for(var i=0;i<arr.length;i++){
+			arr[i]="<span style='background:"+arrColor[i%arrColor.length]+";'>"+arr[i]+"<span/>";
+		}
+		oDiv.innerHTML+=arr.join('');
+		aInp[0].value='';
+	};
+	aInp[2].onclick=function(){
+		oDiv.innerHTML='';
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1"></div>
+<input type='text'/>
+<input type='button' value='提交'/>
+<input type='button' value='清除'/>
+</body>
+</html>

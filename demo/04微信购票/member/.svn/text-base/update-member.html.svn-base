@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="commit" content="undefined">
+	<meta http-equiv="cleartype" content="on">
+	<link href="../css/common.css" type="text/css" rel="stylesheet">
+	<link href="../css/detail.css" type="text/css" rel="stylesheet">
+	<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet" >
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<title>修改会员信息</title>
+</head>
+<body>
+<header class="mu_flex">
+	<div class="h_t color_fff">修改会员信息</div>
+</header>
+<section class="my_info">
+	<div class="ui_input_box">
+		<span>姓名：</span>
+		<input type="text" name="name" class="ui_input" value="科比" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box">
+		<span>性别：</span>
+		<input type="text" name="sex" class="ui_input" value="男" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box">
+		<span>身份证：</span>
+		<input type="text" name="id" class="ui_input" value="4411000000000000000" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box">
+		<span>生日：</span>
+		<input type="text" name="birthday" class="ui_input" value="2002-03-26" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box">
+		<span>邮箱：</span>
+		<input type="text" name="email" class="ui_input" value="1223234@126.com" />
+		<i class="ion-close-circled"></i>
+	</div>
+</section>
+<div class="confirm_btn ui_confirm_btn" style="margin-top: 10%;"><a href="#" class="mod_blue_btn" style="width: 45%;">保存</a><a href="member-details.html" class="mod_gray_btn" style="width: 45%;">取消</a></div>
+</body>
+<script>
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$("input").bind('focus',function(){
+		$(this).nextAll(".ion-close-circled").show();
+	});
+	$("input").bind('blur',function(){
+		$(this).nextAll(".ion-close-circled").hide();
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');;
+	});
+</script>
+</html>

@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+.dialog_mask{ width:100%; height:100%;position:absolute; z-index:2; left:0; top:0; background:#000; opacity:0.5;;filter: alpha(opacity=50);}
+.dialog{width:400px; height:300px; position:fixed; z-index:10; /*top:50%; left:50%; transform:translate(-50%,-50%);*/ border-radius:5px; background:#fff; color:#333;box-shadow: 0 2px 11px #080808;}
+.dialog_nav{ background: #00a1e5; color: #fff; font-weight: 700; font-size: 12px; font-family: "\5b8b\4f53"; border-top-left-radius:3px; border-top-right-radius:3px;}
+.dialog_title{ padding:8px 10px; display:inline-block;}
+.dialog_close{ text-decoration:none;font-weight: 700; color: #fff; float:right; display:inline-block;font-family: arial; font-size: 26px; width:35px; text-align: center;}
+.dialog_close:hover{ color:#444;}
+.dialog_console{text-align:center;}
+.console_btn_confirm{ background:#00a1e5;display: inline-block; margin-top:1rem; font-size: 16px; text-align: center; padding:0.3rem 1rem; color:#fff; border:1px solid #00a1e5; border-radius:3px; text-decoration:none; margin-right:0.6rem;}
+.console_btn_confirm:active{ background:#0582B6;}
+.console_btn_cancel{ background:#fefefe;display: inline-block; font-size: 16px; text-align: center; padding:0.3rem 1rem; color:#999; border:1px solid #dbdbdb; border-radius:3px; text-decoration:none;margin-left:0.6rem;}
+.console_btn_cancel:active{ background:#e4e4e4;}
+.dialog_info{ width:99%; margin:5px auto 0 auto; overflow:auto; display: table;}
+.dialog_info_msg{ text-align:center; color: #27292b; font-size: 16px; height:100%;display: -webkit-box;-webkit-box-orient: horizontal;-webkit-box-pack: center;-webkit-box-align: center;display: -moz-box;-moz-box-orient: horizontal;-moz-box-pack: center;-moz-box-align: center;display: -o-box;-o-box-orient: horizontal;-o-box-pack: center;-o-box-align: center;display: -ms-box;-ms-box-orient: horizontal;-ms-box-pack: center;-ms-box-align: center;}
+.dialog_info_msg{ text-align:center; color: #27292b; font-size: 16px;}
+.dialog_tips{ position:fixed; z-index:10; /*top:50%; left:50%; transform:translate(-50%,-50%);*/ background:url(../image/loading.gif) no-repeat center center;}
+iframe{ border:0; width: 100%; overflow: hidden; height: 5.4rem;}

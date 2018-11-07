@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="001cookie.js"></script>
+    <script>
+        window.onload=function(){
+            var oForm=document.getElementById("form1");
+            var oUser=document.getElementsByName("user")[0];
+            var oClear=document.getElementsByTagName("a")[0];
+
+            oForm.onsubmit=function(){
+                setCookie("user",oUser.value,30);
+            };
+            oUser.value=getCookie("user");
+            oClear.onclick=function(){
+                delCookie("user");
+                oUser.value="";
+            };
+        };
+    </script>
+</head>
+<body>
+<form action="#" id="form1">
+    用户名：<input type="text" name="user"/>
+    密码：<input type="password"/>
+    <input type="submit" value="登录" name="password"/>
+    <a href="javascript:;">清除记录</a>
+</form>
+</body>
+</html>

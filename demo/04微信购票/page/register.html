@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/detail.css" type="text/css" rel="stylesheet">
+    <link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+    <title>注册</title>
+    <style type="text/css">
+    	.ui_input_box {
+		    font-size: 0.75rem;
+		    /*padding: 2vw 2vw 3vw 2vw;*/
+		}
+    </style>
+</head>
+<body>
+<header class="ui-header-bar">
+    <div class="h_t color_fff">会员注册</div>
+</header>
+<div class="main register scroll-content" style="top: 2.2rem;bottom: 2.2rem;">
+    <a href="select-city.html" class="ui_input_box after_arrow_left">
+        <span>注册影院</span>
+        <input type="text" name="name" class="ui_input" placeholder="请选择影院" readonly />
+    </a>
+    <a href="membership-grade.html" class="ui_input_box after_arrow_left">
+        <span>会员等级</span>
+        <input type="text" name="name" class="ui_input" placeholder="请选择会员等级" readonly />
+    </a>
+    <style type="text/css">
+    	.newstyle11{}
+    	.newstyle11-btn{ position: absolute; padding: 0;top: 38%;right: 0.5rem;margin-top: -6.5px;width: 13px;height: 13px;border: 2px solid #ccc;
+			    border-width: 0 0 2px 2px;-webkit-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);transition: all .5s;}
+		.newstyle11-btn-up{-webkit-transform: rotate(135deg);-ms-transform: rotate(135deg);transform: rotate(135deg);top: 51%;transition: all .5s; }	    
+    </style>
+    <div class="ui_input_box newstyle11" style="position: relative;">
+    	<em class="newstyle11-btn"></em>
+        <div style="width: 100%;">
+        	<i style="width:auto;display: inline-block;float:left;box-sizing:border-box;font-style: normal;line-height: 1.2rem;">优惠说明：</i>
+        	<i style="width: 72%;display: inline-block;float:left;box-sizing:border-box;font-style: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height: 1.2rem;">当前卡等级享受购票8折优惠当前卡等级享受购票8折优惠当前卡等级享受购票8折优惠</i>
+        </div>
+    </div>
+     <p class="youhuishou" style="border-bottom: 1px solid #d9d9d9;font-size: 16px;width: 94%;margin: 0 auto;line-height: 150%;padding-top: 5px;display: none; word-wrap:break-word; word-break:normal;">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+    <div class="ui_input_box">
+        <span style="width: auto;">初始充值金额：<label class="color_red">200元</label></span>
+    </div>
+    <div class="ui_input_box">
+        <span>手机号码</span>
+        <input type="number" name="name" class="ui_input" placeholder="请输入手机号码"  />
+        <i class="ion-close-circled"></i>
+    </div>
+    <div class="ui_input_box">
+        <span>验证码</span>
+        <input type="number" name="name" class="ui_input" placeholder="请输入验证码"  />
+        <i class="ion-close-circled"></i>
+        <button class="ui_blue_btn" style="padding: 8px 7px; bottom: 0.45rem; top: -2px; right: 0; position: relative; border: 0;" id="btnSendCode">获取验证码</button>
+    </div>
+    <div class="ui_input_box">
+        <span>密码</span>
+        <input type="password" name="name" class="ui_input" placeholder="请输入密码（6位数字）"  />
+        <i class="ion-close-circled"></i>
+    </div>
+    <div class="ui_input_box">
+        <span>确认密码</span>
+        <input type="password" name="name" class="ui_input" placeholder="请确认密码（6位数字）"  />
+        <i class="ion-close-circled"></i>
+    </div>
+    <div>
+        <div class="ui_input_box">
+            <span>姓名</span>
+            <input type="text" name="name" class="ui_input" placeholder="请输入姓名"  />
+            <i class="ion-close-circled"></i>
+        </div>
+        <!--<a href="membership-grade.html" class="ui_input_box after_arrow_left">
+            <span>会员等级</span>
+            <input type="text" name="name" class="ui_input" placeholder="请选择会员等级" readonly />
+        </a>-->
+        <!--<a href="preferential-policy.html" class="ui_input_box after_arrow_left">
+            <span style="width: auto;">优惠说明：<label>当前卡等级享受购票8折优惠</label></span>
+        </a>-->
+        <!--<style type="text/css">
+        	.newstyle11{}
+        	.newstyle11-btn{ position: absolute; padding: 0;top: 38%;right: 0.5rem;margin-top: -6.5px;width: 13px;height: 13px;border: 2px solid #ccc;
+				    border-width: 0 0 2px 2px;-webkit-transform: rotate(-45deg);-ms-transform: rotate(-45deg);transform: rotate(-45deg);transition: all .5s;}
+			.newstyle11-btn-up{-webkit-transform: rotate(135deg);-ms-transform: rotate(135deg);transform: rotate(135deg);top: 51%;transition: all .5s; }	    
+        </style>
+        <div class="ui_input_box newstyle11" style="position: relative;">
+        	<em class="newstyle11-btn"></em>
+            <div style="width: 100%;">
+            	<i style="width:auto;display: inline-block;float:left;box-sizing:border-box;font-style: normal;">优惠说明：</i>
+            	<i style="width: 72%;display: inline-block;float:left;box-sizing:border-box;font-style: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">当前卡等级享受购</i>
+            </div>
+        </div>
+         <p class="youhuishou" style="border-bottom: 1px solid #d9d9d9;font-size: 16px;width: 94%;margin: 0 auto;line-height: 150%;padding-top: 5px;display: none; word-wrap:break-word; word-break:normal;">1111111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+        <div class="ui_input_box">
+            <span style="width: auto;">初始充值金额：<label class="color_red">200元</label></span>
+        </div>-->
+        <div class="ui_input_box li_f0">
+            <span style="width: auto;">选择支付方式</span>
+        </div>
+        <div class="ui_input_box select_pay" style="display: table;">
+            <label class="ui_icon_box fl_l"><img src="../image/alipayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">支付宝支付</label>
+            <label class="ico_act fl_r"><i class="icon_blue_suc"></i></label>&nbsp;
+        </div>
+        <div class="ui_input_box select_pay" style="display: table;">
+            <label class="ui_icon_box fl_l"><img src="../image/weipayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">微信支付</label>
+            <label class="ico_act fl_r"><i class="icon_circle_no"></i></label>&nbsp;
+        </div>
+    </div>
+</div>
+<a href="movie.html" class="submit mod_orange_btn ui-footer-bar" style="border-radius: 0;"><label>注册并充值200元</label></a>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+	$(".newstyle11-btn").on("click",function(){
+		var active=$(this).hasClass("newstyle11-btn-up");
+		if(active==true){
+			$(this).removeClass("newstyle11-btn-up");
+			$(".youhuishou").slideUp();
+			
+		}else{
+			$(this).addClass("newstyle11-btn-up");
+			$(".youhuishou").slideDown();
+		}
+
+	})
+</script>
+<script>
+	//获取验证码
+    var count = 10;
+    var curCount;
+    var intervalObj;
+    $("#btnSendCode").on('click',function(){
+        curCount = count;
+        $("#btnSendCode").attr('disabled',true);
+        $("#btnSendCode").addClass('disabled');
+        $("#btnSendCode").text(+curCount+'秒再获取');
+        intervalObj = window.setInterval(setTime,1000);
+    })
+    function setTime(){
+        if(curCount == 0){
+            window.clearInterval(intervalObj);
+            $("#btnSendCode").removeAttr('disabled');
+            $("#btnSendCode").removeClass('disabled');
+            $("#btnSendCode").text('重新发送验证码');
+        }
+        else{
+            curCount--;
+            $("#btnSendCode").text(+curCount+'秒再获取');
+        }
+    }
+
+    //选择支持方式
+    $(".select_pay").bind("click",function(){
+        $(".select_pay").find(".ico_act i").removeClass();
+        $(this).siblings().find(".ico_act i").addClass("icon_circle_no");
+        $(this).find(".ico_act i").addClass("icon_blue_suc");
+    })
+
+    //输入框
+    $("input").bind('input propertychange',function(){
+        if($(this).val().length > 1){
+            $(this).nextAll(".ion-close-circled").show();
+        }
+        if($(this).val().length < 1){
+            $(this).nextAll(".ion-close-circled").hide();
+        }
+    });
+    $(".ion-close-circled").bind('click',function(){
+        $(this).hide();
+        $(this).prev('input').val('');
+    });
+    $("input").bind('blur',function(){
+        $(this).nextAll(".ion-close-circled").hide();
+        $(".ui_fixed").css({"position":"fixed"});
+        $(".register").addClass('pb23');
+    });
+    $("input").bind('focus',function(){
+        $(".ui_fixed").css({"position":"relative"});
+        $(".register").removeClass('pb23');
+    });
+</script>
+</html>

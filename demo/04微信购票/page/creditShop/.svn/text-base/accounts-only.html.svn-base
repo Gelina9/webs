@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../../css/detail.css" type="text/css" rel="stylesheet">
+    <link href="../../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../../css/newpage.css" rel="stylesheet">
+    <title>订单确认</title>
+    <style>
+        html,body{ background: #f8f8f8;}
+        .has-footer{ bottom: 62px;}
+        .layui-layer.layui-layer-dialog .layui-layer-content{ padding:35px 20px;}
+        .wrap-page{
+        position:absolute; left:0; right:0;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+	}
+	.has-header {top: 0;}
+	.ui-content {
+    height: calc(100% - 60px);
+}
+.ui-btn-00a1e5{color: #fff;}
+    </style>
+</head>
+<body>
+	
+    <div class="wrap-page has-header has-footer ui-content">
+        <!--<div class="ui-box ui-ptb10 ui-account-film-price">
+            <div class="ui-wc94 ui-tar">
+                <span class="ui-fs18 ui-333">123积分<label class="ui-333 ui-fs16">00</label></span>
+            </div>
+        </div>-->
+        <div class="cl-name-01 ui-fs16">
+        	<!--<div class="ui-wc94></div>-->
+        	测试影院
+        </div>
+        <div class="ui-goods-up-box">
+        	<div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">乐享二人套餐</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        		<!--如果是套餐的话，加上下面↓的详情-->
+	        		<div class="de">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯 </div>
+	        	</div>
+	        </div>
+	        <div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">爆谷</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>	
+	        <div class="sp-box-big">	
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">爆谷321</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">好似果仁</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>	
+        	<div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">好似果仁</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">好似果仁</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">好似果仁</span>
+		        		</div>
+		        		<div class="sp-right clearfix">
+		        			<span class="nums ui-fs16">1份</span>
+			        		<span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="sp-box-big">
+	        	<div class="ui-wc94 sp-box">
+	        		<div class="sp-tc clearfix">
+	        			<div class="sp-left">
+		        			<span class="name ui-fs16">好似果仁</span>
+		        		</div>
+	        		<div class="sp-right clearfix">
+	        			<span class="nums ui-fs16">1份</span>
+		        			 <span class="ui-fs16 ui-333">123积分<label class="ui-333 ui-fs14"></label></span>
+		        		</div>
+	        		</div>
+	        	</div>
+	        </div>
+	        <div class="sp-box-big1">
+	        	<div class="ui-wc94 sp-box1">
+	        		<div class="btn-iconu1"></div>
+	        	</div>
+        	</div>
+        </div>
+        
+        <!--<span class="ui-fs14" style="color: #666;vertical-align: text-top;">积分</span>-->
+        <div class="ui-box ui-bg-f0f0f0 ui-ptb10">
+            <div class="ui-wc94 ui-tar">
+                <span class="ui-fs16">总价：</span>
+                <span class="ui-fs18 ui-ff0000">7500<i style="color: #666;"><span style="color: #666;margin-left: 6px;font-size: 12px;">积分</span></i></span>
+            </div>
+        </div>
+        <!--<div class="ui-box ui-bg-fff">
+            <div class="ui-wc94 ui-ellipsis">
+                <span class="ui-999 ui-fs16">优惠活动：</span>
+                <span class="ui-333 ui-fs16">会员电商购票25元</span>
+            </div>
+        </div>-->
+        <div class="ui-box ui-bg-fff">
+            <div class="ui-wc94 ui-relative ui-h24">
+            	<i class="ui-member-ico ui-fl ui-mr5"></i>
+                <span class="ui-999 ui-fs16 ui-fl">会员：</span>
+                <span class="ui-333 ui-fs16 ui-fl">13800013800</span>
+                <span class="ui-333 ui-fs16 ui-ml10 ui-fl">金卡</span>
+            </div>
+        </div>
+        <!--<div class="ui-box ui-bg-fff clearfix" style="padding: 8px 0;">
+            <div class="ui-wc94 ui-relative ui-h35" style="line-height: 35px;">
+                <i class="ui-member-ico ui-fl ui-mr5 ui-relative" style="top:6px;"></i>
+                <span class="ui-999 ui-fs16 ui-fl">会员：</span>
+                <div class="ui-chosen-input-box ui-fl">
+                    <input type="text" class="ui-chosen-input" value="金卡  3123123" readonly="true">
+                    <div class="ui-ico">
+                        <span class="ui-slideDown"><i class="ui-slideDown-arrow"></i></span>
+                    </div>
+                </div>
+                <div class="ui-chosen-drop">
+                    <ul class="ui-chosen-results">
+                        <li><span class="ui-mr10">自尊金卡</span><label>13800013800</label></li>
+                        <li><span class="ui-mr10">金卡</span><label>1380001380023</label></li>
+                        <li><span class="ui-mr10">白金卡</span><label>1380001380033242</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        <!--<div class="ui-box ui-bg-fff clearfix" style="padding: 10px 0; clear:bold;" onclick="location.href='ticket-pay.html'">
+            <div class="ui-wc94 ui-arrow-left ui-relative">
+                <span class="ui-999 ui-fs16">优惠券：</span>
+                <span class="ui-fs16">6张待用</sapn>
+                <span class="ui-333 ui-fs16 ui-fr ui-mr20">未使用，添加</span>
+            </div>
+        </div>-->
+        <div class="ui-box ui-bg-fff" style="padding: 8px 0;">
+            <div class="ui-wc94 ui-relative ui-h35 ui-input-del">
+                <span class="ui-999 ui-fs16 ui-fl" style="line-height: 35px;">手机号码：</span>
+                <input type="tel" class="ui-input-border ui-fs16 ui-fl" placeholder="请输入接收取货码手机号">
+                <i class="ion-close-circled"></i>
+            </div>
+        </div>
+        <div class="ui-box clearfix" style="border-bottom: 0;">
+            <div class="ui-wc94 ui-relative">
+                <i class="ui-ico-exclamation ui-fl"></i>
+                <span class="ui-ml5 ui-fl ui-fs15">请仔细核对订单信息，售出后不支持退换</span>
+            </div>
+        </div>
+    </div>
+<footer class="bar bar-footer ui-bg-f0f0f0">
+    <div class="ui-wc94" style="line-height: 48px;">
+        <div class="ui-need-pay">
+            <span class="ui-fs14">还需支付:</span>
+            <span class="ui-fs20 ui-ff0000">7500<i style="color: #666;"><span style="color: #666;margin-left: 6px;font-size: 14px;">积分</span></i></span>
+        </div>
+        <!--<a href="javascript:void(0);" class="ui-fs16 ui-account-detail1">明细</a>-->
+        <a href="javascript:void(0);" class="ui-btn-disabled ui-plr10 ui-fs16 ui-fr ui-submit-btn">确认，去支付</a>
+    </div>
+
+</footer>
+<div class="ui-pay-detail-box">
+    <div class="ui-popup-head ui-bg-00a1e5">支付明细<i class="ui-del ui-fff ui-fs24 ui-fr">×</i></div>
+    <div class="ui-pop-content ui-wc94">
+        <div class="row">
+            <div class="col">
+                <div class="ui-fs18 ui-333">总价：</div>
+            </div>
+            <div class="col">
+            </div>
+            <div class="col ui-tar">
+                <div  class="ui-fs16 ui-333">7500<i style="color: #666;">积分</i></div>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col">
+                <div class="ui-fs16">已抵用：</div>
+            </div>
+            <div class="col">
+                <div class="ui-fs16">兑换券1张</div>
+            </div>
+            <div class="col ui-tar">
+                <div  class="ui-fs16 ui-333">抵用¥75.<label class="ui-333 ui-fs12">00</label></div>
+            </div>
+        </div>-->
+        <!--<div class="row">
+            <div class="col">
+                <div class="ui-fs16"></div>
+            </div>
+            <div class="col">
+                <div class="ui-fs16">代金券2张</div>
+            </div>
+            <div class="col ui-tar">
+                <div  class="ui-fs16 ui-333">抵用¥20.<label class="ui-333 ui-fs12">00</label></div>
+            </div>
+        </div>-->
+        <p class="ui-fs18 ui-tar ui-pr10 ui-pt10 ui-pb10" style="border-top: 1px solid #ccc;">还需支付：
+            <span class="ui-fs20 ui-ff0000">7500<i style="color: #666;">积分</i></span>
+        </p>
+    </div>
+</div>
+<div class="backdrop"></div>
+<script src="../../js/jquery.min.js"></script>
+<!-- <script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script> -->
+<script src="../../js/public.js"></script>
+<script src="../../layer/layer.js"></script>
+<script>
+//头部商品显示3个，点击显示全部
+    var spboxnum=$(".ui-goods-up-box .sp-box-big").length;
+    function loadtop(){
+    	 $(".ui-goods-up-box .sp-box-big").hide();
+	for(var i=0;i<3;i++){
+		$(".ui-goods-up-box").find(".sp-box-big").eq(i).show();
+	}
+    }
+   loadtop()
+	$(".sp-box1").on("click",function(){
+		var me=$(this);
+		me.children().toggleClass("btn-icond1");
+		var actice=me.children().hasClass("btn-icond1");
+		if(actice==true){
+			$(".ui-goods-up-box .sp-box-big").show();
+		}else{
+			loadtop()
+		}
+	})
+</script>
+<script>
+    /* angular.module('myApp', ['ionic']); */
+    //明细
+    $(".ui-account-detail1").on("click",function(){
+        $(".backdrop").addClass("visible active");
+        $(".ui-pay-detail-box").slideDown();
+        $(".ui-del").on("click",function(){
+            $(".ui-pay-detail-box").slideUp();
+            $(".backdrop").removeClass("visible active");
+        })
+    })
+    //影票价格
+    $(".ui-account-film").on("click",function(){
+        $(".ui-account-film-info").toggleClass("ui-arrow-left");
+        $(".ui-account-film-price").slideToggle();
+    });
+    //卖品
+    $(".ui-goods-up").on("click",function(){
+        $(this).slideUp();
+        $(".ui-goods-down").slideDown();
+        $(".ui-goods-up-btn").show();
+        $(".ui-goods-up-btn").on("click",function(){
+            $(".ui-goods-up").slideDown();
+            $(".ui-goods-down").slideUp();
+            $(".ui-goods-up-btn").hide();
+        })
+        $(".ui-goods-down").on("click",function(){
+            $(this).slideUp();
+            $(".ui-goods-up").slideDown();
+            $(".ui-goods-up-btn").hide();
+        })
+    });
+
+    //选择会员卡
+    $(".ui-chosen-input").click(function(){
+        $(".ui-chosen-drop").slideToggle();
+        // $(".ui_add_btn").toggle();
+    })
+    $(".ui-slideDown").click(function(){
+        $(".ui-chosen-drop").slideToggle();
+    })
+    $(".ui-chosen-drop li").click(function(){
+        $(".ui-chosen-drop").slideUp();
+        var gettxt = $(this).text();
+        $(".ui-chosen-input").val(gettxt);
+    })
+    $(document.body).click(function(e){
+        var target = e.target;
+        if($('.ui-chosen-drop').is(':visible') && !$(target).hasClass('ui-chosen-results') && !$(target).hasClass('ui-chosen-input') && !$("ui-slideDown"))  {
+            slide_up();
+        }
+    });
+    
+    //购票手机
+    $("input").bind('input propertychange',function(){
+    	if($(this).val().length > 1){
+    		$(this).nextAll(".ion-close-circled").show();
+    		$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+    	}
+    	if($(this).val().length < 1){
+    		$(this).nextAll(".ion-close-circled").hide();
+    		$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+    	}
+    });
+    $(".ion-close-circled").bind('click',function(){
+    	$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+    });
+    
+    //链接到确定支付
+    $(".ui-submit-btn").on("click",function(){
+    	if($(this).hasClass("ui-btn-00a1e5")){
+    		location.href='confirm-payment-only.html';	
+    	}
+    	else if($(this).hasClass("ui-btn-disabled")){
+    		layer.alert('请填写购票手机!',{
+				closeBtn : 0,
+				title : '',
+				shadeClose : true,
+				shade : 0.5,
+			});
+    		$(".layui-layer-btn").addClass('ui-layer-btn');
+    	}
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>会员充值</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<style type="text/css">
+	.m_h p {
+    font-size: 0.56rem;
+    overflow: visible;
+    width: 100%; 
+    white-space: nowrap;
+    text-overflow: clip;
+    line-height: 0.8rem;
+}
+</style>
+<script type="text/javascript">
+var SCRIPT_STATIC_DATA = 'START';
+$(document).ready(function(e) {
+	$(".only_btn").click(function(){
+		$(".mask").hide();
+		$(".ui_wbox").hide();
+	})
+	$(".act_det_pop").click(function(){
+		$(".mask").show();
+		$(".ui_wbox").show();
+	})
+
+	$(".sel_act i").bind("click",function(){
+		if($(".sel_act i").hasClass("icon_blue_suc")){
+			$(".sel_act i").removeClass("icon_blue_suc");
+		}
+		$(this).addClass("icon_blue_suc");
+		$("#recharge_title").bind('click',function(){
+			$("#recharge").show();
+		})
+		$(".li_f .sel_act i").bind("click",function(){
+			$("#recharge").hide();
+			$(".reg_money dd a").removeClass();
+			$(".reg_money dd a").addClass("mod_dis_btn");
+		})
+	})
+	$(".inte_act").bind("click",function(){
+		$(".inte_act").prev(".sel_act").find("i").removeClass("icon_blue_suc");
+		$(this).prev(".sel_act").find("i").addClass("icon_blue_suc");
+		$(".li_f .inte_act").bind("click",function(){
+			$("#recharge").hide();
+			$(".reg_money dd a").removeClass();
+			$(".reg_money dd a").addClass("mod_dis_btn");
+		})
+	})
+	$("#recharge_title .inte_act").bind('click',function(){
+		$("#recharge").show();
+	})
+
+	$(".reg_money dd").click(function(){
+		$(".reg_money dd a").removeClass();
+		$(this).siblings().find("a").addClass("mod_dis_btn");
+		$(this).find("a").addClass("mod_blue_btn");
+	})
+});
+SCRIPT_STATIC_DATA = 'END';
+</script>
+<SCRIPT_DATA></SCRIPT_DATA>
+</head>
+
+<body class="member-recharge">
+<header class="mu_flex">
+	<div class="m_h" style="padding:0;width:66%;">
+		<h1 class="color_fff"><!--<STATIC_DATA>-->数码辰星测试影院<!--</STATIC_DATA>--></h1>
+		<p class="color_fff">会员卡号:<label><!--<STATIC_DATA>-->586253698542<!--</STATIC_DATA>--></label><span style="fl oat: right;margin-left:5%;">手机号:<label>13800013800</label></span></p>
+	</div>
+	<div class="h_right show_tab">
+		<a href="../page/select-city.html" class="new_sec_cinema color_fff">选择影院</a>
+	</div>
+</header>
+<div class="li_fc">
+	<p class="color_red _6rem">温馨提示：您可在影院会员交易流水查询充值记录</p>
+</div>
+<div class="ui_balance_li">
+	<a href="javascript:;" class="card_balance">
+		<span class="color_999">当前卡余额：20.88元</span>
+	</a>
+</div>
+<section class="rec_list pb23">
+	<ul>
+		<li class="mod_li" style="background: #f0f0f0;">
+			<a href="javascript:;" class="rec_info">
+				<span class="ico_act"><em class="icon_act"></em></span>
+				<span class="act color_00a1e5">充值活动：</span>
+			</a>
+		</li>
+		<li class="sel_li li_f bar">
+			<div class="sel_act bar_left">
+				<span class="ico_act"><i class="icon_circle_no icon_blue_suc"></i></span>
+			</div>
+			<span class="inte_act color_333 bar_center"><!--<STATIC_DATA>-->充200元送20元充200元送20元充200元送20元<!--</STATIC_DATA>--></span>
+			<span class="act_det_pop color_00a1e5 bar_right">活动详情</span>
+		</li>
+		<li class="sel_li li_f bar">
+			<div class="sel_act bar_left">
+				<span class="ico_act"><i class="icon_circle_no"></i></span>
+			</div>
+			<span class="inte_act color_333 bar_center">充600元送100元</span>
+			<span class="act_det_pop color_00a1e5 bar_right">活动详情</span>
+		</li>
+		<!--<li class="sel_li li_bg">-->
+			<!--<a href="javascript:;" class="rec_info">-->
+				<!--<p class="color_333 half_7">不参与活动，其他充值金额：</p>-->
+			<!--</a>-->
+		<!--</li>-->
+		<li class="mod_li li_bg" id="recharge_title" style="padding: 0;">
+			<div class="sel_act" style="height: 2rem;">
+				<span class="ico_act"><i class="icon_circle_no"></i></span>
+			</div>
+			<span class="inte_act color_333">不参与活动，其他充值金额</span>
+		</li>
+		<li class="mod_li" style="text-align: center;" id="recharge">
+			<div class="input_box mb10">
+				<input type="text" name="member" placeholder="请输入充值金额" class="mod_input" style="height: 2rem; width: 91.4%;">
+				<i class="ion-close-circled"></i>
+			</div>
+			<dl class="reg_money">
+				<dd><a href="javascript:;" class="mod_dis_btn">50元</a></dd>
+				<dd><a href="javascript:;" class="mod_dis_btn">100元</a></dd>
+				<dd><a href="javascript:;" class="mod_dis_btn">200元</a></dd>
+				<dd><a href="javascript:;" class="mod_dis_btn">300元</a></dd>
+				<dd><a href="javascript:;" class="mod_dis_btn">400元</a></dd>
+				<dd><a href="javascript:;" class="mod_dis_btn">500元</a></dd>
+			</dl>
+		</li>
+		<li class="mod_li" >
+			<a href="#" class="content_info ui_position" style="height: 1.2rem;line-height: 1.2rem;">
+				<p class="color_555 half_7">充值金额：<label class="color_red">300元</label></p>
+			</a>
+		</li>
+	</ul>
+	<div class="ui_input_box li_f0">
+		<span style="width: auto;">选择支付方式</span>
+	</div>
+	<div class="ui_input_box select_pay" style="display: table;">
+		<label class="ui_icon_box fl_l"><img src="../image/alipayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">支付宝支付</label>
+		<label class="ico_act fl_r" style="float: right;"><i class="icon_blue_suc"></i></label>&nbsp;
+	</div>
+	<div class="ui_input_box select_pay" style="display: table;">
+		<label class="ui_icon_box fl_l"><img src="../image/weipayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">微信支付</label>
+		<label class="ico_act fl_r" style="float: right;"><i class="icon_circle_no"></i></label>&nbsp;
+	</div>
+	<div class="ui_input_box select_pay" style="display: table;">
+		<label class="ui_icon_box fl_l"><img src="../image/uniPayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">银行卡支付</label>
+		<label class="ico_act fl_r" style="float: right;"><i class="icon_circle_no"></i></label>&nbsp;
+	</div>
+</section>
+<footer class="footer_flex">
+	<a href="success-recharge.html" class="h_t color_fff">确认充值300.00元</a>
+</footer>
+<section class="mask"></section>
+<section class="ui_wbox">
+	<div class="pop rec_pop">
+		<div class="pop_info">
+			<p class="pop_title color_00a1e5">活动详情</p>
+			<div class="mod_li act_detail">
+				2015年3月1日至2015年8月31日期间会员通过微信平台一次性充值200元可获赠20元。充值金额与其获赠金额都会一次性到账。
+			</div>
+		</div>
+		<div class="only_btn">确认</div>
+	</div>
+</section>
+<script>
+	//选择支持方式
+	$(".select_pay").bind("click",function(){
+		$(".select_pay").find(".ico_act i").removeClass();
+		$(this).siblings().find(".ico_act i").addClass("icon_circle_no");
+		$(this).find(".ico_act i").addClass("icon_blue_suc");
+	});
+
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');
+	});
+	$("input").bind('blur',function(){
+		//$(this).nextAll(".ion-close-circled").hide();ui_balance_li
+		$(".li_fc").css({"position":"fixed"});
+		$(".ui_balance_li").css({"position":"fixed","top":"4rem"});
+		$(".rec_list").css({"top":"6rem"});
+		$(".footer_flex").css({"position":"fixed"});
+	});
+	$("input").bind('focus',function(){
+		$(".li_fc").css({"position":"relative"});
+		$(".ui_balance_li").css({"position":"relative","top":"2rem"});
+		$(".rec_list").css({"top":"2.2rem"});
+		$(".footer_flex").css({"position":"relative"});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绘制矩形圆填充阴影透明度</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            //绘制矩形
+            context.beginPath();
+            context.rect(10,50,200,100);//左上角，长宽
+            context.lineWidth=10;
+            context.strokeStyle="blue";
+            context.stroke();
+            context.fillStyle="red";
+            /*给矩形设置阴影*/
+            context.shadowColor="black";
+            context.shadowBlur=20;
+            context.shadowOffsetX=10;
+            context.shadowOffsetY=10;
+            context.fill();
+
+
+            //绘制圆
+            context.beginPath();
+            var centerX=500;/*圆心坐标*/
+            var centerY=200;
+            var radius=80;/*半径*/
+            context.arc(centerX,centerY,radius,0,2*Math.PI,true);/*起始和终点角度，true表示逆时针*/
+            context.lineWidth=5;
+            context.strokeStyle="blue";
+            context.stroke();
+            context.fillStyle="red";
+            /*给圆设置阴影*/
+            context.shadowColor="purple";
+            context.shadowBlur=20;
+            context.shadowOffsetX=10;
+            context.shadowOffsetY=10;
+            context.globalAlpha=0.2/*设置透明度*/
+            context.fill();
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1024" height="512"></canvas>
+</body>
+</html>

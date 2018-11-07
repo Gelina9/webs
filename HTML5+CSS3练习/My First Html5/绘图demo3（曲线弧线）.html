@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绘制弧线和曲线</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            /*绘制弧线*/
+            context.beginPath();
+            context.moveTo(20,20);
+            context.lineTo(100,20);
+            context.arcTo(150,20,150,70,50);//宽度坐标，高度坐标和半径
+            context.lineTo(150,150);
+            context.lineWidth=5;
+            context.strokeStyle="yellow";
+            context.stroke();
+            /*绘制二次贝塞尔曲线*/
+            context.beginPath();
+            context.moveTo(200,200);//起点
+            context.quadraticCurveTo(300,0,400,200);//控制点坐标和终止点坐标
+            context.lineWidth=5;
+            context.strokeStyle="blue";
+            context.stroke();
+
+            /*绘制二次贝塞尔曲线*/
+            context.beginPath();
+            context.moveTo(400,200);//起点
+            context.bezierCurveTo(500,0,600,0,700,200);//控制点坐标和终止点坐标
+            context.lineWidth=5;
+            context.strokeStyle="red";
+            context.stroke();
+        }
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1024" height="512"></canvas>
+</body>
+</html>

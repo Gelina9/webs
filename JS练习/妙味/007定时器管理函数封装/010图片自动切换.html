@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0;padding:0;list-style:none;}
+        #box{
+            position: relative;
+            margin: 100px auto;
+            width: 560px;
+            height: 420px;
+            border: solid #fff 1px;
+            box-shadow: 0 0 20px #333;
+            overflow: hidden;
+        }
+        #content{
+            position: absolute;
+            width: 5600px;
+            height: 420px;
+            top: 0;
+            left: 0;
+        }
+        #content li{
+            float: left;
+        }
+        img{
+            width: 560px;
+            height: 420px;
+        }
+        .discrip{
+            position: absolute;
+            width: 560px;
+            height: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(150,150,150,0.6);
+        }
+    </style>
+    <script>
+        //getStyle获取元素属性值
+        function getStyle(obj,attr){
+            return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+        }
+        //doMove使元素移动
+        function doMove(obj,attr,dir,target,endFn){
+
+            dir=parseInt(getStyle(obj,attr))<target?dir:-dir;
+            clearInterval(obj.timer);
+            obj.timer=setInterval(function(){
+                obj.isMoving = true;
+                var speed=parseInt(getStyle(obj,attr))+dir;
+                if(speed>target&&dir>0||speed<target&&dir<0){
+                    speed=target;
+                }
+                obj.style[attr]=speed+'px';
+                if(speed==target){
+                    obj.isMoving = false;
+                    clearInterval(obj.timer);
+                    endFn&&endFn(); //如果存在endFn 则执行
+                }
+            },30);
+        }
+        window.onload=function(){
+            var oUl=document.getElementById("content");
+            var oDis=document.getElementsByClassName("discrip")[0];
+            var oP=oDis.getElementsByTagName("p")[0];
+            var oH3=oDis.getElementsByTagName("h3")[0];
+            var arrH3 = ["图片一", "图片二", "图片三", "图片四", "图片五","图片六", "图片七", "图片八", "图片九",  "图片一"];
+            var arrP = ["描述一", "描述二", "描述三", "描述四", "描述五", "描述六", "描述七", "描述八", "描述九",  "描述一"];
+            var img='';
+            var timers;
+            var num=0;
+            var len=10;
+            var des=-560;
+            oUl.isMoving = false;
+            oDis.isMoving = false;
+            /*初始化*/
+            for(var i=0;i<len-1;i++){
+                img+="<li style='left:"+560*i+"px'><img src='images/3"+i+".jpg'></li>";
+            }
+            oUl.innerHTML=img;
+
+            clearInterval(timers);
+            timers=setInterval(function(){
+                if (!oUl.isMoving && !oDis.isMoving) {
+                    doMove(oUl, "left", 5, des, function () {
+                        num++;
+                        oH3.innerHTML = arrH3[num];
+                        oP.innerHTML = arrP[num];
+                        doMove(oDis, "height", 5, 70, function () {
+                            doMove(oDis, "height", 5, 0);
+                            des = (num+1) * -560;
+                            if (num == len-1) {
+                                num = 0;
+                                des = -560;
+                                oUl.style.left = "0";
+                            }
+                        });
+                    });
+                }
+
+            },500)
+        }    //有bug
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul id="content"></ul>
+    <div class="discrip">
+        <h3>图片1</h3>
+        <p>描述……</p>
+    </div>
+</div>
+<script>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <title>五一四季影院</title>
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/detail.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <style>
+    	html,body{ height:100%; background:#fff;}
+    	.scroll{ height:100%;}
+    	.layui-layer.layui-layer-dialog .layui-layer-content{ padding:30px 20px;}
+    	h4{margin-top: 0;}
+    	.ui_m_price {margin-top: 8px;}
+    	.sed .mod_blue_btn{width: 3.2rem;}
+    	.mod_btn_disabled{
+    		background: #aeaeae;
+    		color: #ddd;
+    		border: 1px solid #ddd;
+    		height: 1.3rem;
+    		line-height: 1.3rem;
+    		width: 3.2rem;
+			font-size: 0.75rem;
+		    position: absolute;
+		    right: 0;
+		    top: 0.3rem;
+		    border-radius: 3px;
+		    text-align: center;}
+		.ui_price:after{
+		    content: '';
+		    display: inline-block;
+		    width: 0;
+		    height: 0;
+		    margin-left: 0;
+		    border-width: 5px;
+		    border-color: #999 transparent transparent;
+		    border-style: solid;
+		    font-size: 0;
+		    vertical-align: -3px;
+		  }
+		.scroll {
+		     height: auto; 
+		}    
+    </style>
+     <style type="text/css">
+			.newtag{overflow: hidden;padding-left: 10px;margin-top: 14px; margin-bottom: 5px;}
+			.newtag span{float:left;display:inline-block;font-size: 10px;width: 26px;box-sizing:border-box;height: 16px;line-height:16px;text-align:center;padding:0 0px;margin-top: 2px;border-radius: 2px;margin-right: 4px;}
+			.tagred{color:#ff4e4e;border: 1px solid #ff4e4e;}
+			.tagyellow{color:#ff8e00 ;border: 1px solid #ff8e00 ;}
+			.tagpurple{color:#bc75f3 ;border: 1px solid #bc75f3 ;}
+			.taggreen{color:#6cc531 ;border: 1px solid #6cc531 ;}
+			.newtime{position: absolute;top: 30px;left: 10px;}
+			.ui-account-film-name span { margin-top: -2px;}
+		</style>
+</head>
+<body ng-app="myApp">
+<!--<ion-content class="has-header">-->
+	<!--<div class="ui-relative clearfix">
+		<p class="ui-account-film-name ui-wc94"><span class="ui-fs16 ui-000 ui-mr10 ui-fl">霍比特人：五军之战</span><label class="ui-badge-95d5f0 ui-fl">英语</label> &nbsp;<label class="ui-badge-95d5f0 ui-fl ui-ml5">普通立体3D</label></p>
+		<p class="ui-wc94" style="line-height: normal;position: relative;">
+			<p class="newtag">
+				<span class="tagred">首映</span>
+				<span class="tagyellow">明星</span>
+				<span class="tagpurple">点映</span>
+				<span class="taggreen">特惠</span>
+			</p>
+             <span class="ui-show-time ui-999 ui-fs14 ui-mr10">今天6月13日 16:20</span>
+        </p>
+        <a href="" class="ui-update-btn ui-fs16 list-btn-way">换一场</a>
+	</div>-->
+	<div class="ui-relative clearfix" id="title_item">
+		<p class="ui-account-film-name ui-wc94" style="line-height: normal;"><span class="ui-fs16 ui-000 ui-mr10 ui-fl" id="filmName">影片名称756</span><label class="ui-badge-95d5f0 ui-fl" id="filmLang">国语</label> &nbsp;<label class="ui-badge-95d5f0 ui-fl ui-ml5" id="filmVersion">2D</label></p>
+		<p class="ui-wc94" style="line-height: normal;position: relative;">
+			<p class="newtag">
+				<span class="tagred">首映</span>
+				<span class="tagyellow">明星</span>
+				<span class="tagpurple">点映</span>
+				<span class="taggreen">特惠</span>
+			</p>
+             <span class="ui-show-time ui-999 ui-fs14 ui-mr10 newtime" id="featureTime">今天 02月21日 14:20</span>
+        </p>
+        <a href="" class="ui-update-btn ui-fs16 list-btn-way">换一场</a>
+	</div>
+    <div class="ui-seat-wrap clearfix ui-mt10 relative ui-bg-f0f0f0 ui-pt10">
+        <slide class="ui-slide ui-fl" style=" position: absolute;transform-origin: left top; top: 10px;">
+            <ol>
+                <li class="cs"></li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li class="cs"></li>
+            </ol>
+        </slide>
+        <ion-scroll style="overflow: auto; min-width:100%;" direction="xy" scrollbar-y="false" zooming="true" min-zoom="1" class="ui-scroller ui-fl" on-swipe="onSwipe()" on-drag="onDrag()" >
+            <div class="ui-seat-box">
+            	<div class="ui-seat-screen clearfix">
+            		<img src="../image/seat-screen.png">
+            	</div>
+                <div class="ui-seat-tips ui-pb5"><span>银幕中央</span></div>
+                <p><i class="ui-seat ui-seat-disabled"></i><i class="ui-seat ui-seat-disabled"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-disabled"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-disabled"></i><i class="ui-seat ui-seat-disabled"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat"></i><i class="ui-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat"></i><i class="ui-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat-disabled"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-member-seat"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+                <p><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i><i class="ui-seat ui-seat-active"></i></p>
+            </div>
+        </ion-scroll>
+    </div>
+    
+</ion-content>
+<div class="ui-footer-box">
+    	<p class="ico ui-pl24 ui-tal"><i class="icon_seat"></i>可售<i class="icon_no_buy"></i>不可售<i class="icon_sell"></i>已选<i class="ui-icon-member"></i>会员专座</p>
+		<div class="ui-333 ui-fs12 ui-wc100 ui-selectSeat-tip ui-pb5 ui-pl24">最多可选8个座位</div>
+		<div class="ui-wc94 clearfix ui-relative ui-selected-seat-box">
+			<!-- <span class="ui-user-submit">7排11座</span>
+			<span class="ui-user-submit">7排12座</span>
+			<span class="ui-user-submit">7排13座</span>
+			<span class="ui-user-submit">10排11座</span>
+			<span class="ui-user-submit">10排12座</span> -->
+			<i class="ion-close-circled ui-block ui-aaa ui-fs18 ui-p5 ui-absolute" style="bottom:0;right:0;"></i>
+		</div>
+		<a href="javascript:void(0);" class="ui-submit ui-btn-disabled ui-fs20 ui-wc94 ui-mtb10" style="display:block;">请选座</a>
+</div>
+<div class="cinema-list-else" style="width: 100%;background-color: #fff;position: fixed;bottom: 0;display: none;z-index: 10001;">
+	<p class="cinema-f-title" style="width: 100%;text-align: center;height: 50px;line-height: 50px;position: absolute;top: 0;">今天&nbsp&nbsp06-13</p>
+	<div class="schedule" style="margin-top: 50px;">
+		<ul>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mo d_blue_btn mod_btn_disabled" onClick="javascript:;">当前场次</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+			<li class="mod_li">
+				<a href="#"  class="sed clearfix">
+					<div class="time ui-block ui-fl">
+						<h4 class="star_time">16:20</h4>
+						<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+					</div>
+					<div class="hall ui_hall ui-block ui-fl">
+						<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+						<div class="ui_m_price ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+						<div class="ui_m_price_more">
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+							<span class="ui_card_4">¥30.0</span>
+						</div>
+					</div>
+					<span class="mod_blue_btn" onClick="location.href='seat.html'">购票</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="backdrop" style="z-index: 1000;"></div>
+<script src="../js/jquery.min.js"></script>
+<script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script>
+<script src="../layer/layer.js"></script>
+<script type="text/javascript">
+	$(function(){
+//		..ui-seat-wrap
+		var stHeight=$('.ui-relative').outerHeight(true);
+		var sfHeight=$('.ui-footer-box').outerHeight(true);
+		var scHeight=$("body").height();
+		var sbHeight=scHeight-sfHeight-stHeight;
+		$(".ui-seat-wrap").css({"height":sbHeight,"overflow":"auto",})
+//		alert(sbHeight)
+	})
+</script>
+<script type="text/javascript">
+//	换一换弹窗
+	$(function(){
+		$(".list-btn-way").on("click",function(e){
+			e.stopPropagation();
+			$(".cinema-list-else").show();
+			$(".backdrop").addClass("visible active")
+			var liLength=$(".schedule ul li").length;
+		if(liLength>3){
+			var bcHeight=$(".mod_li").outerHeight(true);
+			var newHeightT=bcHeight*4-bcHeight/2+50;
+			var newHeight=bcHeight*4-bcHeight/2;
+			$(".cinema-list-else").css({"height":newHeightT,});
+			$(".schedule").css({"height":newHeight,"overflow":"auto",});
+			}
+		})
+		$(".backdrop").on("click",function(e){
+			e.stopPropagation();
+			$(".cinema-list-else").hide();
+			$(".backdrop").removeClass("visible active");
+		})
+
+		$(".ui_price").click(function(e) {
+			e.stopPropagation();
+			$(this).next().slideToggle();
+			$(".ui_price").toggleClass("ui_point");
+		});
+		
+	})
+</script>
+<script>
+    //选座
+    $(".ui-seat-active").bind("click",function(){
+        if(($(".ui-seat-selected").length + $(".ui-member-seat-selected").length) < 8){
+            if(!$(this).hasClass("ui-seat-selected")){
+                $(this).addClass("ui-seat-selected");
+                if($(this).hasClass("ui-seat-selected")){
+                	$(".ui-selectSeat-tip").hide();
+                    $(".ui-selected-seat-box").show();
+                    $(".ion-close-circled").show();
+                    $("<span class='ui-user-submit'>"+ $(this).parent("p").index() + "排" + ($(this).index()+1) + "座</span>").attr("id",$(this).parent("p").index() + "-" + ($(this).index()+1)).appendTo($(".ui-selected-seat-box"))
+                };
+
+                //请选座按钮
+                $(".ui-submit").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5").text("确认");
+                $(".ui-btn-00a1e5").on("click",function(){
+                    location.href='goods.html';
+                })
+            }
+            else{
+                if($(this).hasClass("ui-seat-selected")){
+                    $(this).toggleClass("ui-seat-selected");
+                    $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+                }
+                if($(".ui-seat-selected").length < 1){
+                    $(".ui-selected-seat-box").hide();
+                    $(".ui-selectSeat-tip").show();
+                }
+            }
+        }
+        else{
+            if($(this).hasClass("ui-seat-selected")){
+                $(this).toggleClass("ui-seat-selected");
+                $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+            }
+          //最多可选座位提示
+       		layer.alert('最多可选8个座位!',{
+				closeBtn : 0,
+				title : '',
+				shadeClose : true,
+				shade : 0.5,
+			});
+			$(".layui-layer-btn").addClass('ui-layer-btn');
+        }
+    });
+    
+
+
+    var app = angular.module("myApp",["ionic"]);
+    app.controller("myCtrl",function($scope){
+        $scope.onSwipe=function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            console.log(arr)
+            $(".ui-slide").css({"transform":"translate3d(0px,"+ arr[1]+arr[2]+arr[3]});
+        }
+        $scope.onDrag=function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+arr[1]+arr[2]+arr[3]});
+        }
+    })
+    $(document).ready(function(){
+        $('.ui-scroller').bind("touchmove",function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+ arr[1]+arr[2]+arr[3]});
+        });
+        $('.ui-scroller').bind("touchend",function(){
+            var sty = $(".ui-scroller .scroll").css("transform");
+            var arr = sty.split(" ");
+            $(".ui-slide").css({"transform":"translate3d(0px,"+ arr[1]+arr[2]+arr[3]});
+        });
+        
+       //删除选中座位
+       $(".ion-close-circled").on("click",function(){
+    	   $(".ui-user-submit").remove();
+    	   $(this).hide();
+    	   $(".ui-selectSeat-tip").show();
+    	   $(".ui-seat-active").removeClass("ui-seat-selected");
+    	   $(".ui-member-seat").removeClass("ui-member-seat-selected");
+    	   $(".ui-submit").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled").text("请选座");
+       })
+       //会员专座
+       $(".ui-member-seat-disabled").on("click",function(){
+    	   location.href='login-pre.html';
+       });
+       $(".ui-member-seat").on("click",function(){
+    	   if(($(".ui-seat-selected").length + $(".ui-member-seat-selected").length) < 8){
+    		   if(!$(this).hasClass("ui-member-seat-selected")){
+                   $(this).addClass("ui-member-seat-selected");
+                   if($(this).hasClass("ui-member-seat-selected")){
+                   	$(".ui-selectSeat-tip").hide();
+                       $(".ui-selected-seat-box").show();
+                       $(".ion-close-circled").show();
+                       $("<span class='ui-user-submit'>"+ $(this).parent("p").index() + "排" + ($(this).index()+1) + "座</span>").attr("id",$(this).parent("p").index() + "-" + ($(this).index()+1)).appendTo($(".ui-selected-seat-box"))
+                   };
+
+                   //请选座按钮
+                   $(".ui-submit").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5").text("确认");
+                   $(".ui-btn-00a1e5").on("click",function(){
+                       location.href='goods.html';
+                   })
+               }
+    		   else{
+                   if($(this).hasClass("ui-member-seat-selected")){
+                       $(this).toggleClass("ui-member-seat-selected");
+                       $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+                   }
+                   if($(".ui-member-seat-selected").length < 1){
+                       $(".ui-selected-seat-box").hide();
+                       $(".ui-selectSeat-tip").show();
+                   }
+               }
+    	   }
+    	   else{
+               if($(this).hasClass("ui-member-seat-selected")){
+                   $(this).toggleClass("ui-member-seat-selected");
+                   $("#" + $(this).parent("p").index() + "-" + ($(this).index()+1)).remove();
+               }
+             //最多可选座位提示
+          		layer.alert('最多可选8个座位!',{
+	   				closeBtn : 0,
+	   				title : '',
+	   				shadeClose : true,
+	   				shade : 0.5,
+   				});
+   				$(".layui-layer-btn").addClass('ui-layer-btn');
+           }
+       });
+    });
+</script>
+
+</body>
+</html>

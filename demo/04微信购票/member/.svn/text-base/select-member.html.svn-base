@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>会员充值</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<SCRIPT_DATA></SCRIPT_DATA>
+</head>
+<body>
+<header class="">
+	<div class="h_t color_fff">请选择会员卡</div>
+</header>
+<section class="membership">
+	<ul>
+		<li class="m_list">
+			<a href='member-recharge.html' class="m_card_info">
+				<div class="item_icon">
+					<span class="vip_ico"><b class="icon_blue">VIP</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">所属影院：<span class="color_333" title="数码辰星测试影院">数码辰星测试影院</span></p>
+					<p class="color_999">会员卡号：<span class="color_333">3451324141243</span></p>
+				</div>
+			</a>
+		</li>
+		<li class="m_list">
+			<a href='member-recharge.html' class="m_card_info">
+				<div class="item_icon">
+					<span class="vip_ico"><b class="icon_blue">VIP</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">所属影院：<span class="color_333" title="广州时代电影城">广州时代电影城</span></p>
+					<p class="color_999">会员卡号：<span class="color_333">3451324141243</span></p>
+				</div>
+			</a>
+		</li>
+		<li class="m_list">
+			<a href='member-recharge.html' class="m_card_info">
+				<div class="item_icon">
+					<span class="vip_ico"><b class="icon_blue">VIP</b></span>
+				</div>
+				<div class="item_info">
+					<p class="color_999">所属影院：<span class="color_333" title="数码辰星测试影院">数码辰星测试影院</span></p>
+					<p class="color_999">会员卡号：<span class="color_333">3451324141243</span></p>
+				</div>
+			</a>
+		</li>
+	</ul>
+</section>
+</body>
+</html>

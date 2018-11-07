@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id="myCanvas" style="border: 1px solid #aaa;margin: 50px auto;display: block;">
+    当前浏览器不支持canvas，请更换浏览器后再试！
+</canvas>
+<script>
+    /*定义小球的速度加速度等*/
+    var ball={x:512,y:100,r:10,g:1,vx:10,vy:-10,color:"#005588"}; //y=-10有上抛效果
+    window.onload=function(){
+        var canvas=document.getElementById("myCanvas");
+        canvas.width=600;
+        canvas.height=550;
+        var context=canvas.getContext("2d");
+        setInterval(function(){
+            render(context);//绘制当前的画面
+            update();//对整个画面进行调整更新
+        },50)
+    }
+    function update(){
+        ball.x+=ball.vx;
+        ball.y+=ball.vy;
+        ball.vy+=ball.g;
+        /*碰到底边反弹*/
+        if(ball.y>=550-ball.r){
+            ball.y=550-ball.r;
+            ball.vy=-ball.vy
+        }
+        /*碰到右边反弹*/
+        if(ball.x>=600-ball.r){
+            ball.x=600-ball.r;
+            ball.vx=-ball.vx
+        }
+        /*碰到左边反弹*/
+        if(ball.x<=ball.r){
+            ball.x=ball.r;
+            ball.vx=-ball.vx
+        }
+        /*碰到右边反弹*/
+        if(ball.y<=ball.r){
+            ball.y=ball.r;
+            ball.vy=-ball.vy
+        }
+    }
+    function render(cxt){
+        cxt.clearRect(0,0,cxt.canvas.width,cxt.canvas.height);
+        cxt.fillStyle=ball.color;
+        cxt.beginPath();
+        cxt.arc(ball.x,ball.y,ball.r,0,2*Math.PI);
+        cxt.fill();
+    }
+</script>
+</body>
+</html>

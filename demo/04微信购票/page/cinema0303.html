@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+    <title>选择影院</title>
+    <style>
+        html,body{ background: #fff;}
+    </style>
+</head>
+<body ng-app="myApp">
+<div class="bar bar-header ui-bg-00a1e5">
+    <a class="button button-clear ui-city-btn ui-relative ui-small-triangle" title="广州" href="select-city.html">广州</a>
+</div>
+<ion-content class="has-header ui-cinema-list" style="top: 44px;">
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+            <div class="ui-box-list clearfix" onclick="location.href='cinema-details.html'">
+                <div class="ui-inline ui-ellipsis ui-wc50 ui-fs16 ui-fl">五一影院四季天地店</div>
+                <div class="ui-inline ui-fl"><label class="ui-fs16 ui-ff0000">¥30</label> <label class="ui-fs12">起</label></div>
+                <i class="ui-ico-collection ui-fr"><img src="../image/ico-collection.png"></i>
+            </div>
+            <div class="ui-fs12 ui-999 clearfix">
+                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-max-wc68 ui-fl">广州市海珠区赤岗北路118号四季天地3楼</span>
+                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">1.5KM</label></span>
+            </div>
+        </div>
+    </div>
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+            <div class="ui-box-list clearfix" onclick="location.href='cinema-details.html'">
+                <div class="ui-inline ui-ellipsis ui-wc50 ui-fs16 ui-fl">五一影院高德置地店</div>
+                <div class="ui-inline ui-fl"><label class="ui-fs16 ui-ff0000">¥38</label> <label class="ui-fs12">起</label></div>
+                <i class="ui-ico-collection ui-fr"></i>
+            </div>
+            <div class="ui-fs12 ui-999 clearfix">
+                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-wc68 ui-fl">广州市天河区珠江新城高德置地4楼</span>
+                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">2.1KM</label></span>
+            </div>
+        </div>
+    </div>
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+            <div class="ui-box-list clearfix" onclick="location.href='cinema-details.html'">
+                <div class="ui-inline ui-ellipsis ui-wc50 ui-fs16 ui-fl">五一影院天河城店</div>
+                <div class="ui-inline ui-fl"><label class="ui-fs16 ui-ff0000">¥28</label> <label class="ui-fs12">起</label></div>
+                <i class="ui-ico-collection ui-fr"></i>
+            </div>
+            <div class="ui-fs12 ui-999 clearfix">
+                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-wc68 ui-fl">广州市天河区天河城4楼</span>
+                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">4.8KM</label></span>
+            </div>
+        </div>
+    </div>
+    </div>
+</ion-content>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="../js/swiper.js"></script>
+<script>
+    angular.module('myApp', ['ionic']);
+
+    //时间
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        spaceBetween: 8,
+        grabCursor: true
+    });
+    $(".ui-sch-time li span").click(function(){
+        $(".ui-sch-time li span").removeClass("ui-sec-time");
+        $(this).addClass("ui-sec-time");
+    });
+    /* $(".ui-box-list").on("click",function(){
+    	$(".ui-box-list").find("img").remove();
+    	$(this).find("i").append("<img src='../image/ico-collection.png'>");
+    }); */
+</script>
+</body>
+</html>

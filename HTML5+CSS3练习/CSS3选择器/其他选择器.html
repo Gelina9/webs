@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>其他选择器</title>
+</head>
+<style>
+   /* div~p{
+        background-color: #666666;
+    }*/
+    /*p:not(.red){
+        background-color: chartreuse;
+    }*/
+    :target{
+        border: 2px solid #ff4553;
+        background-color: yellow;
+    }
+</style>
+<body>
+<p>0</p>
+<div>
+    <p>1</p>
+</div>
+<p class="red">2</p>
+</div>
+<p>3</p>
+<p><a href="#news1">跳转到内容1</a></p>
+<p><a href="#news2">跳转到内容2</a></p>
+<p>点击以上的链接：target 选择器会高亮显示你所跳转的当前活动的锚标记</p>
+<p id="news1"><b>新的内容1...</b></p>
+<p id="news2"><b>新的内容2...</b></p>
+</body>
+</html>

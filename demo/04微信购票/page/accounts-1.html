@@ -1,0 +1,476 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>确认并选择支付方式</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../uiwidget/wbox/css/wbox.css" rel="stylesheet">
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script src="../layer/layer.js"></script>
+<style>
+	.layui-layer{ border-radius:5px; overflow:hidden;}
+	body{ background:#fff;}
+</style>
+</head>
+
+<body>
+<section class="accounts">
+	<div class="li_fc">
+			<p class="color_red _7rem">请在<label>14分58秒</label>内完成支付</p>
+	</div>
+	<ul class="accounts_list">
+		<li class="mod_li li_bg">
+			<h3 class="ui_title">商品信息</h3>
+		</li>
+		<li>
+			<!--<a href="javascript:;" class="city ticket_info" style="display: none;">-->
+				<!--<span class="color_333">速度与激情7(<label>2</label>张)</span>-->
+				<!--<i class="icon_right_g"></i>-->
+			<!--</a>-->
+			<dl id="film_info" style="display: block;">
+				<dd class="mod_li border_dashed">
+					<div class="item_info">
+						<h3 class="meal_t ">速度与激情7<i class="after_arrow_left"></i></h3>
+						<p class="color_999 _6rem">数码辰星影院</p>
+						<p class="color_999 _6rem">2015年4月13日  16:20</p>
+						<p class="color_999 _6rem"><label>英语</label>&nbsp;<label>普通立体3D</label>&nbsp;<label>2号厅</label></p>
+						<a href='seat-2.html' class="mod_blue_border sec_seat_btn color_00a1e5">重新选座</a>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<dl class="sec_seat">
+						<dd><a href="javascript:;" class="row_n">7排18座</a></dd>
+						<dd><a href="javascript:;" class="row_n">7排19座</a></dd>
+						<dd><a href="javascript:;" class="row_n">7排20座</a></dd>
+						<dd><a href="javascript:;" class="row_n">7排21座</a></dd>
+					</dl>
+				</dd>
+				<dd class="mod_li ticket_price">
+					<a href="#" class="content_info ui_position" style="display: table;">
+						<!--<span class="fl_l color_333 fs15">数量:4张</span>-->
+						<p class="color_555 fs15 fl_r">非会员价:<label>240.00</label>元&nbsp;&nbsp;会员价:<label class="color_red">160.88元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li>
+			<a href="javascript:;" class="city ticket_info">
+				<span class="color_333">乐享二人套餐(<label>1</label>份)</span>
+				<i class="icon_right_g"></i>
+			</a>
+			<dl class="m_info">
+				<dd class="mod_li">
+					<div class="item_info">
+						<h3 class="meal_t">乐享二人套餐</h3>
+						<span class="ui_amount">数量:1份</span>
+						<p class="color_999 _6rem">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<a href="#" class="content_info">
+						<p class="color_555 _7rem absolute_right">非会员价：<label>28</label>元&nbsp;&nbsp;会员价：<label class="color_red">20元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li>
+			<a href="javascript:;" class="city ticket_info">
+				<span class="color_333">乐享二人套餐(<label>1</label>份)</span>
+				<i class="icon_right_g"></i>
+			</a>
+			<dl class="m_info">
+				<dd class="mod_li">
+					<div class="item_info">
+						<h3 class="meal_t">乐享二人套餐</h3>
+						<span class="ui_amount">数量:1份</span>
+						<p class="color_999 _6rem">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<a href="#" class="content_info">
+						<p class="color_555 _7rem absolute_right">非会员价：<label>28</label>元&nbsp;&nbsp;会员价：<label class="color_red">20元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li class="">
+			<a href="javascript:;" class="city ticket_info">
+				<span class="color_333">圣诞二人套餐(<label>2</label>份)</span>
+				<i class="icon_right_g"></i>
+			</a>
+			<dl class="m_info">
+				<dd class="mod_li">
+					<div class="item_info">
+						<h3 class="meal_t">圣诞二人套餐</h3>
+						<span class="ui_amount">数量:2份</span>
+						<p class="color_999 _6rem">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<a href="#" class="content_info">
+						<p class="color_555 _7rem absolute_right">非会员价：<label>28</label>元&nbsp;&nbsp;会员价：<label class="color_red">20元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li class="ui_goods">
+			<a href="javascript:;" class="city ticket_info">
+				<span class="color_333">圣诞二人套餐(<label>1</label>份)</span>
+				<i class="icon_right_g"></i>
+			</a>
+			<dl class="m_info">
+				<dd class="mod_li">
+					<div class="item_info">
+						<h3 class="meal_t">圣诞二人套餐</h3>
+						<span class="ui_amount">数量:1份</span>
+						<p class="color_999 _6rem">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<a href="#" class="content_info">
+						<p class="color_555 _7rem absolute_right">非会员价：<label>28</label>元&nbsp;&nbsp;会员价：<label class="color_red">20元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li class="ui_goods">
+			<a href="javascript:;" class="city ticket_info">
+				<span class="color_333">圣诞二人套餐(<label>2</label>份)</span>
+				<i class="icon_right_g"></i>
+			</a>
+			<dl class="m_info">
+				<dd class="mod_li">
+					<div class="item_info">
+						<h3 class="meal_t">圣诞二人套餐</h3>
+						<span class="ui_amount">数量:2份</span>
+						<p class="color_999 _6rem">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<a href="#" class="content_info">
+						<p class="color_555 _7rem absolute_right">非会员价：<label>28</label>元&nbsp;&nbsp;会员价：<label class="color_red">20元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li class="ui_goods">
+			<a href="javascript:;" class="city ticket_info">
+				<span class="color_333">圣诞二人套餐(<label>1</label>份)</span>
+				<i class="icon_right_g"></i>
+			</a>
+			<dl class="m_info">
+				<dd class="mod_li">
+					<div class="item_info">
+						<h3 class="meal_t">圣诞二人套餐</h3>
+						<span class="ui_amount">数量:1份</span>
+						<p class="color_999 _6rem">爆谷（大）1份+可乐（中）/雪碧（中）奶茶（中）2杯</p>
+					</div>
+				</dd>
+				<dd class="mod_li">
+					<a href="#" class="content_info">
+						<p class="color_555 _7rem absolute_right">非会员价：<label>28</label>元&nbsp;&nbsp;会员价：<label class="color_red">20元</label></p>
+					</a>
+				</dd>
+			</dl>
+		</li>
+		<li class="mod_li more_ticket" id="more_goods">更多商品...</li><!-- 当卖品超过3个时显示 -->
+		<li class="mod_li">
+			<a href="#" class="content_info ui_position" style="display: inline-block;">
+				<strong class="fl_l color_333 fs18 pl5">总价</strong>
+				<p class="color_555 half_7" style="position: static; float: right;">非会员价:<label>120</label>元&nbsp;&nbsp;&nbsp;&nbsp;会员价:<label class="color_red">188元</label><span class="ui_label">起</span></p>
+			</a>
+		</li>
+		<!-- <li class="mod_li h_li">
+			<a href="javascript:;" class="info receive">
+				接收短信手机号：&nbsp;
+				<input type="text" placeholder="13800138000" class="half_7">
+				<div class="sel_act">
+					<span class="ico_act"><i class="icon_gray"></i></span>
+				</div>
+			</a>
+		</li> -->
+		<li class="mod_li li_bg">
+			<h3 class="ui_title">接收取货码手机号</h3>
+		</li>
+		<li class="ui_input_box">
+			<input type="tel" name="phone" class="ui_input" placeholder="请输入取货码手机号">
+			<i class="ion-close-circled"></i>
+		</li>
+		<!-- <li class="mod_li ui_chosen_li">
+			<div class="ui_chosen">
+				<div  class="ui_chosen_txt">
+					请选择用于支付的会员卡号/手机号：
+				</div>
+				<input type="text" class="ui_chosen_input" /><i class="ui_slidedown"><i class="ui_slidedown_arrow"></i></i>
+				<div class="ui_chosen_drop">
+					<ul class="ui_chosen_results">
+						<li>1235434</li>
+						<li>1235434</li>
+						<li>1235434</li>
+					</ul>
+				</div>
+			</div>
+		</li> -->
+		<li class="mod_li li_bg">
+			<h3 class="ui_title">结算信息</h3>
+		</li>
+		<li class="ui_input_box" id="ui_chosen_li_1">
+			<input type="tel" name="phone" class="ui_input" placeholder="请输入取货码手机号">
+			<i class="ion-close-circled"></i>
+			<span class="add_btn" onclick="add()">添加</span>
+		</li>
+		<li class="mod_li ui_chosen_li" id="ui_chosen_li_2">
+			<div class="ui_chosen">
+				<div  class="ui_chosen_txt">
+					请选择用于支付的会员卡号/手机号：
+				</div>
+				<div style="position:relative;">
+					<input type="text" class="ui_chosen_input" placeholder="3123123" />
+					<div class="ui_ico">
+						<span class="ui_slidedown"><i class="ui_slidedown_arrow"></i></span>
+					</div>
+				</div>
+				<div class="ui_chosen_drop">
+					<ul class="ui_chosen_results">
+						<li>1235434</li>
+						<li>1235434</li>
+						<li>1235434</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		<li class="mod_li after_arrow_left">
+			<a href='../member/binding-oscar.html' class="city">
+				<span class="color_333 half_7">绑定会员卡</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='ticket-pay.html' class="city">
+				<span class="color_333 half_7">优惠券：</span>
+				<i class="icon_right_g"></i>
+				<span class="c_cinema_q color_333">2张可用，点击添加使用</span>
+			</a>
+		</li>
+		<li class="mod_li">
+			<div class="city" style="font-size: 0.65rem; color:#333;">
+				<span class="color_333">还需支付：</span>(非会员<label>188.00</label>元&nbsp;&nbsp;&nbsp;&nbsp;会员<label class="color_red">120.88元</label>)
+			</div>
+		</li>
+		<li class="mod_li">
+			<div class="city" style="font-size: 0.65rem; color:#333; line-height: normal; height: auto;white-space: nowrap; width: auto; padding-left: 2.5%;">
+				<span class="nonsupport"><em class="ion-information-circled"></em>请仔细<label>核对</label>购票信息，出票后<label>不支持退换</label></span>
+			</div>
+		</li>
+		<li class="mod_li li_bg" id="item">
+			<h3 class="ui_title">请选择支付方式</h3>
+		</li>
+		<div class="ui_input_box select_pay" style="display: table;">
+			<label class="ui_icon_box fl_l"><img src="../image/memberPayIcon.png"></label><label class="ui_input_box_txt fl_l ml5 color_333">会员支付<label class="color_333 fs14">(余额:315.00元)</label></span></label> <!-- 当余额不足时显示 color_333改为color_999-->
+			<a href="../member/member-recharge.html" class="ui_blue_btn">去充值</a> <!-- 当余额不足时显示 -->
+			<label class="ico_act fl_r"><i class="icon_blue_suc"></i></label>&nbsp;
+		</div>
+		<div class="ui_input_box select_pay" style="display: table;">
+			<label class="ui_icon_box fl_l"><img src="../image/pointpayIcon.png"></label><label class="ui_input_box_txt fl_l ml5 color_999">积分支付<label class="color_999 fs14">(卡内积分：502分)</label></span></label>
+			<label class="ico_act fl_r"><i class="icon_circle_no"></i></label>&nbsp;
+		</div>
+		<div class="ui_input_box select_pay" style="display: table;">
+			<label class="ui_icon_box fl_l"><img src="../image/alipayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">支付宝支付</label>
+			<label class="ico_act fl_r"><i class="icon_circle_no"></i></label>&nbsp;
+		</div>
+		<div class="ui_input_box select_pay" style="display: table;">
+			<label class="ui_icon_box fl_l"><img src="../image/weipayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">微信支付</label>
+			<label class="ico_act fl_r"><i class="icon_circle_no"></i></label>&nbsp;
+		</div>
+		<div class="ui_input_box select_pay" style="display: table;">
+			<label class="ui_icon_box fl_l"><img src="../image/uniPayIcon.png"></label><label class="ui_input_box_txt fl_l ml5">银行卡支付</label>
+			<label class="ico_act fl_r"><i class="icon_circle_no"></i></label>&nbsp;
+		</div>
+		<li class="distance"></li>
+		<a href="javascript:;" class="mod_blue_btn ma member_pay" style="width: 95%; height: 2rem;">确认订单，去支付</a>
+		<li class="distance"></li>
+	</ul>
+
+</section>
+
+<!-- <section class="mask"></section>
+<section class="ui_wbox">
+	<div class="pop ui_member_pay">
+		<div class="pop_info inte_pop">
+			<p class="pop_title color_red">会员卡余额支付：</p>
+			<!-- <p class="pop_title color_red">本次支付积分：300分</p>
+			<p class="ui_member_pay_p">原价：<span>50.00</span></p>
+			<p class="ui_member_pay_p">您还需支付：<span class="ui_member_pay_money">35.00</span></p>
+			<p class="ui_member_pay_p ui_member_pay_activity">活动名称：<span>影院会员折扣影院会员折扣影院会员折扣</span></p>
+			<p class="ui_member_pay_p">用于支付的会员卡/手机号：<span class="ui_member_pay_account">138***800</span></p>
+			<p class="ui_member_pay_p ui_member_pay_pwd">请输入支付密码：</p>
+			<input type="password" class="mod_input pop_input" placeholder="请输入会员密码" />
+		</div>
+		<div class="pop_btn">
+			<ul>
+				<li class="color_999 pop_cancel">取消</li>
+				<li class="color_00a1e5 pop_confirm">确认</li>
+			</ul>
+		</div>
+	</div>
+</section> -->
+</body>
+<script src="../layer/layer.js"></script>
+<script>
+$(document).ready(function(e) {
+	$(".ticket_info").click(function(){
+		$(this).hide();
+		$(this).next(".m_info").show();
+	})
+	$("#film_info").click(function(){
+		$(".ticket_price").toggle();
+		$("#film_info .after_arrow_left").toggle();
+	})
+	$(".m_info").click(function(){
+		$(this).hide();
+		$(".ticket_info").show();
+	})
+
+	$(".member_pay").on('click',function(){
+		/* layer.open({
+			type : 1,
+			/* title : '会员卡余额支付',
+			skin : 'layui-layer-demo',//样式类名
+			closeBtn : false, //不显示关闭按钮
+			shift : 2,
+			shadeClose : true, //开启遮罩关闭
+			content : 'pop_accounts.html',
+			area : ['90%','']
+		}); */
+		layer.open({
+			  type: 2,
+			  shadeClose : true,
+			  area: ['90%', '305px'],
+			  content: 'pop_accounts.html'
+			});
+	})
+	$("#de5").on('click',function(){
+		layer.open({
+			type : 1,
+			skin : 'layui-layer-demo',//样式类名
+			closeBtn : false, //不显示关闭按钮
+			shift : 2,
+			shadeClose : true, //开启遮罩关闭
+			content : '<li>2</li>',
+			area : ['80%','30%']
+		})
+	})
+	$(".pop_confirm").click(function(){
+		$("html").css({"height":"auto","overflow":"inherit"});
+		location.href='pay-success.html';
+	})
+	$(".ui_chosen_input").click(function(){
+		$(".ui_chosen_drop").slideToggle();
+		// $(".ui_add_btn").toggle();
+	})
+	$(".ui_slidedown").click(function(){
+		$(".ui_chosen_drop").slideToggle();
+	})
+	$(".ui_chosen_drop li").click(function(){
+		$(".ui_chosen_drop").slideUp();
+		var gettxt = $(this).text();
+		$(".ui_chosen_input").val(gettxt);
+	})
+	$(document.body).click(function(e){
+		var target = e.target;
+        if($('.ui_chosen_drop').is(':visible') && !$(target).hasClass('ui_chosen_results') && !$(target).hasClass('ui_chosen_input') && !$("ui_slidedown"))  {
+            slide_up();
+    	}
+	})
+	$(".ui_chosen_txt").on('click',function(){
+		$("#ui_chosen_li_1").css({"display":"-webkit-box"})
+		$("#ui_chosen_li_2").hide();
+	})
+	$("#ui_chosen_li_1 .add_btn").on('click',function(){
+		$("#ui_chosen_li_2").show();
+		$("#ui_chosen_li_1").hide();
+	})
+	
+});
+
+function slide_up(){
+	$(".ui_chosen_drop").slideUp(300);
+}
+
+function tips(){
+	var win = $(document).wBox({
+	  iframeWH : {
+	         width : '85%',
+	         height : '28%'
+	      },
+      requestType : 'iframe',
+      title : "demo",
+      opacity : 0.5,
+      target : "tips_pop.html"
+  });
+}
+
+function add(){
+	var win = $(document).wBox({
+	  iframeWH : {
+	         width : '90%',
+	         height : '40%'
+	      },
+      requestType : 'iframe',
+      title : "demo",
+      opacity : 0.5,
+      target : "pop_memeber.html"
+  });
+}
+
+$("#more_goods").on('click',function(){
+	$('.ui_goods').toggle();
+	var txt = $("#more_goods").text();
+	if(txt == '更多商品...'){
+		$("#more_goods").text('收起更多商品...');
+	}
+	else{
+		$("#more_goods").text('更多商品...');
+	}
+})
+
+//选择支持方式
+$(".select_pay").bind("click",function(){
+	$(".select_pay").find(".ico_act i").removeClass();
+	$(this).siblings().find(".ico_act i").addClass("icon_circle_no");
+	$(this).find(".ico_act i").addClass("icon_blue_suc");
+})
+
+//输入框
+$("input").bind('input propertychange',function(){
+	if($(this).val().length > 1){
+		$(this).nextAll(".ion-close-circled").show();
+	}
+	if($(this).val().length < 1){
+		$(this).nextAll(".ion-close-circled").hide();
+	}
+});
+$(".ion-close-circled").bind('click',function(){
+	$(this).hide();
+	$(this).prev('input').val('');
+})
+$("input").bind('blur',function(){
+	//$(this).nextAll(".ion-close-circled").hide();ui_balance_li
+	$(".li_fc").css({"position":"fixed"});
+	$(".accounts_list").css({"top":"1.8rem"})
+});
+$("input").bind('focus',function(){
+	$(".li_fc").css({"position":"relative"});
+	$(".accounts_list").css({"top":"0"});
+});
+</script>
+</html>

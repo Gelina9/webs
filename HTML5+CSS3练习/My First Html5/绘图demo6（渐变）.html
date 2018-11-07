@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绘图模板</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            //线性渐变
+            var clg=context.createLinearGradient(0,0,200,0);//这是水平渐变，垂直是0,200,45°是200,200
+            clg.addColorStop(0,"red");
+            clg.addColorStop(0.5,"yellow");
+            clg.addColorStop(1,"pink");
+            context.fillStyle=clg;
+            context.strokeStyle=clg;
+            context.fillRect(10,10,200,200);
+
+            //径向渐变
+            var crg=context.createRadialGradient(325,100,20,325,100,80);//x1,y1,r1,x2,y2,r2
+            crg.addColorStop(0,"purple");
+            crg.addColorStop(0.75,"blue");
+            crg.addColorStop(1,"green");
+            context.fillStyle=crg;
+            context.fillRect(230,10,200,200);
+        };
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1340" height="660"></canvas>
+</body>
+</html>

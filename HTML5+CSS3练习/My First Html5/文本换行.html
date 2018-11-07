@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>文本换行</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        function wrapText(context,text,x,y,maxWidth,lineHeight){
+            var words=text.split(" ");//以空格把字符串分割并存放到数组之中去
+            var line="";
+            //循环数组取出数组中的字符串
+            for(var n=0;n<words.length;n++){
+                var testLine=line+words[n]+" ";
+                var metrics=context.measureText(testLine);
+                var testWidth=metrics.width;//得到测量字符串的宽度
+                if(testWidth>maxWidth){
+                    context.fillText(line,x,y);
+                    line=words[n]+" ";//重新给line赋值，绘制下一行
+                    y+=lineHeight;//y坐标要加上行高在上一行的下方绘制，避免绘制的内容重叠
+                }
+                else{
+                    line=testLine;
+                }
+            }
+            context.fillText(line,x,y);//绘制文本
+        }
+        window.onload = function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            var text = "Love is when you"
+                    +" sit beside someone doing nothing"
+                    +" yet you feel comfortable~";
+            var maxWidth=250;//每一行绘制的长度，超过就换行
+            var lineHeight=25;//设置行之间的间隔
+            var x=(canvas.width-maxWidth)/2;//起始坐标
+            var y=60;
+            context.font="16px Arial";
+            context.fillStyle="#333";
+            wrapText(context,text,x,y,maxWidth,lineHeight);
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1340" height="660"></canvas>
+</body>
+</html>

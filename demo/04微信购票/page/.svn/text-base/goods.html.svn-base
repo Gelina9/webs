@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
+    <!-- <link href="../css/swiper.css" type="text/css" rel="stylesheet" /> -->
+    <title>卖品推荐</title>
+    <style>
+        body,html{ background: #f8f8f8;}
+        .wrap-page{
+        position:absolute; left:0; right:0;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+		}
+    </style>
+</head>
+<body ng-app="myApp">
+<div class="bar bar-header" style="background: #f0f0f0;border-top: 1px solid #e4e4e4;border-bottom: 1px solid #e4e4e4;">
+    <h1 class="title">
+        <span class="ui-999 ui-fs16 ui-fl">已选影票：</span>
+        <span class="ui-fs16 ui-333 ui-fl">霍比特人：五军之战  x2</span>
+    </h1>
+</div>
+<!-- <ion-content class="has-header ui-goods-wrap has-footer"> -->
+<div class="wrap-page has-header has-footer ui-goods-wrap">
+	<ul class="list">
+        <li class="item item-thumbnail-left ui-relative">
+          <img src="../image/default-goods-picture.jpg">
+          <div class="ui-selected-goods">
+          	 <h2 class="ui-goods-title">情侣套餐</h2>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="../image/set_meal.png">
+          <div class="ui-selected-goods">
+          	 <h2 class="ui-goods-title">情侣套餐</h2>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar-not"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="../image/set_meal.png">
+          <div class="ui-selected-goods">
+          	 <h2 class="ui-goods-title">情侣套餐</h2>
+          	 <p class="ui-lineClamp-2 ui-fs12">爆谷（大）1份+可乐（中）/雪碧（中）/奶茶（中）2杯</p>
+          </div>
+          <p><span class="ui-fs18 ui-ff0000">¥19.<label class="ui-ff0000 ui-fs12">9</label></span></p>
+          <p class="ui-line-through" style="font-size:13px;">柜台价：<span class="ui-fs14">¥35</span></p>
+          <div class="button-bar ui-btn-group" style="position: absolute;bottom: 10px;width: auto;right: 10px;">
+          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+          	<label class="button ui-button-amount">1</label>
+          	<span class="button ui-ion-plus ui-button-bar-not"><i class="ion-plus"></i></span>
+       	  </div>
+       	  <i class="ion-checkmark-circled ui-checkbox-bar-not"></i>
+        </li>
+    </ul>
+</div>
+<footer class="bar bar-footer ui-bg-f0f0f0">
+    <div class="ui-wc94" style="line-height: 48px;">
+        <a href="accounts.html" class="ui-account-detail ui-fs16">跳过</a>
+        <a href="javascript:void(0);" class="ui-btn-disabled ui-plr10 ui-fs16 ui-fr ui-submit-btn" style="width:80%;">确认，下一步</a>
+    </div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<!-- <script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script> -->
+<script>
+    /* angular.module('myApp', ['ionic']); */
+    $(".ui-selected-goods").on("click",function(){
+    	$(this).nextAll("i").toggleClass("ui-checkbox-bar-not").addClass("ui-checkbox-bar");
+    	$(this).parent("li").toggleClass("ui-bg-fffccc");
+    	$(this).nextAll("div").children(".ui-ion-plus").toggleClass("ui-button-bar-not").addClass("ui-button-bar");
+		if($(".item").hasClass("ui-bg-fffccc")){
+			$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+		}
+		else{
+			$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+		}
+    });
+    
+	//加数量
+    $(".ui-ion-plus").on("click",function(){
+    	var $this_ = $(this);
+    	if(!$this_.hasClass("ui-button-bar-not")){
+    		var num = $this_.prev(".ui-button-amount").text();
+    		$this_.prev(".ui-button-amount").text(parseInt(num)+1);
+    		$this_.parent().find(".ui-ion-minus").removeClass("ui-button-bar-not").addClass("ui-button-bar");
+    		
+    	}
+	});
+	//减数量
+    $(".ui-ion-minus").on("click",function(){
+    	var $this_ = $(this);
+    	if(!$this_.hasClass("ui-button-bar-not")){
+    		var num = $this_.next(".ui-button-amount").text();
+    		var sub_num = parseInt(num)-1;
+    		$this_.next(".ui-button-amount").text(sub_num);
+    		if(sub_num =="1"){
+    			$this_.removeClass("ui-button-bar").addClass("ui-button-bar-not")
+    		}
+    	}
+    });
+    
+    $(".ion-checkmark-circled").on("click",function(){
+    	$(this).toggleClass("ui-checkbox-bar-not").addClass("ui-checkbox-bar");
+    	$(this).parent("li").toggleClass("ui-bg-fffccc");
+    	if($(".item").hasClass("ui-bg-fffccc")){
+			$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+		}
+		else{
+			$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+		}
+    })
+	$(".ui-submit-btn").on("click",function(){
+		if($(this).hasClass("ui-btn-00a1e5")){
+			location.href='accounts.html';
+		}
+	})
+
+    </script>
+</body>
+</html>

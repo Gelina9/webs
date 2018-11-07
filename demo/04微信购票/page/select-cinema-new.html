@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<title>选择影院</title>
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$('.mod_search').bind('input propertychange', function() {
+			if($(this).val().length>0){
+				$(".icon_e").show();
+			}
+		}); 
+	$(".icon_e").click(function(){
+		$(".mod_search").val("");
+		$(this).hide();
+	});
+});
+</script>
+<style>
+	.s_city{ color: #333;}
+	.search{ float: right; margin-right: 4vw;width: 75%;}
+	.s_city:visited { color: #333;}
+	.s_city:after { content: '';  display: inline-block;  width: 0;  height: 0;  margin-left: 4px;  border-width: 5px;  border-color: #333 transparent transparent;  border-style: solid;  font-size: 0;  vertical-align: -2px;}
+</style>
+
+</head>
+<body>
+<section class="sec_fixed search_sel_city">
+	<a href="select-city.html" class="s_city">广州</a>
+	<article class="search input_box">
+		<i class="icon_search"></i>
+		<input type="text" class="mod_search" placeholder="请输入影片名称进行查询">
+		<i class="ion-close-circled"></i>
+	</article>
+</section>
+<section class="cinema_list">
+	<ul>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+		<li class="mod_li">
+			<a href='movie.html' class="cinema">
+				<div class="cinema_info">
+					<h3 class="cinema_name color_333">数码辰星测试影院</h3>
+					<p class="cinema_address color_999">地址：<label>广州大道北197号新达城广场</label></p>
+					<p class="remain_film color_999">今日余<label>6</label>场</p>
+				</div>
+				<i class="icon_right_g"></i>
+			</a>
+		</li>
+	</ul>
+</section>
+<script>
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$("input").bind('focus',function(){
+		$(this).nextAll(".ion-close-circled").show();
+	});
+	$("input").bind('blur',function(){
+		$(this).nextAll(".ion-close-circled").hide();
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');;
+	});
+</script>
+</body>
+</html>

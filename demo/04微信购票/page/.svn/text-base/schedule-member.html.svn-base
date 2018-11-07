@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>影片排期会员</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../css/main.css" rel="stylesheet">
+<link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+<link href="../lib/ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="../css/newpage.css" type="text/css" rel="stylesheet" />
+<style>
+	.layui-layer.layui-layer-dialog .layui-layer-content{ line-height:50px; min-height:auto; text-align:center; padding:15px 25px;}
+	.layui-layer-msg.layui-layer-hui{ border-radius:5px;}
+	.sed .mod_blue_btn {top: 0;}
+	
+	.ui-ml15 {margin-left: 5px;}
+	.new-st1{width: 55px;overflow: hidden;white-space:nowrap;}
+	.new-st2{width: 96px;overflow: hidden;white-space:nowrap;}
+	.re-seats {width: auto;}
+
+</style>
+</head>
+
+<body class="schedule-page">
+<!--<header>-->
+	<!--<div class="h_left ui_arrow_left_btn">-->
+		<!--<a href="#" class="cinema_t color_fff">数码辰星测试影院</a>-->
+	<!--</div>-->
+	<!--<div class="h_right show_tab">-->
+		<!--<a href='#' class="sec_cinema color_fff" onClick="location.href='select-cinema.html'">选择影院</a><i class="icon_right_r"></i>-->
+	<!--</div>-->
+<!--</header>-->
+<!--<div class="ui-box clearfix" style="padding: 5px 0;">
+	<div class="ui-fl ui-arrow-left ui-relative ui-cinema-head">
+		<p class="clearfix ui-mb5"><span class="ui-fs18 ui-333" onclick="location.href ='cinema-details.html'">广州四季天地五一影院</span></p>
+		<p class="clearfix"><span class="ui-999 ui-fs13 ui-fl">广州市海珠区艺苑路24号5楼</span><a href="tel:020-66668888" class="ui-999 ui-fs13 ui-fl ui-ml10">020-66668888</a> </p>
+	</div>
+	<div class="ui-fr ui-relative ui-collection-box">
+		<i class="ui-collection-btn ui-fr ui-plr15 ion-android-star-outline ui-fs24"></i> 
+			
+			<!-- 关注后ion-android-star-outline改为ion-android-star，ui-333改为ui-ff9500 -->
+	<!--</div>-->
+</div>
+
+<div class="swiper-container banner_playbill">
+	<ul class="swiper-wrapper banner">
+		<li class="swiper-slide selected_bor"><a href="javascript:;" class="b_pb rep_bor ui-relative"><img src="../image/min_playbill.png" /><label class="ui-presell">预售</label></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/default-movie-picture.jpg" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill03.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill04.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill_t.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill03.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill04.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill_t.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill03.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill04.png" /></a></li>
+		<li class="swiper-slide"><a href="javascript:;" class="b_pb bor"><img src="../image/min_playbill.png" /></a></li>
+	</ul>
+	<!-- Add Scrollbar -->
+	<div class="swiper-scrollbar"></div>
+</div>
+	<h1 class="film_det">
+		<a href="javascript:;" class="film_name color_333">超能陆战队</a>
+		<a href='#' class="film_det_btn color_00a1e5" onClick="location.href='film-details.html'">影片详情</a>
+	</h1>
+	<div class="ui-box clearfix ui-bg-fff2ca">
+		<div class="ui-wc94">
+		<i class="ui-ico-exclamation ui-fl"></i>
+		<span class="ui-fs14 ui-fl ui-ml5 ui-f6a341">温馨提示：电影开场前15分钟关闭在线售票</span>
+		</div>
+		
+	</div>
+	<div class="swiper-container sch_time">
+		<ul class="swiper-wrapper">
+		<li class="swiper-slide"><span class="s_t sec_time">今天4-11</span></li>
+		<li class="swiper-slide"><span class="s_t">明天4-12</span></li>
+		<li class="swiper-slide"><span class="s_t">后天4-13</span></li>
+		<li class="swiper-slide"><span class="s_t">周四4-14</span></li>
+		<li class="swiper-slide"><span class="s_t">4-16</span></li>
+		<li class="swiper-slide"><span class="s_t">4-17</span></li>
+		<li class="swiper-slide"><span class="s_t">4-18</span></li>
+		<li class="swiper-slide"><span class="s_t">4-19</span></li>
+	</ul>
+	<!-- Add Scrollbar -->
+		<div class="swiper-scrollbar" style="opacity:0;"></div>
+	</div>
+	<!-- 会员登录不显示会员价 -->
+<!--<div class="ui_card_explain after_arrow_left">  
+	<span>会员价：</span>
+	<label class="ui_card_explain_1"></label> 金卡	
+	<label class="ui_card_explain_2"></label> 银卡
+	<label class="ui_card_explain_3"></label> 普卡
+	<label class="ui_card_explain_4"></label> 非会员
+	<div style="display:none;">
+		<label class="ui_card_explain_1"></label> 金
+		<label class="ui_card_explain_1"></label> 金卡
+		<label class="ui_card_explain_2"></label> 银卡
+		<label class="ui_card_explain_3"></label> 普卡
+		<label class="ui_card_explain_4"></label> 非会员
+	</div>
+
+</div>-->
+
+<div class="schedule">
+	<ul>
+		<!--<li class="mod_li">
+			<a href="#"  class="sed clearfix">
+				<div class="time ui-block ui-fl">
+					<h4 class="star_time">16:20</h4>
+					<h4 class="over_time">18:20<span class="ui-fs10">散场</span></h4>
+				</div>
+				<div class="hall ui_hall ui-block ui-fl">
+					<div class="ui-fs13 ui-777"><span class="ui_hall_type ui-fs13 ui-777">普通立体 | 英语</span> | <span class="ui_hall_number ui-fs13 ui-777">7号普通厅</span></div>
+					<div class="ui_m_price" id="ui_price"><label>¥40.0</label><span class="ui_card_1">¥30.0</span><span class="ui_card_2">¥50.0</span><span class="ui_card_3">¥80.0</span></div>
+					<div class="ui_m_price_more">
+						<span class="ui_card_4">¥30.0</span>
+						<span class="ui_card_4">¥30.0</span>
+						<span class="ui_card_4">¥30.0</span>
+						<span class="ui_card_4">¥30.0</span>
+					</div>
+				</div>
+				<span class="price">55<label>起</label></span>
+				<span class="mod_blue_btn" onClick="location.href='seat.html'">选座</span>
+			</a>
+		</li>-->
+		<!--<style type="text/css">
+			.newtag{overflow: hidden;padding-left: 10px;}
+			.newtag span{float:left;display:inline-block;font-size: 10px;width: 26px;height: 16px;line-height:16px;text-align:center;box-sizing:border-box;padding:0 0px;margin-top: 4px;border-radius: 2px;margin-right: 4px;}
+			.tagred{color:#ff4e4e;border: 1px solid #ff4e4e;}
+			.tagyellow{color:#ff8e00 ;border: 1px solid #ff8e00 ;}
+			.tagpurple{color:#bc75f3 ;border: 1px solid #bc75f3 ;}
+			.taggreen{color:#6cc531 ;border: 1px solid #6cc531 ;}
+			.newprice{margin-top: 5px;}
+		</style>-->
+		<li class="mod_li">
+			<a href="#"  class="sed clearfix">
+				<div class="time ui-block ui-fl new-st1">
+					<h4 class="star_time">16:20</h4>
+					<h4 class="over_time ui-777" style="line-height:150%;">18:20<span class="ui-fs10 ui-777">散场</span></h4>
+				</div>
+				<div class="ui-block ui-fl new-st2">
+					<p class="ui_hall_type ui-fs13 ui-777">中国巨幕3D|英英语语</p>
+					<p class="ui_hall_number ui-fs13 ui-777">7号普通厅普通厅通通通厅通通通厅通通通厅通通通厅通通</p>
+				</div>
+				<div class="ui-block ui-fl ui-ml15">
+					<p class="clearfix">
+						<span class="ui-fs16 ui-ff0000 ui-fl">¥19.9</span>
+						<span class="ui-bage-price ui-bage-ff9500 ui-fl ui-ml5">金卡金卡金卡</span>
+						<p class="ui-line-through ui-fs14 ui-777" style="text-align: left;">¥40.0</p>
+					</p>
+					
+				</div>
+				<!-- <span class="price">55<label>起</label></span> -->
+				<span class="mod_blue_btn" onClick="location.href='seat.html'">选座</span>
+				<p class="re-seats">总:228 余:225</p>
+			</a>
+			<div class="newtag">
+				<span class="tagred">首映</span>
+				<span class="tagyellow">明星</span>
+				<span class="tagpurple">点映</span>
+				<span class="taggreen">特惠</span>
+			</div>
+		</li>
+		<li class="mod_li">
+			<a href="#"  class="sed clearfix">
+				<div class="time ui-block ui-fl new-st1">
+					<h4 class="star_time">16:20</h4>
+					<h4 class="over_time ui-777" style="line-height:150%;">18:20<span class="ui-fs10 ui-777">散场</span></h4>
+				</div>
+				<div class="ui-block ui-fl new-st2">
+					<p class="ui_hall_type ui-fs13 ui-777">中国巨幕3D|英英语语</p>
+					<p class="ui_hall_number ui-fs13 ui-777">7号普通厅普通厅通通通厅通通通厅通通通厅通通通厅通通</p>
+				</div>
+				<div class="ui-block ui-fl ui-ml15">
+					<p class="clearfix">
+						<span class="ui-fs16 ui-ff0000 ui-fl">¥19.9</span>
+						<span class="ui-bage-price ui-bage-ff9500 ui-fl ui-ml5">金卡金卡金卡</span>
+						<p class="ui-line-through ui-fs14 ui-777" style="text-align: left;">¥40.0</p>
+					</p>
+					
+				</div>
+				<!-- <span class="price">55<label>起</label></span> -->
+				<span class="mod_blue_btn" onClick="location.href='seat.html'">选座</span>
+				<p class="re-seats">总:228 余:225</p>
+			</a>
+			<div class="newtag">
+				<span class="tagred">首映</span>
+				<span class="tagyellow">明星</span>
+				<span class="tagpurple">点映</span>
+				<span class="taggreen">特惠</span>
+			</div>
+		</li>
+		<li class="mod_li">
+			<a href="#"  class="sed clearfix">
+				<div class="time ui-block ui-fl new-st1">
+					<h4 class="star_time">16:20</h4>
+					<h4 class="over_time ui-777" style="line-height:150%;">18:20<span class="ui-fs10 ui-777">散场</span></h4>
+				</div>
+				<div class="ui-block ui-fl new-st2">
+					<p class="ui_hall_type ui-fs13 ui-777">中国巨幕3D|英英语语</p>
+					<p class="ui_hall_number ui-fs13 ui-777">7号普通厅普通厅通通通厅通通通厅通通通厅通通通厅通通</p>
+				</div>
+				<div class="ui-block ui-fl ui-ml15">
+					<p class="clearfix">
+						<span class="ui-fs16 ui-ff0000 ui-fl">¥19.9</span>
+						<span class="ui-bage-price ui-bage-ff9500 ui-fl ui-ml5">金卡金卡金卡</span>
+						<p class="ui-line-through ui-fs14 ui-777" style="text-align: left;">¥40.0</p>
+					</p>
+					
+				</div>
+				<!-- <span class="price">55<label>起</label></span> -->
+				<span class="mod_blue_btn" onClick="location.href='seat.html'">选座</span>
+				<p class="re-seats">总:228 余:225</p>
+			</a>
+			<div class="newtag">
+				<span class="tagred">首映</span>
+				<span class="tagyellow">明星</span>
+				<span class="tagpurple">点映</span>
+				<span class="taggreen">特惠</span>
+			</div>
+		</li>
+		<li class="mod_li">
+			<a href="#"  class="sed clearfix">
+				<div class="time ui-block ui-fl new-st1">
+					<h4 class="star_time">16:20</h4>
+					<h4 class="over_time ui-777" style="line-height:150%;">18:20<span class="ui-fs10 ui-777">散场</span></h4>
+				</div>
+				<div class="ui-block ui-fl new-st2">
+					<p class="ui_hall_type ui-fs13 ui-777">中国巨幕3D|英英语语</p>
+					<p class="ui_hall_number ui-fs13 ui-777">7号普通厅普通厅通通通厅通通通厅通通通厅通通通厅通通</p>
+				</div>
+				<div class="ui-block ui-fl ui-ml15">
+					<p class="clearfix">
+						<span class="ui-fs16 ui-ff0000 ui-fl">¥19.9</span>
+						<span class="ui-bage-price ui-bage-ff9500 ui-fl ui-ml5">金卡金卡金卡</span>
+						<p class="ui-line-through ui-fs14 ui-777" style="text-align: left;">¥40.0</p>
+					</p>
+					
+				</div>
+				<!-- <span class="price">55<label>起</label></span> -->
+				<span class="mod_blue_btn" onClick="location.href='seat.html'">选座</span>
+				<p class="re-seats">总:228 余:225</p>
+			</a>
+			<div class="newtag">
+				<span class="tagred">首映</span>
+				<span class="tagyellow">明星</span>
+				<span class="tagpurple">点映</span>
+				<span class="taggreen">特惠</span>
+			</div>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script type="text/javascript" src="../js/swiper.js"></script>
+<script src='../layer/layer.js'></script>
+<script>
+$(document).ready(function(e) {
+	//$(".sch_time li").click(function(){
+//		$(".sch_time ul").css({"left":"-50px"});
+//		var i = $(this).index();
+//		switch (i){
+//			case 0 : $(".sch_time ul").css({"left":"0px"}); break;
+//			case 1 : $(".sch_time ul").css({"left":"-40px"}); break;
+//			case 2 : $(".sch_time ul").css({"left":"-90px"}); break;
+//			case 3 : $(".sch_time ul").css({"left":"-270px"}); break;
+//			case 4 : $(".sch_time ul").css({"left":"-364px"}); break;
+//		}
+//	})
+	$(".banner a").click(function(){
+		$(".banner a").removeClass("rep_bor");
+		$(".banner a").addClass("bor");
+		$(this).addClass("rep_bor");
+		$(".banner a i").removeClass("b_icon_r");
+		$(this).find("i").addClass("b_icon_r");
+		$(".banner li").removeClass("selected_bor");
+		$(this).parent("li").addClass("selected_bor");
+	})
+	$(".sch_time li span").click(function(){
+		$(".sch_time li span").removeClass("sec_time");
+		$(this).addClass("sec_time");
+	})
+
+});
+var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        spaceBetween: 8,
+        grabCursor: true
+    });
+
+var ui_sed_width = $(".sed").innerWidth();
+var ui_sed_time_width = $(".sed .time").innerWidth();
+var ui_sed_btn_width = $(".sed .mod_blue_btn").innerWidth();
+var ui_laber_width = $(".ui_m_price span").innerWidth();
+var ui_hall_width = ui_sed_width - ui_sed_time_width -ui_sed_btn_width;
+
+$(".ui_hall").css({"width":ui_hall_width});
+var arr_hall = [];
+$.each($(".ui_hall"), function(index, val) {
+	 var len = $(this).find("div[class='ui_m_price']>span").length;
+	 arr_hall.push(len);
+	 var ui_len = $(".ui_m_price span").innerWidth();
+	 var ui_arr_len = ui_len*len;
+	 var ui_price_len = $(".ui_m_price").innerWidth();
+	 if(ui_arr_len>ui_price_len){
+	 	$(this).find("div[class='ui_m_price']").addClass('ui_point');
+	 	$(this).find(".ui_m_price").children().eq(len-1).remove();
+	 	$(this).find("div[class='ui_m_price_more']").addClass('ui_more');
+
+	 }
+	 
+});
+$("#ui_price").click(function(event) {
+	$(this).next().slideToggle(500);
+	$("#ui_price").toggleClass("ui_point");
+});
+
+/* 更多等级  */
+$(".ui_card_explain").bind('click',function(){
+	if($(this).hasClass('after_arrow_left')){
+		$(this).find("div").css({
+			"display":"inline"
+		});
+		$(this).removeClass("after_arrow_left");
+	}
+	else if(!$(this).hasClass('after_arrow_left')){
+		$(this).find("div").css({
+			"display":"none"
+		});
+		$(this).addClass("after_arrow_left");
+	}
+})
+
+//收藏
+$(".ui-collection-btn").on("click",function(){
+	if($(this).hasClass("ion-android-star")){
+		$(this).removeClass("ion-android-star");
+		$(this).addClass("ion-android-star-outline");
+		layer.msg('已取消收藏！',{time: 1500});
+	}
+	else if($(this).hasClass("ion-android-star-outline")){
+		$(this).removeClass("ion-android-star-outline");
+		$(this).addClass("ion-android-star");
+		layer.msg('收藏成功！',{time: 1500});
+	}
+})
+</script>
+</body>
+</html>

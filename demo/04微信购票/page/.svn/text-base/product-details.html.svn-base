@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta name="wap-font-scale" content="no">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/newpage.css" rel="stylesheet">
+    <!-- <link href="../css/swiper.css" type="text/css" rel="stylesheet" /> -->
+    <title>商品详情</title>
+    <style>
+        body,html{ background: #f0f0f0;height: 100%;}
+        .wrap-page{
+        position:absolute; left:0; right:0;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+		}
+		.has-footer {bottom: 60px;}
+		.has-header{top: 43px;}
+		.bar-footer.ui-bg-f0f0f0{background-color: #fff;}
+		.button-bar>.button {padding: 0 8px;min-width: 30px;min-height: 30px;line-height: 30px;}
+		.ui-button-bar-not {font-size: 20px;line-height: 32px;min-width: 38px;text-align: center;min-height: 32px;padding: 0;color: #e2e2e2;background: #f2f2f2;padding: 0;}
+		.ui-button-bar {font-size: 20px;line-height: 32px;min-width: 38px;text-align: center;min-height: 32px;padding: 0;color: #797979;background: #f2f2f2;padding: 0;}
+		.ui-button-amount {line-height: 30px;min-height: 30px; min-width: 38px;background: #fff; color: #333;text-align: center;padding: 0;}
+		
+		
+		.button:hover{color: #e2e2e2;}
+    </style>
+</head>
+<body ng-app="myApp">
+	
+<div class="bar bar-header product-page">
+    <h1>爆谷（大）</h1> 
+</div>
+<!-- <ion-content class="has-header ui-goods-wrap has-footer"> -->
+<div class="wrap-page has-header has-footer ui-goods-wrap">
+	<div class="bwrap">
+		<div class="ui-wc94"><img src="../image/goods-only/product-tu.jpg"/></div>
+	</div>
+	<div class="bwrap">
+		<div class="ui-wc94">
+			<span class="dis-price">¥19.<i>00/份</i></span>
+			<span class="pur-price">柜台价：¥19.00</span>
+		</div>
+	</div>
+	<div class="bwrap" style="margin-top: 10px;border-top: 1px solid #d9d9d9;">
+		<div class="ui-wc94">
+			<span class="font15 pd10">购买数量</span>
+			<div class="button-bar" style="position: absolute;bottom: 7px;width: auto;right: 10px;">
+	          	<span class="button ui-ion-minus ui-button-bar-not"><i class="ion-minus"></i></span>
+	          	<label class="button ui-button-amount">1</label>
+	          	<span class="button ui-ion-plus ui-button-bar"><i class="ion-plus"></i></span>
+	       	  </div>
+		</div>
+	</div>
+	<div class="bwrap " style="margin-top: 10px;border-top: 1px solid #d9d9d9;">
+		<div class="pronew">
+			<span class="font15 pd10 pro1">商品详情</span>
+			<span class="font15 pd10 ui-999">爆谷（大）1份</span>
+		</div>
+	</div>
+	<div class="bwrap " style="margin-top: 10px;border-top: 1px solid #d9d9d9;">
+		<div class="pronew">
+			<span class="font15 pd10 pro1">购买须知</span>
+			<span class="font15 pd10 ui-999">请凭取货码到影院柜台取货。</span>
+		</div>
+	</div>
+	<ul class="list">
+    </ul>
+</div>
+<footer class="bar bar-footer ui-bg-f0f0f0" style="background-color: #fff;border-top:1px solid #d9d9d9 ;">
+    <div class="ui-wc94 clearfix" style="height: 50px;font-size: 16px;">
+    	<div class="sum left">合计:<i style="color: #FF0000;">¥35.00</i></div>
+    	<div class="right clearfix">
+    		<div class="confirm" id="addpro" style="background-color: #00a1e5;margin-right: 5px;">加入购物车</div>
+    		<div class="confirm" onclick="javascript:window.location.href='accounts-only.html'">立即购买</div>
+    	</div>
+    </div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../layer/layer.js"></script>
+<!-- <script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script> -->
+<script>
+
+//点击购物车	
+	$(".db-shoppingcar").on("click",function(){
+		$(".shade").show();
+		$("#shoppingcar-tc").show();
+		isheight();
+	})
+	
+$("#addpro").on("click",function(){
+    		layer.msg('已成功加入购物车！',{time: 1500},function(){
+    			location.href='goods-only.html';
+    		});
+
+    });
+</script>
+<script>
+    /* angular.module('myApp', ['ionic']); */
+    $(".ui-selected-goods").on("click",function(){
+    	$(this).nextAll("i").toggleClass("ui-checkbox-bar-not").addClass("ui-checkbox-bar");
+    	$(this).parent("li").toggleClass("ui-bg-fffccc");
+    	$(this).nextAll("div").children(".ui-ion-plus").toggleClass("ui-button-bar-not").addClass("ui-button-bar");
+		if($(".item").hasClass("ui-bg-fffccc")){
+			$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+		}
+		else{
+			$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+		}
+    });
+    
+	//加数量
+    $(".ui-ion-plus").on("click",function(){
+    	var $this_ = $(this);
+    	if(!$this_.hasClass("ui-button-bar-not")){
+    		var num = $this_.prev(".ui-button-amount").text();
+    		$this_.prev(".ui-button-amount").text(parseInt(num)+1);
+    		$this_.parent().find(".ui-ion-minus").removeClass("ui-button-bar-not").addClass("ui-button-bar");
+    		
+    	}
+	});
+	//减数量
+    $(".ui-ion-minus").on("click",function(){
+    	var $this_ = $(this);
+    	if(!$this_.hasClass("ui-button-bar-not")){
+    		var num = $this_.next(".ui-button-amount").text();
+    		var sub_num = parseInt(num)-1;
+    		$this_.next(".ui-button-amount").text(sub_num);
+    		if(sub_num =="1"){
+    			$this_.removeClass("ui-button-bar").addClass("ui-button-bar-not")
+    		}
+    	}
+    });
+    
+    $(".ion-checkmark-circled").on("click",function(){
+    	$(this).toggleClass("ui-checkbox-bar-not").addClass("ui-checkbox-bar");
+    	$(this).parent("li").toggleClass("ui-bg-fffccc");
+    	if($(".item").hasClass("ui-bg-fffccc")){
+			$(".ui-submit-btn").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+		}
+		else{
+			$(".ui-submit-btn").removeClass("ui-btn-00a1e5").addClass("ui-btn-disabled");
+		}
+    })
+	$(".ui-submit-btn").on("click",function(){
+		if($(this).hasClass("ui-btn-00a1e5")){
+			location.href='accounts.html';
+		}
+	})
+
+    </script>
+</body>
+</html>

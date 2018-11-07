@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: #ccc;
+        }
+        #content{
+            width: 600px;
+            height: 340px;
+            border: 10px solid #ccc;
+            margin: 40px auto 0;
+            position: relative;
+            background: url(image/bg.gif) no-repeat;
+            background-size: cover;
+        }
+        #content a {
+            width: 40px;
+            height: 40px;
+            background: #451;
+            border: 5px solid #eee;
+            position: absolute;
+            top: 145px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            line-height: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            filter: alpha(opacity:60);
+            opacity: 0.6;
+        }
+        #content a:hover{
+            filter: alpha(opacity:90);
+            opacity: 0.9;
+        }
+        #prev{left: 10px;}
+        #next{right: 10px;}
+        #text,#span1{
+            position: absolute;
+            left: 0;
+            width:600px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #000;
+            filter: alpha(opacity:80);
+            opacity: 0.8;
+        }
+        #text{
+            bottom: 0;
+            margin: 0px;
+        }
+        #span1{
+            top: 0;
+        }
+        #img1{
+            width: 600px;
+            height:340px;
+        }
+        #btn{
+            text-align: center;
+        }
+        #p1,#p2{
+            text-align: center;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oPrev=document.getElementById("prev");
+            var oNext=document.getElementById("next");
+            var oText=document.getElementById("text");
+            var oSpan=document.getElementById("span1");
+            var oImg=document.getElementById("img1");
+            var oBtn1=document.getElementById("btn1");
+            var oBtn2=document.getElementById("btn2");
+            var oP1=document.getElementById("p1");
+            var oP2=document.getElementById("p2");
+
+            var arrUrl = [
+                "image/01.jpg",
+                "image/02.jpg",
+                "image/03.jpg",
+                "image/04.jpg",
+                "image/05.jpg",
+                "image/06.jpg",
+            ];
+            var arrText=[
+                "waterfall",
+                "oasis",
+                "road",
+                "grass",
+                "river",
+                "tree"
+            ];
+            var num=0;
+            //初始化
+            function fnTab(){
+                oSpan.innerHTML=num+1+"/"+arrText.length;
+                oImg.src=arrUrl[num];
+                oText.innerHTML=arrText[num];
+            }
+            fnTab();
+
+            //循环函数
+            function cir(){
+                oP1.style.display="block";
+                oP2.style.display="none";
+                oPrev.onclick=function(){
+                    num--;
+                    if(num==-1){
+                        num=arrText.length-1;
+                    }
+                    fnTab();
+                };
+
+                oNext.onclick=function(){
+                    num++;
+                    if(num==arrText.length){
+                        num=0;
+                    }
+                    fnTab();
+                };
+            }
+
+            //顺序函数
+            function seq(){
+                oP1.style.display="none";
+                oP2.style.display="block";
+                oPrev.onclick=function(){
+                    if(num==0){
+                        alert("这已经是第一张图片啦~");
+                    }else{
+                        num--;
+                        fnTab();
+                    }
+                };
+
+                oNext.onclick=function(){
+                    if(num==arrText.length-1){
+                        alert("这已经是最后一张图片啦~");
+                    }else{
+                        num++;
+                        fnTab();
+                    }
+
+                };
+            }
+
+            //点击切换
+            oBtn1.onclick=function(){
+                cir();
+            }
+            oBtn2.onclick=function(){
+                seq();
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="btn">
+    <input id="btn1" type="button" value="循环切换"/>
+    <input id="btn2" type="button" value="顺序切换"/>
+</div>
+<p id="p1">图片可以从最后一张跳转到第一张</p>
+<p id="p2">图片只能顺序切换</p>
+<div id="content">
+    <a id="prev" href="javascript:;"><</a>
+    <a id="next" href="javascript:;">></a>
+    <p id="text">图片加载中……</p>
+    <span id="span1">数量正在计算中……</span>
+    <img id="img1"/>
+</div>
+</body>
+</html>

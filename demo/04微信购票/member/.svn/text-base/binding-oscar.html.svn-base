@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>绑定影院会员卡</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script src="../layer/layer.js"></script>
+</head>
+
+<body class="binding-page">
+<header class="mu_flex">
+	<div class="h_t color_fff">绑定影院会员卡</div>
+</header>
+<!--<div class="login_input m_login binding">-->
+	<!--<a href="../page/select-cinema.html" class="ui_sel_cinema ui_sel_cinema_dis after_arrow_left">请选择影院</a>-->
+	<!--<input type="text" name="" placeholder="请输入手机号码/会员卡号" class="mod_input">-->
+	<!--<input type="password" name="password" placeholder="请输入会员密码" class="mod_input">-->
+	<!--<div class="ui_default_checkbox"><span class="ico_act"><i class="icon_blue_suc"></i></span>&nbsp;设为默认卡</div>-->
+<!--</div>-->
+<!--<a href="javascript:;" class="submit">-->
+	<!--<span class="mod_blue_btn" style="width:90%; margin:0 auto;">绑 定</span>-->
+<!--</a>-->
+<section class="my_info">
+	<a href="../page/select-cinema.html" class="ui_input_box after_arrow_left">
+		<span>影院名称：</span>
+		<input type="text" name="name" class="ui_input" value="广州新太阳新天地飞扬影院" readonly />
+	</a>
+	<div class="ui_input_box">
+		<span>会员卡号：</span>
+		<input type="text" name="member_id" class="ui_input" value="8888888888" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box">
+		<span>手机号码：</span>
+		<input type="number" name="phone" class="ui_input" value="13800013800" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box placeholder">
+		<span>验证码：</span>
+		<input type="text" name="birthday" class="ui_input" placeholder="请输入验证码" />
+		<i class="ion-close-circled"></i>
+		<button class="ui_blue_btn" style="padding: 8px 10px; bottom: 0.45rem; top: -2px; right: 0; position: relative; border: 0;" id="btnSendCode">获取验证码</button>
+	</div>
+	<div class="ui_input_box placeholder">
+		<span>密码：</span>
+		<input type="password" name="confirm_new_pwd" class="ui_input" placeholder="请输入密码" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_default_checkbox" style="margin: 10px 0px 0 2vw;"><span class="ico_act"><i class="icon_blue_suc"></i></span>&nbsp;设为默认卡</div>
+	<div class="confirm_btn ui_confirm_btn" style="margin-top: 10%; display: table; background: #fff;"><a href="#" class="mod_blue_btn" style="width: 45%;">确定</a><a href="member.html" class="mod_gray_btn" style="width: 45%;">取消</a></div>
+</section>
+
+</body>
+<script>
+	$(".ui_default_checkbox").on('click',function(){
+		$(this).find('i').toggleClass("icon_circle_no");
+	})
+	$(".mod_blue_btn").on('click',function(){
+		var index = layer.msg('恭喜！绑定成功！',{shade : [0.4,'#000']});
+		setTimeout(function(){
+			layer.close(index);
+			location.href='member.html';
+		},3000)
+	});
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$("input").bind('focus',function(){
+		$(this).nextAll(".ion-close-circled").show();
+	});
+	$("input").bind('blur',function(){
+		$(this).nextAll(".ion-close-circled").hide();
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');;
+	});
+</script>
+</html>

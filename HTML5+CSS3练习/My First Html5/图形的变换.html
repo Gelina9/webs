@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图形的变换</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            var rectWidth=150;
+            var rectHeight=75;
+            context.fillStyle="#ff0000";
+            //把坐标原点移动到canvas中心点
+            context.translate(canvas.width/2,canvas.height/2);
+            //顺时针旋转45°
+            context.rotate(0.25*Math.PI);
+            //坐标纵向上缩小一半
+            context.scale(1,0.5);
+            context.fillRect(-rectWidth/2,-rectHeight/2,rectWidth,rectHeight);
+
+        }
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1340" height="660"></canvas>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <title>确认支付</title>
+    <style>
+        html,body{ background: #f8f8f8;}
+        .layui-layer-title{ display: none;}
+        .layui-layer-btn1{ display:none;}
+        .layui-layer-btn .layui-layer-btn1{ color:#555;}
+        .layui-layer.layui-layer-dialog .layui-layer-content{ padding:30px 20px;}
+        .has-header {top: 0px;}
+    </style>
+</head>
+<body ng-app="myApp">
+<!--<div class="bar bar-header ui-bg-ff9900">
+    <h1 class="title ui-ff0000">请在14分58秒内完成支付</h1>
+</div>-->
+<ion-content direction="y" class="has-header">
+<div class="ui-box">
+    <p class="ui-relative ui-wc94">
+        <span class="ui-000 ui-fs16">总价：</span><span class="ui-fs18 ui-333">¥75.<label class="ui-333 ui-fs16">00</label></span>
+        <span class="ui-fr">
+            <a class="ui-000 ui-fs16">还需支付：</a><a class="ui-fs18 ui-ff0000">¥55.<label class="ui-ff0000 ui-fs16">00</label></a>
+        </span>
+    </p>
+</div>
+<div class="ui-box ui-bg-f0f0f0">
+    <p class="ui-relative ui-wc94 ui-fs16">请选择支付方式</p>
+</div>
+<div class="ui-box clearfix ui-select-pay-not ui-relative">
+    <div class="ui-wc94 clearfix">
+    	<div class="ui-block" id="ui-go-recharge">
+    		<span class="ui-icon-box ui-fl ui-mr5"><img src="../image/memberPayIcon.png"></span><span class="ui-input-box-txt ui-fl  ui-fs16">会员支付</span>
+        	<!-- 当余额不足时显示 ui-333改为ui-999-->
+        	<label class="ui-999 ui-fs12" style="line-height: 26px;">(余额:15.00元)</label>
+        	<!-- 当余额不足时显示 -->
+        	<a href="../member/member-recharge.html" class="ui-btn-00a1e5 ui-p5-10">去充值</a>
+    	</div>
+        <span class="ui-ico-act ui-fr"><i class="icon_circle_no"></i></span>
+    </div>
+</div>
+<div class="ui-slide-box clearfix">
+	<i class="ui-slide-bar"></i>
+	<div class="ui-wc94 clearfix">
+		<div class="ui-fl ui-555 ui-pl30 ui-fs14 ui-block">充值活动：</div>
+	  	<div class="ui-fl ui-block">
+	  		<p class="ui-555">充200元送20元。</p>
+	  		<p class="ui-555">充300元送50元。</p>
+	  	</div>
+	</div>
+</div>
+<div class="ui-box clearfix ui-select-pay">
+    <div class="ui-wc94 clearfix">
+        <label class="ui-icon-box ui-fl ui-mr5"><img src="../image/alipayIcon.png"></label><label class="ui-input-box-txt ui-fl  ui-fs16">支付宝支付</label>
+        <label class="ui-ico-act ui-fr"><i class="icon_circle_no"></i></label>
+    </div>
+</div>
+<div class="ui-box clearfix ui-select-pay">
+    <div class="ui-wc94 clearfix">
+        <label class="ui-icon-box ui-fl ui-mr5"><img src="../image/weipayIcon.png"></label><label class="ui-input-box-txt ui-fl  ui-fs16">微信支付</label>
+        <label class="ui-ico-act ui-fr"><i class="icon_circle_no"></i></label>
+    </div>
+</div>
+<div class="ui-box ui-tac ui-mt50 ui-confirm-pay" style="border-bottom: 0;">
+    <a href="#" class="ui-wc94 ui-ptb15 ui-fs23 ui-btn-disabled">确认支付 ¥55.00</a>
+</div>
+</ion-content>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script>
+<script src="../js/keyboard.js"></script>
+<script src="../layer/layer.js"></script>
+<script>
+    keyboard();
+    angular.module('myApp', ['ionic']);
+
+    //选择支持方式
+    $(".ui-select-pay").bind("click",function(){
+        $(".ui-select-pay").find("i").removeClass("icon_blue_suc");
+        $(this).siblings().find("i").addClass("icon_circle_no");
+        $(this).find(".ui-ico-act i").addClass("icon_blue_suc");
+        $(".ui-confirm-pay a").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+    });
+    
+    //充值优惠
+    $("#ui-go-recharge").on("click",function(){
+    	$(".ui-slide-box").slideToggle();
+    });
+
+    //密码
+    $(".ui-confirm-pay a").bind ("click",function(){
+    	if($(this).hasClass("ui-btn-00a1e5")){
+    		$(".backdrop").addClass("visible active");
+            $(".ui-keyboard-box").slideDown();
+            $(".ui-del").on("click",function(){
+                $(".backdrop").removeClass("visible active");
+                $(".ui-keyboard-box").slideUp();
+            })
+
+            var i = 0;
+            $(".ui-digital-btn li a").click(function(){
+                i++;
+                if(i<6){
+                    $(".ui-mm-box li").eq(i-1).addClass("ui-mm-d");
+                }
+                else{
+                    $(".ui-mm-box li").eq(i-1).addClass("ui-mm-d");
+                    setTimeout(function(){
+                        layer.alert('会员密码输入不正确!',{
+                            closeBtn : 0,
+                            title : '提示',
+                            shadeClose : true,
+                            shade : 0.5,
+                            btn: ['忘记密码','重试'] //按钮
+                        });
+                    },500);
+                }
+            });
+
+            $(".ui-digital-btn li .del").click(function(){
+                if(i>0){
+                    i--;
+                    $(".ui-mm-box li").eq(i).removeClass("ui-mm-d");
+                    i==0;
+                }
+            });
+    	}
+    	else if($(this).hasClass("ui-btn-disabled")){
+    		layer.alert('请选择支付方式!',{
+				closeBtn : 0,
+				title : '',
+				shadeClose : true,
+				shade : 0.5,
+			});
+    		$(".layui-layer-btn").addClass('ui-layer-btn');
+    	}
+    });
+    //余额不足提示
+    $("#ui-go-recharge ~ span").on('click',function(){
+		layer.confirm('当前会员帐号余额不足!',{
+			closeBtn : 0,
+			title : '提示',
+			shadeClose : true,
+			shade : 0.5,
+			btn: ['去充值','取消']//按钮
+			,yes: function(index){
+				location.href="../member/member-recharge.html";
+			  } 
+		});
+		//$(".layui-layer-btn").addClass('ui-layer-btn');
+	});
+    $(document).ready(function(){
+    	if(".ui-ico-act".hasClass("icon_blue_suc")){
+    		$(".ui-confirm-pay a").removeClass("ui-btn-disabled").addClass("ui-btn-00a1e5");
+    	}
+    });
+</script>
+</body>
+</html>

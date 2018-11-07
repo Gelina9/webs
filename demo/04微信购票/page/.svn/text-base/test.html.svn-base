@@ -1,0 +1,26 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>无标题文档</title> 
+<style> 
+body{margin:0px;padding:0px} 
+#div1{background:#F00;color: #FFF; display:none;position:absolute;} 
+#div2{background:#333333;color: #FFF;width:400px;display:none; position:absolute;} 
+ul{ width:10000px; overflow-x:auto; overflow-y:hidden; -webkit-transform: translate(-414px, 0px);transition-duration: 0ms;}
+li{ float:left; width:1000px;}
+img{ width:100%;}
+</style> 
+</head> 
+<body > 
+<ul>
+			<li><img src="../image/film_img01.png" /></li>
+			<li><img src="../image/film_img02.png" /></li>
+			<li><img src="../image/film_img03.png" /></li>
+			<li><img src="../image/film_img01.png" /></li>
+			<li><img src="../image/film_img02.png" /></li>
+			<li><img src="../image/film_img03.png" /></li>
+		</ul> 
+</body> 
+</html> 

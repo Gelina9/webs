@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oBtn=document.getElementById("btn1");
+            var oText=document.getElementById("text1");
+            var oImag=document.getElementById("img1")
+            oBtn.onclick=function(){
+                oImag.src="image/0"+oText.value+".jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="text1"/>
+<input type="button" value="确定" id="btn1"/>
+<br/><br/>
+<img  id="img1" src="image/01.jpg" width="300"/>
+</body>
+</html>

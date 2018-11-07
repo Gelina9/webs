@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title></title>
+<link href="../css/common.css" type="text/css" rel="stylesheet">
+<link href="../css/detail.css" type="text/css" rel="stylesheet">
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+</head>
+
+<body>
+	<div class="ui_pop_header">
+		<span class="ui_pop_header_title">添加会员卡</span>
+	</div>
+	<article class="ui_pop_content">
+		<p class="ui_member_pay_p ui_member_pay_pwd">请输入会员密码：</p>
+		<div class="input_box mb20"> <input type="password" name="member" placeholder="请输入会员密码" class="ui_input mod_input" style="height: 1.8rem; font-size: 0.8rem; margin-top: 5px;"><i class="ion-close-circled"></i> </div>
+		<div class="ui_check">
+			<span class="ico_act"><i class="icon_blue_suc"></i></span>
+			<span>同时绑定会员卡到微信帐号</span>
+		</div>
+	</article>
+	<div class="pop_btn ui_footer">
+			<ul>
+				<li><a href="javascript:;" class="color_999 pop_cancel" onclick="cancelWin()">取消</a></li>
+				<li><a href="javascript:;" class="color_00a1e5 pop_confirm" onclick="cancelWin()">确认</a></li>
+			</ul>
+		</div>
+</body>
+<script>
+	$(".ico_act i").click(function(){
+		if ($(this).hasClass("icon_blue_suc")){
+			$(this).removeClass();
+			$(this).addClass("icon_circle_no");
+		}
+		else if ($(this).hasClass("icon_circle_no")){
+			$(this).removeClass();
+			$(this).addClass("icon_blue_suc");
+		}
+	});
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$("input").bind('focus',function(){
+		$(this).nextAll(".ion-close-circled").show();
+	});
+	$("input").bind('blur',function(){
+		$(this).nextAll(".ion-close-circled").hide();
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');
+	});
+</script>
+</html>

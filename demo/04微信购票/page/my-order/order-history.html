@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>订单记录</title>
+<link href="../../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../../css/main.css" rel="stylesheet" />
+<link href="../../css/newpage.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/public.js"></script>
+<!--<script>
+$(document).ready(function(e) {
+	$(".order_head li").click(function(){
+		$(".order_head li").removeClass();
+		$(this).siblings().addClass("color_fff");
+		$(this).addClass("sec_color");
+	})
+	$("#consume_record").click(function(){
+		$(".consume_record").show();
+		$(".recharge_record").hide();
+		$(".buy_ticket_record").hide();
+	})
+	$("#recharge_record").click(function(){
+		$(".recharge_record").show();
+		$(".consume_record").hide();
+		$(".buy_ticket_record").hide();
+	})
+	$("#buy_ticket_record").click(function(){
+		$(".buy_ticket_record").show();
+		$(".recharge_record").hide();
+		$(".consume_record").hide();
+	})
+});
+</script>-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".order_head li").on("click",function(){
+			var me=$(this);
+			var index=me.index();
+			me.addClass("is-active").siblings().removeClass("is-active");
+			$(".content-show ").eq(index).show().siblings(".content-show").hide();
+
+		})
+	})
+</script>
+</head>
+
+<body>
+<header class="newheader">
+	<div class="order_head">
+		<ul class="d-center">
+			<li class="sec_color is-active" id="consume_record">消费记录</li>
+			<li class="color_fff" id="recharge_record">充值记录</li>
+			<li class="color_fff" id="buy_ticket_record">购券记录</li>
+		</ul>
+	</div>
+</header>
+<section  class="order_tip">
+	<ul>
+		<li>
+			<p class="color_333 _7rem" style="text-align: center;">最近30条订单记录！</p>
+		</li>
+	</ul>
+</section>
+
+<section class="content-show consume_record">
+<ul>
+	<li class="mod_li">
+		<a href="unpaid.html" class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_unpaid">待支付</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999"><span class="color_333">恶棍天使*2张，卖品*1份</span></p>
+				<p class="color_999">场次时间：<span class="color_333">2016-01-19</span>&nbsp;&nbsp;&nbsp;<span class="color_333">16:20</span></p>
+				<p class="color_999 bm">总价：<span class="color_333">30.00元</span><span class="ui_pick_ticket" style="color:#00a1e5;">去付款</span></p>
+				<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href="consume-detail.html" class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_suc">成功</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999"><span class="color_333">星球大战：原力觉醒*2张，卖品*1份</span></p>
+				<p class="color_999">场次时间：<span class="color_333">2016-01-19</span>&nbsp;&nbsp;&nbsp;<span class="color_333">16:20</span></p>
+				<p class="color_999 bm">总价：<span class="color_333">30.00元</span><span class="ui_pick_ticket">未取票</span></p>
+				<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href="consume-detail.html" class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_suc">成功</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999"><span class="color_333">狼图腾*2张，卖品*1份</span></p>
+				<p class="color_999">场次时间：<span class="color_333">2016-01-19</span>&nbsp;&nbsp;&nbsp;<span class="color_333">16:20</span></p>
+				<p class="color_999 bm">总价：<span class="color_333">30.00元</span><span class="ui_pick_ticket">已取票</span></p>
+					<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href="in-the-ticket.html" class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_ticket">出票中</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999"><span class="color_333">狼图腾*2张，卖品*1份</span></p>
+				<p class="color_999">场次时间：<span class="color_333">2016-01-19</span>&nbsp;&nbsp;&nbsp;<span class="color_333">16:20</span></p>
+				<p class="color_999 bm">总价：<span class="color_333">30.00元</span></p>
+				<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href="refund.html" class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_fal">失败</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999"><span class="color_333">狼图腾*2张，卖品*1份</span></p>
+				<p class="color_999">场次时间：<span class="color_333">2016-01-19</span>&nbsp;&nbsp;&nbsp;<span class="color_333">16:20</span></p>
+				<p class="color_999 bm">总价：<span class="color_333">30.00元</span><span class="ui_pick_ticket">待退款</span></p>
+				<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href="refund.html" class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_fal">失败</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999"><span class="color_333">狼图腾*2张，卖品*1份</span></p>
+				<p class="color_999">场次时间：<span class="color_333">2016-01-19</span>&nbsp;&nbsp;&nbsp;<span class="color_333">16:20</span></p>
+				<p class="color_999 bm">总价：<span class="color_333">30.00元</span><span class="ui_pick_ticket">待退款</span></p>
+				<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+</ul>
+	<!-- 暂无相关订单时，引用  ../../image/goods-only/no-movies.png-->
+	<div class="not_info_box">
+		<div class="not_info_pic"><i><img src="../../image/goods-only/no-movies.png" /> </i></div>
+		<div class="not_info_txt">暂无相关订单，去下一单试试吧~</div>
+	</div>
+</section>
+
+<section class="content-show recharge_record">
+<ul>
+	<li class="mod_li">
+		<a href='recharge-detail.html' class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_suc">成功</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999">充值金额：<span class="color_red">200元</span></p>
+				<p class="color_999 bm">交易时间：<span class="color_333">2015-04-20</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color_333">16:26</span></p>
+					<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href='recharge-detail.html' class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_suc">成功</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999">充值金额：<span class="color_red">200元</span></p>
+				<p class="color_999 bm">交易时间：<span class="color_333">2015-04-20</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color_333">16:26</span></p>
+					<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+</ul>
+</section>
+
+<section class="content-show buy_ticket_record">
+<ul>
+	<li class="mod_li">
+		<a href='buy-ticket-detail.html' class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_suc">成功</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999">票券名称：<span class="color_333">20元代金券，15元代金券</span></p>
+				<p class="color_999 bm">交易时间：<span class="color_333">2015-04-20</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color_333">16:26</span></p>
+					<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<li class="mod_li">
+		<a href='buy-ticket-detail.html' class="record_info">
+			<div class="item_icon">
+				<span class="square"><label class="icon_txt_suc">成功</label></span>
+			</div>
+			<div class="item_info">
+				<p class="color_999">票券名称：<span class="color_333">20元代金券，15元代金券</p>
+				<p class="color_999 bm">交易时间：<span class="color_333">2015-04-20</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color_333">16:26</span></p>
+					<i class="icon_right_g"></i>
+			</div>
+		</a>
+	</li>
+	<!--<li class="mod_li">-->
+		<!--<a href='buy-ticket-detail.html' class="record_info">-->
+			<!--<div class="item_icon">-->
+				<!--<span class="square"><label class="icon_txt_fal">失败</label></span>-->
+			<!--</div>-->
+			<!--<div class="item_info">-->
+				<!--<p class="color_999">票券名称：<span class="color_333">20元代金券，15元代金券</p>-->
+				<!--<p class="color_999 bm">交易时间：<span class="color_333">2015-04-20</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color_333">16:26</span></p>-->
+					<!--<i class="icon_right_g"></i>-->
+			<!--</div>-->
+		<!--</a>-->
+	<!--</li>-->
+	<!--<li class="mod_li">-->
+		<!--<a href='buy-ticket-detail.html' class="record_info">-->
+			<!--<div class="item_icon">-->
+				<!--<span class="square"><label class="icon_txt_fal">失败</label></span>-->
+			<!--</div>-->
+			<!--<div class="item_info">-->
+				<!--<p class="color_999">票券名称：<span class="color_333">20元代金券，15元代金券</p>-->
+				<!--<p class="color_999 bm">交易时间：<span class="color_333">2015-04-20</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="color_333">16:26</span></p>-->
+					<!--<i class="icon_right_g"></i>-->
+			<!--</div>-->
+		<!--</a>-->
+	<!--</li>-->
+</ul>
+</section>
+</body>
+</html>

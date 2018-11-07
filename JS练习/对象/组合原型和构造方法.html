@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>组合原型和构造方法</title>
+</head>
+<body>
+<script>
+    function Person(name,age,job){
+        this.name = "Gelina";
+        this.age = 20;
+        this.job = "student";
+        this.friends = ["钟敏慧","姚若寒"];
+    }
+    Person.prototype = {
+        constructor :Person,
+        sayName:function(){
+            alert(this.name);
+        }
+    };
+    var person1 = new Person("Gelina",20,"student");
+    var person2 = new Person("Panius",21,"student");
+    person1.friends.push("马晓卓");//person2不会受影响
+    alert(person1.friends);
+    alert(person2.friends);
+    alert(person1.friends===person2.friends);
+    alert(person1.sayName===person2.sayName);
+</script>
+</body>
+</html>

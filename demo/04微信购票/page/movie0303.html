@@ -1,0 +1,500 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../css/common-new.css" type="text/css" rel="stylesheet" />
+<link href="../css/main.css" rel="stylesheet">
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<link href="../css/swiper.css" rel="stylesheet">
+<link href="../css/newpage.css" type="text/css" rel="stylesheet" />
+<style>
+	.swiper-pagination-bullet{ background:#ffa59e; opacity:1;}
+	.swiper-pagination-bullet-active{ background:#7e241d;}
+	.type_2DImax {
+	    background: #00a1e5;
+	    font-size: 0.4rem;
+	    height: 14px;
+	    padding: 0 0.2rem;
+	    display: -webkit-box;
+	    -webkit-box-pack: center;
+	    -webkit-box-align: center;
+	    position: absolute;
+	    left: 43%;
+	    bottom: 74px;
+	}
+	.c_style{background-color: #00a1e5;color: #fff;font-size: 14px;vertical-align:text-top;margin-left: 1%;padding-left: 1%;padding-right: 1%;}
+    .item_info .film_t{
+    /*width: 82%;*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+    .new-time-f{width: 94%;margin: 0 auto;font-size: .6rem;text-align: left;color: #00a1e5;margin-top: 3%;}
+    .new-time-f i{display:inline-block;width:8%;font-style: normal;margin-left: 1.5%;margin-right: 1.5%;}
+    .new-time-f a:hover,.new-time-f a:active{color: #333;}
+    .ui-preferential-activity-swiper,.ui-swiper-box{z-index:1;}
+    .ui_footernav_submenu{z-index: 100000;}
+    .not_info_box .not_info_pic img{width: 53px;height: 70px;}
+    .ui_footernav_submenu ul li a{height: 1.4rem;}
+    
+    .ui-swiper .swiper-slide{height:100px} ;  
+    .swiper-slide-active { height:auto};
+    
+    .not_info_box{padding: 40vw 0;}
+    
+    .star{
+    	text-overflow: -o-ellipsis-lastline;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+    	display: -webkit-box;
+    	-webkit-line-clamp: 1;
+    	-webkit-box-orient: vertical;}
+    	.soon{position: relative;}
+    .i-snack{float:left;margin-right:8px;display: inline-block;width: 38px;height: 17px;background-color: #ff8e00;border-radius: 4px;text-align: center;line-height: 17px;color: #fff;font-size: 0.56rem;}
+    .i-hot{float:left;margin-right:8px;display: inline-block;width:17px;height: 17px;background-color: #ff4e4e;position: relative;border-radius: 4px;}	
+    .i-hot:after{content: "";display: inline-block;width:8px;height:11px;background: url(../image/i_hot.png) no-repeat;background-size: 100%;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;}
+    .i-cheap{float:left;margin-right:8px;display: inline-block;width:17px;height: 17px;background-color: #bc75f3;border-radius: 4px;text-align: center;line-height: 17px;color: #fff;font-size: 0.56rem;}
+    .item_info .direct { overflow: visible; height: 0.75rem;}
+    .item_info .star{top: 0;margin-top: 0px;margin-top: -1px;}
+    .item_info .d-icon{margin-top: 2px;}
+
+	/*20140214新版界面*/
+   header {background: #fff;border-bottom:1px solid #d9d9d9 ;}
+   .s_city:visited {color: #000;}
+   .h_left{width: 19%;}
+   .h_right{width: 81%;}
+   .h_left .s_city:after {border-color: #000 transparent transparent;}
+   .show_tab ul{border: 1px solid #00A1E5;height: 29px;width: 50%;border-radius: 4px;margin-left: 40px;margin-top: 8.6px;}
+   .show_tab li a{color: #00A1E5;font-size: 15px;}
+   .show_tab li:first-child,
+   .show_tab li:last-child{padding-left: 0;text-align: center;width: 50%;height: 29px;line-height: 28px;}
+   .show_tab .is-active{background-color: #00A1E5;}
+   .show_tab .is-active a{color: #fff;}
+   .s_city {font-size: 16px;color: #000;}
+</style>
+<title>365微信购票</title>
+</head>
+
+<body>
+<header class="mu_flex">
+	<div class="h_left">
+		<a href='select-city-0302.html' class="s_city" href="select-city.html">广州</a><i class="city_r"></i>
+	</div>
+	<div class="h_right show_tab">
+	<ul>
+		<li class="hot_show_tab is-active"><a href="../page/movie.html" class="color_fffc00">影片</a></li>
+		<li><a href="../page/cinema-other.html" class="color_fff">影院</a></li>
+	</ul>
+	</div>
+</header>
+<div class="ui-swiper-box" style="margin-top:2.2rem;">
+	<div class="swiper-container ui-swiper" style="width:100%;" >
+		<div class="swiper-wrapper" id="wrapperimg">
+			<div class="swiper-slide"><img alt="" src="../image/ad-1.png" class="ui-wc100"></div>
+			<div class="swiper-slide"><img alt="" src="../image/ad-1.png" class="ui-wc100"></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="clearfix ui-preferential-activity-swiper">
+		<span class="ui-block ui-fl ui-preferential-activity"><img src="../image/ad-activity-title.png"></span>
+		<div class="swiper-container ui-fl ui-swiperActivity" style="height:100%;width:calc(100% - 26%);">
+			<div class="swiper-wrapper">
+				<a href="#" class="swiper-slide">七七情人节，3D电影9.9元抢</a>
+				<a href="#" class="swiper-slide">充值大优惠，充500送200</a>
+				<a href="#" class="swiper-slide">魔兽会员优惠价，黄金时段只需18.8元</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <section class="sec_fixed ui_input_box" style="margin-top: 2.2rem;">
+		<article class="search input_box">
+			<i class="icon_search"></i>
+			<input type="text" class="mod_search" placeholder="请输入影片名称进行查询" />
+			<i class="ion-close-circled"></i>
+		</article>
+</section> -->
+
+<section class="film_list show clearfix" style="position:relative;">
+	<ul>
+		<li class="ui_film_disabled no_film" style="display:none;padding: 13vh 0;">
+			<div class="not_info_box">
+			<div class="not_info_pic"><i><img src="../image/pic.png"> </i></div>
+			<div class="not_info_txt">对不起!目前暂无排期~~~</div>
+		</div>
+		</li>
+		<!--<style type="text/css">
+			.newtag{overflow: hidden;}
+			.newtag span{float:left;display:inline-block;font-size: 10px;width: 26px;height: 16px;line-height:16px;text-align:center;box-sizing:border-box;padding:0 0px;margin-top: 1px;border-radius: 2px;margin-right: 4px;}
+			.tagred{color:#ff4e4e;border: 1px solid #ff4e4e;}
+			.tagyellow{color:#ff8e00 ;border: 1px solid #ff8e00 ;}
+			.tagpurple{color:#bc75f3 ;border: 1px solid #bc75f3 ;}
+			.taggreen{color:#6cc531 ;border: 1px solid #6cc531 ;}
+		</style>-->
+		<li class="mod_li">
+			<a href='cinema-list.html' class="film_info">
+				<div class="item_pic"><img src="../image/default-movie-picture.jpg" /></div>
+				<div class="item_info">
+					<div class="film_t color_333"><span>失孤失孤失孤</span><strong class="c_style">IMAX3D</strong></div>
+					<span class="ui-lowest-price" style="background-color: #fff;"><span class="ui-fs16 ui-ff0000">¥18.<label class="ui-ff0000 ui-fs12">8</label><label class="ui-fs12 ui-ff0000">起</label></span></span>
+					<p class="direct color_999">导演：<span>彭三源</span></p>
+					<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如德华 井柏然 梁家辉 吴君如德华 井柏然 梁家辉 吴君如</span></p>
+					<p class="direct color_999">时长：<span>150分钟</span></p>
+					<p class="direct d-icon color_999 newtag clearfix">
+							<span class="tagred">首映</span>
+							<span class="tagyellow">明星</span>
+							<span class="tagpurple">点映</span>
+							<span class="taggreen">特惠</span>
+					</p>
+				</div>
+				<span class="mod_blue_border ind_b_t color_00a1e5">购票</span>
+			</a>
+			<p class="new-time-f">
+				<a href="seat.html"><i>10:00</i></a>
+				<a href="seat.html"><i>12:00</i></a>
+				<a href="seat.html"><i>13:00</i></a>
+				<a href="seat.html"><i>14:00</i></a>
+				<a href="seat.html"><i>15:00</i></a>
+				<a href="seat.html"><i>16:00</i></a>
+				<a href="seat.html"><i>17:00</i></a>
+				<a href="seat.html"><i>18:00</i></a>
+			</p>
+		</li>
+		
+		<li class="mod_li">
+			<a href='cinema-list.html' class="film_info">
+				<div class="item_pic"><img src="../image/default-movie-picture.jpg" /></div>
+				<div class="item_info">
+					<div class="film_t color_333">疯狂动物城疯狂动物城疯狂动物城疯狂动物城<strong class="c_style">IMAX3D</strong></div>
+					<span class="ui-lowest-price"><span class="ui-fs16 ui-ff0000">¥18.<label class="ui-ff0000 ui-fs12">8</label><label class="ui-fs12 ui-ff0000">起</label></span></span>
+					<p class="direct color_999">导演：<span>彭三源</span></p>
+					<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如</span></p>
+					<p class="direct color_999">时长：<span>150分钟</span></p>
+				</div>
+				<span class="mod_blue_border ind_b_t color_00a1e5">购票</span>
+				
+			</a>
+			<p class="new-time-f">
+				<a href="seat.html"><i>10:00</i></a>
+				<a href="seat.html"><i>12:00</i></a>
+				<a href="seat.html"><i>13:00</i></a>
+				<a href="seat.html"><i>14:00</i></a>
+				<a href="seat.html"><i>15:00</i></a>
+				<a href="seat.html"><i>16:00</i></a>
+				<a href="seat.html"><i>17:00</i></a>
+				<a href="seat.html"><i>18:00</i></a>
+				<a href="seat.html"><i>19:00</i></a>
+				<a href="seat.html"><i>20:00</i></a>
+			</p>
+		</li>
+		<li class="mod_li">
+			<a href='cinema-list.html' class="film_info">
+				<div class="item_pic ui-relative"><img src="../image/min_playbill.png" /><label class="ui-presell">预售</label></div>
+				<div class="item_info">
+					<div class="film_t color_333">疯狂动物城<strong class="c_style">IMAX</strong></div>
+					<span class="ui-lowest-price"><span class="ui-fs16 ui-ff0000">¥9.<label class="ui-ff0000 ui-fs12">8</label><label class="ui-fs12 ui-ff0000">起</label></span></span>
+					<p class="direct color_999">导演：<span>彭三源</span></p>
+					<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如 </span></p>
+					<p class="direct color_999">时长：<span>150分钟</span></p>
+
+				</div>
+				<span class="ind_b_t ui-d39f10-border">预售</span>
+			</a>
+			<p class="new-time-f"><i>10:00</i><i>12:00</i><i>14:00</i><i>16:00</i><i>18:00</i><i>20:00</i><i>22:00</i><i>23:00</i><i>20:00</i><i>22:00</i><i>23:00</i></p>
+		</li>
+		<li class="mod_li">
+			<a href='cinema-list.html' class="film_info">
+				<div class="item_pic"><img src="../image/min_playbill.png" /></div>
+				<div class="item_info">
+					<div class="film_t color_333">美人鱼美人鱼美人<strong class="c_style">3D</strong></div>
+					<span class="ui-lowest-price"><span class="ui-fs16 ui-ff0000">¥25.<label class="ui-ff0000 ui-fs12">0</label><label class="ui-fs12 ui-ff0000">起</label></span></span>
+					<p class="direct color_999">导演：<span>彭三源</span></p>
+					<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如 </span></p>
+					<p class="direct color_999">时长：<span>150分钟</span></p>
+				</div>
+				<span class="mod_blue_border ind_b_t color_00a1e5">购票</span>
+			</a>
+			<p class="new-time-f">
+				<a href="seat.html"><i>10:00</i></a>
+				<a href="seat.html"><i>12:00</i></a>
+				<a href="seat.html"><i>13:00</i></a>
+			</p>
+		</li>
+		<li class="mod_li">
+			<a href='cinema-list.html' class="film_info">
+				<div class="item_pic"><img src="../image/min_playbill.png" /></div>
+				<div class="item_info">
+					<div class="film_t color_333">美人鱼美人鱼美人<strong class="c_style">2D</strong></div>
+					<span class="ui-lowest-price"><span class="ui-fs16 ui-ff0000">¥25.<label class="ui-ff0000 ui-fs12">0</label><label class="ui-fs12 ui-ff0000">起</label></span></span>
+					<p class="direct color_999">导演：<span>彭三源</span></p>
+					<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如 </span></p>
+					<p class="direct color_999">时长：<span>150分钟</span></p>
+				</div>
+				<span class="mod_blue_border ind_b_t color_00a1e5">购票</span>
+			</a>
+			<p class="new-time-f">
+				<a href="seat.html"><i>10:00</i></a>
+				<a href="seat.html"><i>12:00</i></a>
+				<a href="seat.html"><i>13:00</i></a>
+				<a href="seat.html"><i>14:00</i></a>
+				<a href="seat.html"><i>15:00</i></a>
+				<a href="seat.html"><i>18:00</i></a>
+				<a href="seat.html"><i>19:00</i></a>
+				<a href="seat.html"><i>20:00</i></a>
+			</p>
+		</li>
+		<li class="mod_li">
+			<a href='cinema-list.html' class="film_info">
+				<div class="item_pic"><img src="../image/min_playbill.png" /></div>
+				<div class="item_info">
+					<div class="film_t color_333">美人鱼美人鱼美人美人鱼美人鱼美人美人鱼美人<strong class="c_style">2D</strong></div>
+					<span class="ui-lowest-price"><span class="ui-fs16 ui-ff0000">¥25.<label class="ui-ff0000 ui-fs12">0</label><label class="ui-fs12 ui-ff0000">起</label></span></span>
+					<p class="direct color_999">导演：<span>彭三源</span></p>
+					<p class="star color_999">主演：<span>刘德华 井柏然 梁家辉 吴君如刘德华 井柏然 梁家辉 吴君如刘德华 井柏然 梁家辉 吴君如</span></p>
+					<p class="direct color_999">时长：<span>150分钟</span></p>
+				</div>
+				<span class="mod_blue_border ind_b_t color_00a1e5">购票</span>
+			</a>
+			<p class="new-time-f">
+				<a href="seat.html"><i>10:00</i></a>
+				<a href="seat.html"><i>18:00</i></a>
+				<a href="seat.html"><i>19:00</i></a>
+				<a href="seat.html"><i>20:00</i></a>
+			</p>
+		</li>
+		
+	</ul>
+	<div class="address-new">
+		<div class="box">
+			<div class="icon"><img src="../image/goods-only/icon-a1.png" alt="" /></div> 
+			<!--<div class="icon"><img src="../image/goods-only/c-list-bg2.png" alt="" /></div>-->
+			<div class="name">星光大道影院</div>
+			<div class="add"><i></i>广州市白云区大龙街道彭东大街星光大道广场12楼</div>
+			<div class="ph"><i></i>020-81562222</div>
+		</div>
+	</div>
+</section>
+
+<div class="top-btn" onclick="window.scrollTo(0,0);">
+	<a href="javascript:;" class="react"></a>
+	<i class="icon-top"></i>
+</div>
+
+<!-- footernav -->
+<div class="ui_footernav" style="disp lay: none;">
+	<div class="ui_footernav_menu">
+			<!--<span class="ui_footernav_home"><a href="#" class="ui_footernav_home_icon"></a></span>-->
+			<span class="ui_footernav_menu_li">
+				<a class="ui_footernav_menu_long"><img src="../image/item.png">购票</a>
+				<div class="ui_footernav_submenu ui_footernav_submenu_one">
+					<ul>
+						<!--<li><a href="#">影院</a></li>-->
+						<!--<li class="ui_line_divide"></li>-->
+						<li><a href="#">快速购票</a></li>
+					</ul>
+				</div>
+			</span>
+			<span class="ui_footernav_menu_li">
+				<a class="ui_footernav_menu_long"><img src="../image/item.png">影院</a>
+				<div class="ui_footernav_submenu ui_footernav_submenu_two">
+					<ul>
+						<li><a href="#">影院介绍</a></li>
+						<li class="ui_line_divide"></li>
+						<li><a href="#">优惠活动</a></li>
+					</ul>
+				</div>
+			</span>
+			<span class="ui_footernav_menu_li">
+				<a class="ui_footernav_menu_long"><img src="../image/item.png">发现</a>
+				<div class="ui_footernav_submenu ui_footernav_submenu_two">
+					<ul>
+						<li><a href="#">活动</a></li>
+						<!--<li class="ui_line_divide"></li>-->
+						<!--<li><a href="#">优惠活动</a></li>-->
+					</ul>
+				</div>
+			</span>
+			<span class="ui_footernav_menu_li">
+				<a class="ui_footernav_menu_long"><img src="../image/item.png">我的</a>
+				<div class="ui_footernav_submenu ui_footernav_submenu_three">
+					<ul>
+						<li><a href="#">我的订单</a></li>
+						<li class="ui_line_divide"></li>
+						<li><a href="#">我的资料</a></li>
+						<li class="ui_line_divide"></li>
+						<li><a href="#">会员充值</a></li>
+						<li class="ui_line_divide"></li>
+						<li><a href="#">会员注册</a></li>
+						<li class="ui_line_divide"></li>
+						<li><a href="#">购买票券</a></li>
+						<li class="ui_line_divide"></li>
+						<li><a href="#">积分兑换</a></li>
+					</ul>
+				</div>
+			</span>
+	</div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script src="../js/swiper.js"></script>
+<script type="text/javascript">
+//解决轮播图片出现空白的问题
+	$(function(){
+		var wrapperimg=function(){
+			var wrapper=$("#wrapperimg");
+			wrapper.parent().css({
+				"height":"100%",
+			})
+			var h=wrapper.find(".swiper-slide").height();
+			var ph=wrapper.find("img").height();
+			if(h>ph){
+				wrapper.find("img").css({
+					"height":"100%",
+				})
+			}
+			wrapper.find(".swiper-slide").css({
+				"overflow":"hidden",
+			})
+			console.log(h)
+			console.log(ph)
+		}
+		wrapperimg()
+	})
+</script>
+<script>
+
+	$(function(){
+		var nums=$(".new-way").text();
+		var newshow=nums;
+		if(nums.length>8){
+			newshow=nums.substring(0,6)+"...";
+		}
+		$(".new-way").text(newshow);
+		console.log(newshow);
+	})
+</script>
+<script type="text/javascript">
+$(".ui_footernav_menu_li").click(function(){
+	$(this).siblings().find(".ui_footernav_submenu").hide();
+	$(this).find(".ui_footernav_submenu").toggle();
+})
+//输入框
+$("input").bind('input propertychange',function(){
+	if($(this).val().length > 1){
+		$(this).nextAll(".ion-close-circled").show();
+	}
+	if($(this).val().length < 1){
+		$(this).nextAll(".ion-close-circled").hide();
+	}
+});
+$(".ion-close-circled").bind('click',function(){
+	$(this).hide();
+	$(this).prev('input').val('');
+})
+var mySwiper = new Swiper('.ui-swiper',{
+	autoplay:3000,
+	pagination:".swiper-pagination",
+	loop:true
+})
+
+var swiperActivity = new Swiper('.ui-swiperActivity',{
+	direction: 'vertical',
+	autoplay:3000,
+	loop:true,
+})
+
+$(document).ready(function(e) {	
+//	$(".show_tab li").click(function(){
+//		$(".show_tab li").find("a").removeClass();
+//		$(this).siblings().find("a").addClass("color_fff");
+//		$(this).find("a").addClass("color_fffc00");
+//		if($(this).hasClass("hot_show_tab")){
+//			$(".show").show();
+//			$(".soon").hide();
+//			$(".search_a").show();
+//			$(".swiper-container").show();
+//			film_listTop();
+//		}
+//		else{
+//			$(".soon").show();
+//			$(".show").hide();
+//			$(".search_a").hide();
+//			$(".swiper-container").hide();
+//			film_listTop1();
+//		}
+//		
+//	})
+	$('.mod_search').bind('input propertychange', function() {
+		if($(this).val().length>0){
+			$(".icon_e").show();
+		}
+	}); 
+	$(".icon_e").click(function(){
+		$(".mod_search").val("");
+		$(this).hide();
+	});
+});
+function b(){
+	h = $(window).height();
+	t = $(document).scrollTop();
+	if(t > h){
+		$('.top-btn').fadeIn('slow');
+	}else{
+		$('.top-btn').fadeOut('slow');
+	}
+}
+$(window).scroll(function(e){
+	b();		
+})
+//内容滚动高度
+function bodyheight(){
+	var topHeight1=$(".ui-swiper-box").outerHeight(true);
+	var footHeight1=$(".ui_footernav").outerHeight(true);
+	var windowHeight1=$(window).height();
+	var bodyHeight1=windowHeight1-topHeight1-footHeight1;
+	$(".film_list").css({"height":bodyHeight1});
+}
+bodyheight();
+//广告
+    var h = $(".swiper-slide img").height();
+	$(".ui-swiper").css({"height":$(".swiper-slide img").height()});
+
+$(function(){
+	function film_listTop(){
+	$(".show").css({"top":$(".ui-swiper-box").outerHeight(true)});
+	bodyheight();
+	var no_film=$(".show").find(".no_film").css("display");
+	if(no_film!="none"){$(".show").find(".address-new").css({"position":"absolute","bottom":"40px"})}
+}
+film_listTop()
+function film_listTop1(){
+	$(".soon").css({"top":$(".ui-swiper-box").outerHeight(true)});
+	bodyheight();
+	var no_film=$(".soon").find(".no_film").css("display");
+if(no_film!="none"){$(".soon").find(".address-new").css({"position":"absolute","bottom":"40px"})}
+	
+}
+})
+
+
+
+
+//function address(classname){
+//	var no_film=$(classname).find(".no_film").css("display");
+//	if(no_film!="none"){$(classname).find(".address-new").css({"position":"absolute","bottom":"40px"})}
+//}
+//var newadd=new address(".show");
+
+
+</script>
+</body>
+</html>

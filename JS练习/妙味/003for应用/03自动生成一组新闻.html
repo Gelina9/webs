@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var arr=[
+                '中美两国新任财长首次会谈强调需加强经济合作',
+                '发改委主任：中国经济发展面临三大结构性失衡',
+                '日本前国会议员面对侵华铁证 称毕生反省谢罪',
+                '民盟昆明市委建议:尽快制定规划 重建西南联大',
+                '沙特国王来京 还有这个没有被报道的行程'
+            ];
+            var oBtn=document.getElementById("btn1");
+            var oUl=document.getElementById("list");
+
+            /*解决重复点击出现5条思路
+            1.给按钮加属性，比如display，disabled
+            2.先清空再生成
+            3.判断给一个布尔变量
+            */
+            oBtn.onclick=function(){
+                for(var i=0;i<arr.length;i++){
+                    oUl.innerHTML+="<li>"+arr[i]+"</li>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="btn1" type="button" value="自动生成5条新闻"/>
+<ul id="list"></ul>
+</body>
+</html>

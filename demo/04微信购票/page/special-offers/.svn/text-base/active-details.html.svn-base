@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>活动详情</title>
+<link href="../../css/common.css" type="text/css" rel="stylesheet">
+<link href="../../css/detail.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/public.js"></script>
+<style>
+	html,body{ background: #fff;}
+	img {height: auto; width: auto\9; width:100%;}
+	.active-header {overflow: visible;text-overflow: clip;white-space: normal;text-align: center;padding: 0.4rem 0;}
+	/*.active-header h1{text-align: left;}*/
+</style>
+</head>
+
+<body>
+<!-- <header class="mu_flex">
+	<div class="h_t color_fff">数码辰星测试影院</div>
+</header> -->
+<section class="act_det" style="margin-top:0;">
+	<article class="active-header">
+		<h1 class="color_333">会员特惠套票开卖啦！会员特惠套票开卖啦！会员特惠套票开卖啦！</h1>
+		<p class="color_999">2015-4-13</p>
+	</article>
+		<img src="../../image/active.png" class="active-img" />
+	<article class="active-content">
+	2015年，新浪财经与黑苹果青年联手推出的新浪财经·黑苹果寻找未来金融之星”名家巡讲活动于4月初启动。作为大赛的核心落地环节，名家巡讲将在15个城市落地，届时将邀请在大学生群体中有影响力的金融行业知名人士进入高校演讲，分享他们的个人成长经历，引导有志于金融行业的青年人找寻职业成长方向。
+	</article>
+</section>
+</body>
+<script>
+//$(function(){
+//	var aa=$(".active-content").height();
+//	$(".active-content").css({"line-height":aa})
+//})
+//	
+</script>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>影院详情</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/detail.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet" />
+    <link href="../css/newpage.css" rel="stylesheet">
+    <style>
+    	.ui-arrow-left:after{ border-color:#fff;}
+    	.ion-location:before,.ui_row .ui_row_txt{color: #333;}
+    </style>
+</head>
+<body>
+<header class="mu_flex iHeader">
+	<a href="select-city.html" class="iHeader-href">
+		<div class="iHeader-box">
+			<p class="iHeader-box_palce">广州</p>
+			<p class="iHeader-box_cinemaname">星光大道影院</p>
+			<p class="iHeader-box_righticon"></p>
+		</div>
+	</a>
+</header>	
+<article class="content cinema-details">
+	<div class="show-bill"><img src="../image/film.jpg" /></div>
+	<div class="ui_row_box">
+	     <div class="ui_row">
+	         <div class="ui_row_left_icon"><i class="ion-location"></i></div>
+	         <div class="ui_row_txt"><span class="range">距您约<label>6.10km</label> | </span><span name="address">海珠区新港东路618号南丰广场3楼303铺</span></div>
+	     </div>
+	     <div class="ui_row" style="line-height: 1rem;">
+			<div class="ui_row_left_icon"><i class="ion-ios-telephone" style="color:#333;"></i></div>
+			<div class="ui_row_phone_number" style="color:#333;">020-84131063</div>
+			<!--<div class="ui_row_right_icon"><i class="ion-android-call"></i></div>-->
+		</div>
+	</div>
+	<div class="ui-bg-fff ui-pt10">
+		<h3 class="clearfix ui-wc95 ui-mb10"><i class="ui-border-left ui-fl"></i><span class="ui-fl ui-333 ui-fs16 ui-ml5" style="line-height:18px;">影院详情</span></h3>
+		<div class="film_abs color_999 text_expander_box">
+	    	<div class="text_expander_content">五星级影院，地处交通便利，地铁上盖，影厅装修豪华，可同时供850多人同时观影，是您观影的不二选择五星级影院。五星级影院，地处交通便利，地铁上盖，影厅装修豪华，可同时供850多人同时观影，是您观影的不二选择五星级影院。</div>
+	    	<div class="text_expander_button"><i class="icon ion-chevron-down"></i></div>
+		</div>
+		<p style="border-top: 1px solid #d9d9d9;  margin-bottom: 15px;"></p>
+		<h3 class="clearfix ui-wc95 ui-mb10"><i class="ui-border-left ui-fl"></i><span class="ui-fl ui-333 ui-fs16 ui-ml5" style="line-height:18px;">影厅介绍（共11个）</span></h3>
+		<div class="film_abs">
+		    <p><span class="hall_number">一号厅：</span><span class="hall_item">308座，3D影厅。308座，3D影厅。308座，3D影厅。</span></p>
+		    <p><span class="hall_number">二号厅：</span><span class="hall_item">308座，3D影厅。</span></p>
+		    <p><span class="hall_number">三号厅：</span><span class="hall_item">308座，3D影厅。</span></p>
+		    <p><span class="hall_number">四号厅：</span><span class="hall_item">308座，3D影厅。</span></p>
+		    <!--<span class="spread" style="display: inline;">展开&gt;&gt;</span>-->
+			<!--<span class="pack_up">&lt;&lt;收起</span>-->
+		 </div>
+	</div>
+</article>
+<footer class="footer_flex">
+    <a href="schedule.html" class="h_t color_fff">立即购票</a>
+</footer>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	if($(".content").height() > ($(window).height() - 96)){
+		$(".footer_flex").css({"position":"relative"})	
+	}
+});
+    $('.text_expander_box').on('click',function(){
+        if($(".text_expander_button i").hasClass('ion-chevron-down')){
+            $('.text_expander_content').css({'height':'auto'});
+            $(".text_expander_button i").removeClass('ion-chevron-down');
+            $(".text_expander_button i").addClass('ion-chevron-up');
+        }
+        else{
+            $('.text_expander_content').css({'height':'3rem'});
+            $(".text_expander_button i").removeClass('ion-chevron-up');
+            $(".text_expander_button i").addClass('ion-chevron-down');
+        }
+        if($(".content").height() > ($(window).height() - 96)){
+    		$(".footer_flex").css({"position":"relative"});
+    	}
+        else{
+        	$(".footer_flex").css({"position":"fixed"});
+        }
+    });
+</script>
+</html>

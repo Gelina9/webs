@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var  aBtn=document.getElementsByTagName("input");
+            var that="";
+
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].onclick=function(){
+                    //this.style.background="red";
+                    that=this;//把this先存起来,就算其他地方再用this 这里的that还是指的是当前的this所指的对象
+                    fn1();
+                };
+            }
+
+            function fn1(){
+                //this=>window
+                that.style.background="red";//that所指代的this=>oBtn
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮1"/>
+<input type="button" value="按钮2"/>
+<input type="button" value="按钮3"/>
+</body>
+</html>

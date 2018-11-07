@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta name="commit" content="undefined">
+<meta http-equiv="cleartype" content="on">
+<title>绑定影院会员卡</title>
+<link href="../css/common.css" type="text/css" rel="stylesheet" />
+<link href="../css/detail.css" type="text/css" rel="stylesheet" />
+<link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+<link href="../ionic-v1.0.1/css/ionicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/public.js"></script>
+<script src="../layer/layer.js"></script>
+<style>
+	html,body,.my_info .ui_input_box .ui_input,.my_info{ background:#fff;}
+</style>
+</head>
+
+<body class="binding-page">
+<!-- <header class="mu_flex">
+	<div class="h_t color_fff">绑定影院会员卡</div>
+</header> -->
+<section class="my_info" style="margin-top:0; padding-bottom:10px;">
+	 <a href="../page/select-city.html" class="ui_input_box after_arrow_left">
+		<span>影院名称：</span>
+		<input type="text" name="name" class="ui_input" value="广州新太阳新天地飞扬影院" readonly />
+	</a> 
+	<div class="ui_input_box placeholder">
+		<span>帐号：</span>
+		<input type="tel" name="member_id" class="ui_input" placeholder="请输入手机号/会员卡号" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_input_box placeholder">
+		<span>密码：</span>
+		<input type="password" name="confirm_new_pwd" class="ui_input" placeholder="请输入密码" />
+		<i class="ion-close-circled"></i>
+	</div>
+	<div class="ui_default_checkbox" style="margin: 10px 0px 0 2vw; display: inline-block;"><span class="ico_act"><i class="icon_blue_suc"></i></span>&nbsp;设为默认卡</div>
+</section>
+<a href="javascript:;" class="submit">
+	<span class="mod_blue_btn" style="width:90%; margin:0 auto;">绑 定</span>
+</a>
+<div class="ui-wc90"><a href="register.html" class="ui_register_btn ui-fr ui-tar">忘记密码？</a></div>
+
+</body>
+<script>
+	$(".ui_default_checkbox").on('click',function(){
+		$(this).find('i').toggleClass("icon_circle_no");
+	})
+	$(".submit").on('click',function(){
+		var index = layer.msg('恭喜！绑定成功！',{shade : [0.4,'#000']});
+		setTimeout(function(){
+			layer.close(index);
+			location.href='member.html';
+		},3000)
+	})
+	$(".ui_default_checkbox").bind("click",function(){
+		if($(this).find(".ico_act i").hasClass("icon_blue_suc")){
+			$(this).find(".ico_act i").removeClass();
+			$(this).find(".ico_act i").addClass("icon_circle_no");
+		}
+		else {
+			$(this).find(".ico_act i").removeClass();
+			$(this).find(".ico_act i").addClass("icon_blue_suc");
+		}
+	})
+	//输入框
+	$("input").bind('input propertychange',function(){
+		if($(this).val().length > 1){
+			$(this).nextAll(".ion-close-circled").show();
+		}
+		if($(this).val().length < 1){
+			$(this).nextAll(".ion-close-circled").hide();
+		}
+	});
+	$(".ion-close-circled").bind('click',function(){
+		$(this).hide();
+		$(this).prev('input').val('');
+	})
+</script>
+</html>

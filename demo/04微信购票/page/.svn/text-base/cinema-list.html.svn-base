@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="commit" content="undefined">
+    <meta http-equiv="cleartype" content="on">
+    <link href="../css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../lib/ionic-v1.0.1/css/ionic.min.css" rel="stylesheet">
+    <link href="../css/swiper.css" type="text/css" rel="stylesheet" />
+    <title>影院列表</title>
+    <style>
+        html,body{ background: #fff;}
+    	.ftag-box{position: relative;height: 32px;}
+    	.ftagred{position: absolute;box-sizing:border-box;bottom: 0;left: 0;width: 28px;height: 14px;line-height:13px;border-radius:2px;font-size: 12px;opacity: 0.5;display: inline-block;color:#ff4e4e;border: 1px solid #ff4e4e;}
+    	.tagyellow{position: absolute;box-sizing:border-box;bottom: 0;left: 0;width: 28px;height: 14px;line-height:13px;border-radius:2px;font-size: 12px;opacity: 0.5;display: inline-block;color:#ff8e00;border: 1px solid #ff8e00;}
+    	.tagpurple{position: absolute;box-sizing:border-box;bottom: 0;left: 0;width: 28px;height: 14px;line-height:13px;border-radius:2px;font-size: 12px;opacity: 0.5;display: inline-block;color:#bc75f3;border: 1px solid #bc75f3;}
+    	.taggreen{position: absolute;box-sizing:border-box;bottom: 0;left: 0;width: 28px;height: 14px;line-height:13px;border-radius:2px;font-size: 12px;opacity: 0.5;display: inline-block;color:#6cc531;border: 1px solid #6cc531;}           
+    </style>
+</head>
+<body ng-app="myApp">
+<div class="bar bar-header ui-bg-00a1e5" style="position: absolute;top: 0;">
+    <a class="button button-clear ui-city-btn ui-relative ui-small-triangle" title="广州" href="select-city.html">广州</a>
+    <h1 class="title ui-head-title">霍比特人：五军之战</h1>
+</div>
+<div class="bar bar-subheader" style="background: #f0f0f0; padding: 0;position: absolute;top: 44px;">
+    <div class="swiper-container ui-sch-time">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide"><span class="ui-s-t ui-sec-time">今天6-15</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">明天6-16</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">后天6-17</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">周四6-18</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">6-19</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">6-20</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">6-21</span></li>
+            <li class="swiper-slide"><span class="ui-s-t">6-22</span></li>
+        </ul>
+        <!-- Add Scrollbar -->
+        <div class="swiper-scrollbar" style="opacity:0;"></div>
+    </div>
+</div>
+<ion-content class="hui-cinema-list" style="position:absolute;top: 88px;width: 100%;">
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+        	<a href="schedule.html" style="color: #000;">
+	            <div class="ui-box-list clearfix">
+	                <div class="ui-inline ui-ellipsis ui-wc78 ui-fs16 ui-fl">数码辰星测试影院</div>
+	               	<div class="ui-inline ui-fr" style="line-height: 20px;"><label class="ui-fs16 ui-ff0000">¥30</label> <label class="ui-fs12">起</label></div>
+                	<i class="ui-ico-collection ui-fr" style="margin-right: 5px;"><img src="../image/ico-collection.png" style="width: 15px;"></i>
+	                
+	            </div>
+	            <div class="ui-fs12 ui-999 clearfix ul-btn">
+	                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-max-wc68 ui-fl">广州大道北197号新达城广场</span>
+	                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">1.5KM</label></span>
+	            </div>
+            </a>
+            <ul class="ui-time-table clearfix">
+                <!--<li><a href="seat.html" class="ftag-box">10:00<i class="ftagred">首映</i></a></li>
+                <li><a href="seat.html" class="ftag-box">12:30<i class="tagyellow">明星</i></a></li>-->
+                <li><a href="seat.html" class="">10:00</a></li>
+                <li><a href="seat.html" class="">12:30</a></li>
+                <li><a href="seat.html" class="">14:50</a></li>
+                <li><a href="seat.html" class="">17:15</a></li>
+                <li><a href="seat.html" class="">19:05</a></li>
+                <li><a href="seat.html" class="">21:40</a></li>
+                <li><a href="seat.html" class="">23:15</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+        	<a href="schedule-member.html" style="color: #000;">
+	            <div class="ui-box-list clearfix">
+	                <div class="ui-inline ui-ellipsis ui-wc78 ui-fs16 ui-fl">数码辰星测试影院</div>
+	                	<div class="ui-inline ui-fr" style="line-height: 20px;"><label class="ui-fs16 ui-ff0000">¥30</label> <label class="ui-fs12">起</label></div>
+                	<i class="ui-ico-collection ui-fr" style="margin-right: 5px;"></i>
+	            </div>
+	            <div class="ui-fs12 ui-999 clearfix ul-btn">
+	                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-wc68 ui-fl">广州大道北197号新达城广场</span>
+	                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">2.1KM</label></span>
+	            </div>
+	        </a>    
+            <ul class="ui-time-table clearfix">
+                <li><a href="seat.html" class="">10:00</a></li>
+                <li><a href="seat.html" class="">12:30</a></li>
+                <li><a href="seat.html" class="">14:50</a></li>
+                <li><a href="seat.html" class="">17:15</a></li>
+                <li><a href="seat.html" class="">19:05</a></li>
+                <li><a href="seat.html" class="">21:40</a></li>
+                <li><a href="seat.html" class="">23:15</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+        	<a href="schedule-member.html" style="color: #000;">
+	            <div class="ui-box-list clearfix">
+	                <div class="ui-inline ui-ellipsis ui-wc78 ui-fs16 ui-fl">数码辰星测试影院</div>
+	                <div class="ui-inline ui-fr" style="line-height: 20px;"><label class="ui-fs16 ui-ff0000">¥30</label> <label class="ui-fs12">起</label></div>
+                	<i class="ui-ico-collection ui-fr" style="margin-right: 5px;"></i>
+	            </div>
+	            <div class="ui-fs12 ui-999 clearfix ul-btn">
+	                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-wc68 ui-fl">广州大道北197号新达城广场</span>
+	                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">4.8KM</label></span>
+	            </div>
+	        </a>    
+            <ul class="ui-time-table clearfix">
+                <li><a href="seat.html" class="">10:00</a></li>
+                <li><a href="seat.html" class="">12:30</a></li>
+                <li><a href="seat.html" class="">14:50</a></li>
+                <li><a href="seat.html" class="">17:15</a></li>
+                <li><a href="seat.html" class="">19:05</a></li>
+                <li><a href="seat.html" class="">21:40</a></li>
+                <li><a href="seat.html" class="">23:15</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+        	<a href="schedule-member.html" style="color: #000;">
+	            <div class="ui-box-list clearfix">
+	                <div class="ui-inline ui-ellipsis ui-wc78 ui-fs16 ui-fl">数码辰星测试影院</div>
+	                <div class="ui-inline ui-fr" style="line-height: 20px;"><label class="ui-fs16 ui-ff0000">¥30</label> <label class="ui-fs12">起</label></div>
+                	<i class="ui-ico-collection ui-fr" style="margin-right: 5px;"></i>
+	            </div>
+	            <div class="ui-fs12 ui-999 clearfix ul-btn">
+	                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-wc68 ui-fl">广州大道北197号新达城广场</span>
+	                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">5.8KM</label></span>
+	            </div>
+	        </a>    
+            <ul class="ui-time-table clearfix">
+                <li><a href="seat.html" class="">10:00</a></li>
+                <li><a href="seat.html" class="">12:30</a></li>
+                <li><a href="seat.html" class="">14:50</a></li>
+                <li><a href="seat.html" class="">17:15</a></li>
+                <li><a href="seat.html" class="">19:05</a></li>
+                <li><a href="seat.html" class="">21:40</a></li>
+                <li><a href="seat.html" class="">23:15</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ui-box clearfix">
+        <div class="ui-wc94 clearfix">
+        	<a href="schedule-member.html" style="color: #000;">
+	            <div class="ui-box-list clearfix">
+	                <div class="ui-inline ui-ellipsis ui-wc78 ui-fs16 ui-fl">数码辰星测试影院</div>
+	                <div class="ui-inline ui-fr" style="line-height: 20px;"><label class="ui-fs16 ui-ff0000">¥30</label> <label class="ui-fs12">起</label></div>
+                	<i class="ui-ico-collection ui-fr" style="margin-right: 5px;"></i>
+	            </div>
+	            <div class="ui-fs12 ui-999 clearfix ul-btn">
+	                <label class="ui-fl">地址：</label><span class="ui-inline ui-ellipsis ui-wc68 ui-fl">广州大道北197号新达城广场</span>
+	                <span class="ui-fr"><i class="ui-ico-location ui-fl "></i><label class="ui-999 ui-fs12 ui-fl">10.1KM</label></span>
+	            </div>
+           </a>
+            <ul class="ui-time-table clearfix">
+                <li><a href="seat.html" class="">10:00</a></li>
+                <li><a href="seat.html" class="">12:30</a></li>
+                <li><a href="seat.html" class="">14:50</a></li>
+                <li><a href="seat.html" class="">17:15</a></li>
+                <li><a href="seat.html" class="">19:05</a></li>
+                <li><a href="seat.html" class="">21:40</a></li>
+                <li><a href="seat.html" class="">23:15</a></li>
+            </ul>
+        </div>
+    </div>
+</ion-content>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../lib/ionic-v1.0.1/js/ionic.bundle.min.js"></script>
+<script type="text/javascript" src="../js/swiper.js"></script>
+<script>
+    	
+    angular.module('myApp', ['ionic']);
+
+    //时间
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: '.swiper-scrollbar',
+        scrollbarHide: true,
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        spaceBetween: 8,
+        grabCursor: true
+    });
+    $(".ui-sch-time li span").click(function(){
+        $(".ui-sch-time li span").removeClass("ui-sec-time");
+        $(this).addClass("ui-sec-time");
+    });
+//
+$(".ui-box-list,.ul-btn").on("click on-drag on-hold on-tap",function(){
+	  		$(this).parents(".ui-box").css({
+    		"background-color":"#f2f2f2",
+    	})
+})
+
+var scHeight=$(window).height();
+var bodyHeight=scHeight-89;
+$(".hui-cinema-list").css({
+	"height":bodyHeight,
+	"overflow": "auto",
+})
+</script>
+</body>
+</html>

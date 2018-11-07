@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>原型的问题</title>
+</head>
+<body>
+<script>
+    function Person(){}
+    Person.prototype = {
+        constructor:Person,
+        name:"Gelina",
+        age:20,
+        job:"student",
+        friends:["钟敏慧", "姚若寒"],//这是一个数组
+        sayName:function(){
+            alert(this.name);
+        }
+    };
+    var person1 = new Person();
+    var person2 = new Person();
+    person1.friends.push("马晓卓");//实际上是往属性里再加上马晓卓，并非赋值
+    alert(person1.friends);
+    alert(person2.friends);
+</script>
+</body>
+</html>

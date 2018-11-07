@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>系统时间</title>
+<script>
+window.onload=function(){
+	var oBody=document.body;
+	setInterval(fnTime,1000);
+	fnTime();
+	function fnTime(){
+		var myTime=new Date(); //获取当前系统时间
+	var iYear=myTime.getFullYear();
+	var iMonth=myTime.getMonth()+1;
+	var iDate=myTime.getDate();
+	var iDay=myTime.getDay();
+	var iHour=myTime.getHours();
+	var iMin=myTime.getMinutes();
+	var iSec=myTime.getSeconds();
+	var str='';
+	if(iDay=0){iDay="星期日";}
+	else if(iDay=1){iDay="星期一";}
+	else if(iDay=2){iDay="星期二";}
+	else if(iDay=3){iDay="星期三";}
+	else if(iDay=4){iDay="星期四";}
+	else if(iDay=5){iDay="星期五";}
+	else{iDay="星期六";}
+	
+	str=iYear+"年"+iMonth+"月"+iDate+"日 "+iDay+" "+toTwo(iHour)+":"+toTwo(iMin)+":"+toTwo(iSec);
+	oBody.innerHTML=str;
+	}
+};
+function toTwo(n){
+	return n<10?"0"+n:""+n;
+}
+</script>
+</head>
+
+<body style="font-size:40px;">
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: lightblue;
+        }
+        #container{
+            margin: -10px auto;
+            background: url("images/bg.jpg") center no-repeat;
+            position: relative;
+            width:1024px;
+            height: 693px;
+        }
+        input{
+            position: absolute;
+            border-radius: 7px;
+            outline: none;
+        }
+        #prev{
+            top: 30px;
+            left: 60px;
+        }
+        #next{
+            top: 30px;
+            left: 130px;
+        }
+        li{
+            list-style: none;
+        }
+        #container div{
+            background: lightsteelblue;
+        }
+        #first{
+            width: 250px;
+            height: 390px;
+            position: absolute;
+            top: 65px;
+            left: 60px;
+        }
+        #second{
+            width: 500px;
+            height: 580px;
+            position: absolute;
+            top: 65px;
+            right: 62px;
+        }
+        #first img{
+            width: 250px;
+            height: 360px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        #second img{
+            width: 500px;
+            height: 550px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        span{
+            position: absolute;
+            bottom: 3px;
+            left: 3px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oPrev=document.getElementById("prev");
+            var oNext=document.getElementById("next");
+            var oUlf=document.getElementById("f");
+            var aLi=oUlf.getElementsByTagName("li");
+            var aImgf=oUlf.getElementsByTagName("img");
+            var oUls=document.getElementById("s");
+            var aLi=oUls.getElementsByTagName("li");
+            var aImgs=oUls.getElementsByTagName("img");
+            var aSpan=document.getElementsByTagName("span");
+            var arr1=["images/001.jpg","images/002.jpg","images/003.jpg",];
+            var arr2=["images/004.jpg","images/005.jpg","images/006.jpg","images/007.jpg",];
+            var num=0;
+            //初始化
+            for(var i=0;i<arr1.length;i++){
+                oUlf.innerHTML+="<li><img src=''/></li>";
+            }
+            for(var i=0;i<arr2.length;i++){
+                oUls.innerHTML+="<li><img src=''/></li>";
+            }
+            aImgf[num].src=arr1[num];
+            aImgs[num].src=arr2[num];
+            aSpan[0].innerHTML=num+1+"/"+arr1.length;
+            aSpan[1].innerHTML=num+1+"/"+arr2.length;
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <input type="button" value="上一组" id="prev">
+    <input type="button" value="下一组" id="next">
+    <div id="first">
+        <ul id="f"></ul>
+        <span></span>
+    </div>
+    <div id="second">
+        <ul id="s"></ul>
+        <span></span>
+    </div>
+
+</div>
+</body>
+</html>

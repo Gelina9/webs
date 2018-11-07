@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1,#div2{
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("text",ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+<div id = "div1" ondrop = "drop(event)"  ondragover = "allowDrop(event)">
+<img src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1488514563624&di=0dec148436def29ca1a85404343
+dde6a&imgtype=0&src=http%3A%2F%2Fwww.dnzs.com.cn%2Fw3cschool%2Fskins%2Fuploads%2F2015%2F09%2Fdomus-01-google.jpg"
+        draggable = "true" ondragStart = "drag(event)" id = "drag1" width = "88" height = "31"></div>
+<div id = "div2" ondrop = "drop(event)" ondragOver = "allowDrop(event)"></div>
+</body>
+</html>

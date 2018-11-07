@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>查找替换</title>
+<style>
+p{display:block;width:400px;margin:25px;background:#6F9;padding:5px;border:solid 4px #CCC;}
+#span1{background:yellow;}
+#span2{background:#6CF;}
+input{height:24px;margin-top:100px;}
+</style>
+</head>
+
+<body>
+<input type='text'/>
+<input type='button' value='查找'/>
+<input type='text'/>
+<input type='button' value='替换'/>
+<input type='button' value='清除'/>
+
+<p id="pa">
+许多寂寞孤独的人之所以如此，是因为不了解爱和友谊并非从天而降的礼物。一个人要想收到他人的欢迎，或被人们就看见看见俺回来后即可见见客户和文化空间去空间结婚登记卡复活家开始的恢复健康和健康会受到很快就会健康会尽快回家看了会是第二位卡而后快结婚还款时间的空间了空间里看到埃及诶推哦他哈哈哈哈哈哈哈哈快快快快</p>
+
+<script>
+var aInp=document.getElementsByTagName('input');
+var oP=document.getElementById('pa');
+var old=oP.innerHTML;
+aInp[1].onclick=function(){
+	var str=aInp[0].value;
+	oP.innerHTML=oP.innerHTML.split(str).join('<span id="span1">'+str+'</span>');
+	aInp[0].value='';
+	str=aInp[0].value;
+};
+aInp[3].onclick=function(){
+	var str=aInp[0].value;
+	var newStr=aInp[2].value;
+	if(!str)return;
+	oP.innerHTML=oP.innerHTML.split(str).join('<span id="span2">'+newStr+'</span>');
+	aInp[0].value='';
+	aInp[2].value='';
+};
+aInp[4].onclick=function(){
+	oP.innerHTML=old;
+};
+</script>
+</body>
+</html>

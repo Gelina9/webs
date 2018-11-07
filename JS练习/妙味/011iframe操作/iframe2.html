@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function(){
+            var oIpt=document.getElementById("ipt1");
+            oIpt.onclick=function(){
+                window.parent.document.getElementById("div1").style.background="yellow"; //父层
+                window.top.document.getElementById("div1").style.background="red";//顶层
+            };
+        }
+    </script>
+</head>
+<body>
+<input id="ipt1" type="button" value="变色"/>
+</body>
+</html>

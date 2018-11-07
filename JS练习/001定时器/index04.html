@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <span id="tiao">3</span>
+    <a href="javascript:countDown"></a>秒后自动跳转
+    <meta http-equiv=refresh content=5;url="index03.html"/>
+    <!--脚本开始-->
+    <script type="text/javascript">
+        function countDown(secs){
+            tiao.innerText=secs;
+            if(secs>0){
+                secs--;
+                setTimeout("countDown("+secs+")",1000)
+            }
+        }
+        countDown(5);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

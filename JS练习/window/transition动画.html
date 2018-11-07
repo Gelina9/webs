@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>transition动画</title>
+    <style type="text/css">
+        body{
+            background: #ff00ff;
+        }
+        .trans_box{
+            padding: 20px;
+
+        }
+        .trans_list{
+            width: 5%;
+            height: 64px;
+            margin: 10px 0;
+            background-color: #486AAA;
+            color: black;
+            text-align: center;
+        }
+        .trans_box:hover .trans_list{
+            margin-left: 89%;
+            background-color: aqua;
+            color: blue;
+            border-radius: 20px;
+            transform: rotate(360deg);
+        }
+        div.test{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition-property: width, height,background;
+            transition-duration: 4s;
+        }
+        div.test:hover/*鼠标移上去发生变化*/{
+            width:300px;
+            height: 300px;
+            background: yellow;
+        }
+
+        .ease{
+            transition: all 4s ease;
+        }
+        .ease_in{
+            transition: all 4s ease-in;
+        }
+        .ease_out{
+            transition: all 4s ease-out;
+        }
+        .ease_in_out{
+            transition: all 4s ease-in-out;
+        }
+        .linear{
+            transition: all 4s linear;
+        }
+        .cubic-bezier{
+            transition: all 4s cubic-bezier(0.3,0,0.7,1);
+        }
+
+    </style>
+</head>
+<body>
+<h3>transition动画</h3>
+<div class="test"></div>
+<div id="transBox" class="trans_box">
+    <div class="trans_list ease">ease</div>
+    <div class="trans_list ease_in">ease-in</div>
+    <div class="trans_list ease_out">ease-out</div>
+    <div class="trans_list ease_in_out">ease-in-out</div>
+    <div class="trans_list linear">linear</div>
+    <div class="trans_list cubic-bezier">cubic-bezier</div>
+</div>
+</body>
+</html>

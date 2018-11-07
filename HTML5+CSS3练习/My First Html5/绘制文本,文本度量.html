@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绘制文本</title>
+    <style>
+       /* body{
+            margin:0px;
+            padding:0px;
+        }*/
+        #mycanvas{
+            border:1px solid #9c9898;
+            background-color: #77ffcc;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var canvas = document.getElementById("mycanvas");
+            var context = canvas.getContext("2d");
+            var x=canvas.width/2;
+            var y=canvas.height/2;
+            /*context.font="italic 40px Arial";
+            context.fillStyle="#ff0000";
+            context.fillText("i love u,Gelina",x,y);*/
+
+            /*context.moveTo(canvas.width/2,0);
+            context.lineTo(canvas.width/2,canvas.height);
+            context.lineWidth=5;
+            context.strokeStyle="#ff0000";
+            context.stroke();
+*/
+
+            context.font="italic 40px Arial";
+            context.strokeStyle="#0000ff";
+            context.lineWidth=1;
+            context.textAlign="left";//对齐方式
+            context.strokeText("I love u,gelina！",x,y);
+
+            /*var metrics=context.measureText("hello hello");
+            var width=metrics.width;
+            context.font="30pt Arial";
+            context.textAlign="left";
+            context.fillStyle="#549";
+            context.fillText("("+width+"px wide)",x,y+100);*/
+        }
+    </script>
+</head>
+<body>
+<canvas id="mycanvas" width="1340" height="660"></canvas>
+</body>
+</html>

@@ -1,0 +1,123 @@
+body {
+	/*font-size:12px; background:#fff;*/
+}
+a:active {
+	outline:none;
+blr:expression(this.onFocus = this.blur());
+}
+a:focus {
+	outline:none;
+	-moz-outline:none;
+}
+.wBox_content{ background:#fff;}
+.wbox-wrapper {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1000;
+}
+.wbox-wrapper .wBox_popup {
+	position:relative;
+}
+.wbox {
+	border:none;
+	top:0;
+	left:0;
+	position:relative;
+}
+.wbox-header {
+	height:33px;
+	display:none;
+}
+.wbox-header .left, .wbox-header .right {
+	width:6px;
+	height:33px;
+	background: url(../images/window-leftcorners.png) no-repeat 0 0;
+}
+.wbox-header .right {
+	background: url(../images/window-rightcorners.png) no-repeat 0 0;
+}
+.wbox-header .mid {
+	height:33px;
+	background: url(../images/window-topbottom.png) repeat-x top;
+}
+.wbox-header .mid span {
+	font-weight:bold;
+	color:#fff;
+	line-height:33px;
+	text-indent:25px;
+	float:left;
+	background: url(../images/logo.gif) no-repeat left center;
+}
+.wbox-header .mid .wBox_close {
+	width:36px;
+	height:21px;
+	position:absolute;
+	right:0;
+	background:url(../images/window-close.gif) no-repeat 0 0;
+}
+.wbox-header .mid .on {
+	background: url(../images/window-close-over.png) no-repeat 0 0;
+}
+.wbox-body .left, .wbox-body .right {
+	width:6px;
+	background:#e2e5ef url(../images/window-leftcorners.png) no-repeat 0 -33px;
+	display: none;
+}
+.wbox-body .right {
+	background:#e2e5ef url(../images/window-rightcorners.png) no-repeat 0 -33px;
+}
+.wbox-bottom .left, .wbox-bottom .right {
+	width:6px;
+	height:6px;
+	background: url(../images/window-leftcorners.png) no-repeat 0 -260px;
+	display: none;
+}
+.wbox-bottom .right {
+	background: url(../images/window-rightcorners.png) no-repeat 0 -260px;
+	display:none;
+}
+.wbox-bottom .mid {
+	height:6px;
+	background: url(../images/window-topbottom.png) repeat-x 0 -260px;
+	display:none;
+}
+#wBox_overlay {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+#wBox_overlay iframe {
+	display:none;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	filter:mask();
+	width:100%;
+	height:100%;
+}
+.wBox_overlayBG {
+	background-color:#000;
+	z-index:9999;
+}
+.wBox_hide {
+	z-index:-100;
+}
+.processbar {
+	background-color:#eee;
+	overflow:hidden;
+	height:40px;
+	padding-top:10px;
+}
+.wBox_body{
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 11px #080808;
+  border:2px solid #fff;
+}
+.wBox_content iframe{ position: relative; top:6px;}

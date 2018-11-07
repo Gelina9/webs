@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>循环</title>
+</head>
+<body>
+<script>
+    var number = 23871;
+    var reverse = 0;
+    while(number>0)
+    {
+        var lastDigit = number%10;
+        reverse = (reverse*10)+lastDigit;
+        number=number/10;
+    }
+    alert("That number reversed is "+reverse);
+
+</script>
+</body>
+</html>
